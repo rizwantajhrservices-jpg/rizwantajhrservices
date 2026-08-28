@@ -1,766 +1,1380 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Our Services | Taj HR Services</title>
+<title>Recruitment Services | Taj HR Services</title>
 
-    <meta name="description" content="Taj HR Services offers manpower recruitment, overseas recruitment, candidate sourcing, screening and employer recruitment solutions.">
+<meta name="description" content="Taj HR Services provides international manpower recruitment, candidate screening, documentation, work permit support, pre-departure training and deployment services.">
 
-    <link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#172033;
+    line-height:1.65;
+    background:#fff;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+.header{
+    background:#fff;
+    border-bottom:1px solid #e5e9ee;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    color:#0b3157;
+    line-height:1;
+}
+
+.logo span{
+    display:block;
+    font-size:11px;
+    letter-spacing:3px;
+    color:#d19a25;
+    margin-top:5px;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:21px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav a:hover{
+    color:#d19a25;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:6px;
+    font-weight:700;
+}
+
+.btn-primary{
+    background:#d19a25;
+    color:#fff;
+}
+
+.btn-dark{
+    background:#0b3157;
+    color:#fff;
+}
+
+.btn-outline{
+    border:1px solid #d19a25;
+    color:#0b3157;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(120deg,#071f38,#0d4169);
+    color:#fff;
+    padding:90px 0;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid rgba(255,255,255,.35);
+    padding:7px 14px;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#e4b54d;
+}
+
+.hero p{
+    color:#d9e5ef;
+    font-size:18px;
+    max-width:760px;
+}
+
+.hero-buttons{
+    margin-top:28px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* SECTION */
+
+.section{
+    padding:85px 0;
+}
+
+.section-light{
+    background:#f7f9fb;
+}
+
+.section-title{
+    text-align:center;
+    max-width:780px;
+    margin:0 auto 45px;
+}
+
+.label{
+    color:#c18b1c;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    color:#0b3157;
+    font-size:38px;
+    line-height:1.2;
+    margin:10px 0 15px;
+}
+
+.section-title p{
+    color:#657286;
+}
+
+/* SERVICE CARDS */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.service-card{
+    background:#fff;
+    border:1px solid #e1e7ed;
+    border-radius:13px;
+    padding:30px;
+    transition:.2s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.service-icon{
+    width:58px;
+    height:58px;
+    border-radius:10px;
+    background:#f1f4f7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.service-card h3{
+    color:#0b3157;
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#657286;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.service-card ul{
+    padding-left:18px;
+    color:#526174;
+    font-size:14px;
+}
+
+.service-card li{
+    margin:6px 0;
+}
+
+/* PROCESS */
+
+.process{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.step{
+    background:#fff;
+    border:1px solid #e1e7ed;
+    padding:27px;
+    border-radius:12px;
+    position:relative;
+}
+
+.step-number{
+    width:40px;
+    height:40px;
+    background:#0b3157;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.step h3{
+    color:#0b3157;
+    margin-bottom:8px;
+}
+
+.step p{
+    color:#657286;
+    font-size:14px;
+}
+
+/* TWO COLUMN */
+
+.two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.content h2{
+    color:#0b3157;
+    font-size:38px;
+    line-height:1.2;
+    margin:10px 0 20px;
+}
+
+.content p{
+    color:#657286;
+    margin-bottom:15px;
+}
+
+.check-list{
+    margin:25px 0;
+}
+
+.check-list div{
+    margin:10px 0;
+    font-weight:600;
+}
+
+.dark-box{
+    background:#0b3157;
+    color:#fff;
+    padding:40px;
+    border-radius:15px;
+}
+
+.dark-box h3{
+    font-size:29px;
+    margin-bottom:15px;
+}
+
+.dark-box p{
+    color:#dce7f1;
+    margin-bottom:18px;
+}
+
+.dark-box ul{
+    padding-left:20px;
+}
+
+.dark-box li{
+    margin:9px 0;
+}
+
+/* INDUSTRIES */
+
+.industry-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.industry{
+    border:1px solid #e1e7ed;
+    padding:28px;
+    border-radius:12px;
+    background:#fff;
+}
+
+.industry h3{
+    color:#0b3157;
+    margin-bottom:9px;
+}
+
+.industry p{
+    color:#657286;
+    font-size:14px;
+}
+
+/* DESTINATIONS */
+
+.destination-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.destination{
+    background:#fff;
+    border:1px solid #e1e7ed;
+    border-radius:9px;
+    padding:20px;
+}
+
+.destination strong{
+    display:block;
+    color:#0b3157;
+}
+
+.destination span{
+    color:#718094;
+    font-size:13px;
+}
+
+/* EMPLOYER */
+
+.employer-box{
+    background:#0b3157;
+    color:#fff;
+    border-radius:15px;
+    padding:45px;
+}
+
+.employer-box h2{
+    font-size:34px;
+    margin-bottom:14px;
+}
+
+.employer-box p{
+    color:#dce7f1;
+    max-width:850px;
+    margin-bottom:23px;
+}
+
+.employer-features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin:25px 0;
+}
+
+.employer-feature{
+    background:rgba(255,255,255,.08);
+    padding:18px;
+    border-radius:8px;
+}
+
+.employer-feature strong{
+    display:block;
+    color:#e4b54d;
+    margin-bottom:4px;
+}
+
+/* FAQ */
+
+.faq{
+    max-width:900px;
+    margin:auto;
+}
+
+details{
+    border-bottom:1px solid #dfe5eb;
+    padding:18px 0;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:700;
+    color:#0b3157;
+}
+
+details p{
+    color:#657286;
+    margin-top:10px;
+}
+
+/* CTA */
+
+.cta{
+    background:#f1f4f7;
+    border-radius:15px;
+    padding:50px;
+    text-align:center;
+}
+
+.cta h2{
+    color:#0b3157;
+    font-size:34px;
+    margin-bottom:13px;
+}
+
+.cta p{
+    color:#657286;
+    max-width:720px;
+    margin:0 auto 25px;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#071d32;
+    color:#fff;
+    padding:60px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:35px;
+}
+
+.footer-logo{
+    font-size:24px;
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.footer h3{
+    color:#e4b54d;
+    margin-bottom:15px;
+}
+
+.footer p,
+.footer a{
+    color:#bdcbd8;
+    font-size:14px;
+}
+
+.footer a{
+    display:block;
+    margin:8px 0;
+}
+
+.footer a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    color:#9fb0c0;
+    font-size:13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:999;
+    background:#168c45;
+    color:#fff;
+    padding:14px 20px;
+    border-radius:40px;
+    font-weight:800;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+    .nav{
+        display:none;
+    }
+
+    .service-grid,
+    .industry-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .process{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .destination-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .two-col{
+        grid-template-columns:1fr;
+    }
+
+    .employer-features{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:65px 0;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .section{
+        padding:60px 0;
+    }
+
+    .section-title h2,
+    .content h2{
+        font-size:30px;
+    }
+
+    .service-grid,
+    .industry-grid,
+    .process,
+    .destination-grid,
+    .employer-features,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .employer-box,
+    .cta{
+        padding:32px 22px;
+    }
+
+    .cta h2{
+        font-size:28px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <!-- HEADER -->
 
-<header class="main-header">
+<header class="header">
 
-    <div class="container header-content">
+<div class="container header-inner">
 
-        <a href="index.html" class="logo">
-            <span class="logo-main">TAJ</span>
-            <span class="logo-sub">HR SERVICES</span>
-        </a>
+<a href="index.html" class="logo">
+TAJ
+<span>HR SERVICES</span>
+</a>
 
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="employers.html">Employers</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="industries.html">Industries</a>
+<a href="resources.html">Resources</a>
+<a href="employers.html">Employers</a>
+<a href="jobs.html">Careers</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-        <a href="jobs.html" class="header-button">
-            Find Jobs
-        </a>
+<a href="https://wa.me/919651332002"
+target="_blank"
+class="btn btn-primary">
+WhatsApp
+</a>
 
-    </div>
+</div>
 
 </header>
 
 
-<!-- PAGE HERO -->
+<!-- HERO -->
 
 <section class="hero">
 
-    <div class="container hero-content">
+<div class="container hero-content">
 
-        <div class="hero-text">
+<span class="badge">
+International Recruitment Solutions
+</span>
 
-            <span class="hero-tag">
-                OUR RECRUITMENT SERVICES
-            </span>
+<h1>
+Complete Workforce Solutions
+<span>From India to the World</span>
+</h1>
 
-            <h1>
-                Recruitment Solutions
-                <span>That Connect People</span>
-            </h1>
+<p>
+Taj HR Services provides end-to-end international manpower
+recruitment solutions — from candidate sourcing and screening
+to documentation, work permit coordination, deployment and
+post-arrival support.
+</p>
 
-            <p>
-                From manpower sourcing to candidate screening,
-                Taj HR Services supports employers and candidates
-                throughout the recruitment journey.
-            </p>
+<div class="hero-buttons">
 
-        </div>
+<a href="employers.html"
+class="btn btn-primary">
+Request Manpower
+</a>
 
-    </div>
+<a href="contact.html"
+class="btn btn-outline">
+Talk to Our Team
+</a>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- SERVICES INTRO -->
+<!-- SERVICES -->
 
 <section class="section">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="section-title">
 
-            <span class="section-tag">
-                WHAT WE OFFER
-            </span>
+<span class="label">
+Our Services
+</span>
 
-            <h2>
-                Complete Recruitment & Manpower Solutions
-            </h2>
+<h2>
+End-to-End Recruitment Services
+</h2>
 
-            <p>
-                Our services are designed to help organizations
-                find suitable manpower and help candidates discover
-                relevant employment opportunities.
-            </p>
+<p>
+We manage the complete recruitment journey so employers
+can focus on their business while we handle workforce
+sourcing and coordination.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="service-grid">
+<div class="service-grid">
 
 
-            <!-- SERVICE 1 -->
+<div class="service-card">
 
-            <div class="service-card">
+<div class="service-icon">🔎</div>
 
-                <div class="service-icon">
-                    👥
-                </div>
+<h3>
+Candidate Sourcing & Screening
+</h3>
 
-                <h3>
-                    Manpower Recruitment
-                </h3>
+<p>
+Identify and shortlist qualified candidates based on
+employer requirements.
+</p>
 
-                <p>
-                    Recruitment support for companies,
-                    contractors and organizations looking
-                    for suitable manpower.
-                </p>
+<ul>
+<li>Candidate database sourcing</li>
+<li>CV screening</li>
+<li>Experience verification</li>
+<li>Initial interviews</li>
+<li>Background documentation</li>
+</ul>
 
-                <a href="#manpower">
-                    Explore Service →
-                </a>
+</div>
 
-            </div>
 
+<div class="service-card">
 
-            <!-- SERVICE 2 -->
+<div class="service-icon">🧪</div>
 
-            <div class="service-card">
+<h3>
+Trade Testing & Assessment
+</h3>
 
-                <div class="service-icon">
-                    🌍
-                </div>
+<p>
+Practical assessment for skilled workers to verify
+technical capabilities.
+</p>
 
-                <h3>
-                    Overseas Recruitment
-                </h3>
+<ul>
+<li>Trade skill assessment</li>
+<li>Practical testing</li>
+<li>Technical interviews</li>
+<li>Experience verification</li>
+<li>Employer-specific testing</li>
+</ul>
 
-                <p>
-                    Supporting candidates looking for
-                    employment opportunities in overseas
-                    markets.
-                </p>
+</div>
 
-                <a href="#overseas">
-                    Explore Service →
-                </a>
 
-            </div>
+<div class="service-card">
 
+<div class="service-icon">👥</div>
 
-            <!-- SERVICE 3 -->
+<h3>
+Bulk & Project Hiring
+</h3>
 
-            <div class="service-card">
+<p>
+Large-scale manpower recruitment for construction,
+manufacturing and infrastructure projects.
+</p>
 
-                <div class="service-icon">
-                    📋
-                </div>
+<ul>
+<li>Bulk candidate sourcing</li>
+<li>Project-based recruitment</li>
+<li>Phased mobilization</li>
+<li>Mass interviews</li>
+<li>Deployment planning</li>
+</ul>
 
-                <h3>
-                    Candidate Screening
-                </h3>
+</div>
 
-                <p>
-                    Reviewing candidate profiles,
-                    experience and skills according
-                    to job requirements.
-                </p>
 
-                <a href="#screening">
-                    Explore Service →
-                </a>
+<div class="service-card">
 
-            </div>
+<div class="service-icon">📄</div>
 
+<h3>
+Documentation & Compliance
+</h3>
 
-            <!-- SERVICE 4 -->
+<p>
+Coordination of recruitment documents required for
+international employment.
+</p>
 
-            <div class="service-card">
+<ul>
+<li>Demand letter coordination</li>
+<li>Employment documents</li>
+<li>Candidate documentation</li>
+<li>Attestation guidance</li>
+<li>Compliance coordination</li>
+</ul>
 
-                <div class="service-icon">
-                    🏢
-                </div>
+</div>
 
-                <h3>
-                    Corporate Hiring
-                </h3>
 
-                <p>
-                    Recruitment assistance for corporate,
-                    industrial and project manpower requirements.
-                </p>
+<div class="service-card">
 
-                <a href="#corporate">
-                    Explore Service →
-                </a>
+<div class="service-icon">🌍</div>
 
-            </div>
+<h3>
+Work Permit Support
+</h3>
 
+<p>
+Guidance and coordination for applicable international
+work permit processes.
+</p>
 
-            <!-- SERVICE 5 -->
+<ul>
+<li>Permit documentation</li>
+<li>Application coordination</li>
+<li>Qualification documents</li>
+<li>Employer coordination</li>
+<li>Process updates</li>
+</ul>
 
-            <div class="service-card">
+</div>
 
-                <div class="service-icon">
-                    🛠️
-                </div>
 
-                <h3>
-                    Skilled Manpower
-                </h3>
+<div class="service-card">
 
-                <p>
-                    Recruitment support for skilled technical
-                    workers across different trades and industries.
-                </p>
+<div class="service-icon">🎓</div>
 
-                <a href="#skilled">
-                    Explore Service →
-                </a>
+<h3>
+Pre-Departure Training
+</h3>
 
-            </div>
+<p>
+Prepare candidates for their new workplace and
+international working environment.
+</p>
 
+<ul>
+<li>Orientation</li>
+<li>Workplace safety</li>
+<li>Destination information</li>
+<li>Language basics</li>
+<li>Cultural preparation</li>
+</ul>
 
-            <!-- SERVICE 6 -->
+</div>
 
-            <div class="service-card">
 
-                <div class="service-icon">
-                    👷
-                </div>
+<div class="service-card">
 
-                <h3>
-                    Semi-Skilled Manpower
-                </h3>
+<div class="service-icon">✈️</div>
 
-                <p>
-                    Helping employers source suitable
-                    semi-skilled workers for project requirements.
-                </p>
+<h3>
+Deployment & Travel Support
+</h3>
 
-                <a href="#semiskilled">
-                    Explore Service →
-                </a>
+<p>
+Coordination of the final stage before candidates
+travel to the employer.
+</p>
 
-            </div>
+<ul>
+<li>Travel coordination</li>
+<li>Departure preparation</li>
+<li>Airport coordination</li>
+<li>Employer updates</li>
+<li>Arrival planning</li>
+</ul>
 
+</div>
 
-            <!-- SERVICE 7 -->
 
-            <div class="service-card">
+<div class="service-card">
 
-                <div class="service-icon">
-                    🔎
-                </div>
+<div class="service-icon">🏠</div>
 
-                <h3>
-                    Candidate Sourcing
-                </h3>
+<h3>
+Arrival & Post-Deployment Support
+</h3>
 
-                <p>
-                    Identifying potential candidates based
-                    on employer requirements and job profiles.
-                </p>
+<p>
+Support continues after the candidate reaches the
+destination country.
+</p>
 
-                <a href="#sourcing">
-                    Explore Service →
-                </a>
+<ul>
+<li>Arrival coordination</li>
+<li>Registration guidance</li>
+<li>Employer communication</li>
+<li>Post-arrival check-ins</li>
+<li>Issue coordination</li>
+</ul>
 
-            </div>
+</div>
 
 
-            <!-- SERVICE 8 -->
+<div class="service-card">
 
-            <div class="service-card">
+<div class="service-icon">🔄</div>
 
-                <div class="service-icon">
-                    🤝
-                </div>
+<h3>
+Replacement Support
+</h3>
 
-                <h3>
-                    Recruitment Coordination
-                </h3>
+<p>
+Replacement assistance is available under applicable
+employer recruitment arrangements.
+</p>
 
-                <p>
-                    Supporting communication and coordination
-                    during the recruitment process.
-                </p>
+<ul>
+<li>Replacement coordination</li>
+<li>Candidate re-sourcing</li>
+<li>Employer communication</li>
+<li>Fast shortlist preparation</li>
+<li>90-day replacement support</li>
+</ul>
 
-                <a href="#coordination">
-                    Explore Service →
-                </a>
+</div>
 
-            </div>
+</div>
 
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- MANPOWER RECRUITMENT -->
+<!-- PROCESS -->
 
-<section id="manpower" class="section light-section">
+<section class="section section-light">
 
-    <div class="container two-column">
+<div class="container">
 
-        <div class="section-content">
+<div class="section-title">
 
-            <span class="section-tag">
-                MANPOWER RECRUITMENT
-            </span>
+<span class="label">
+Our Process
+</span>
 
-            <h2>
-                The Right People For Your Workforce
-            </h2>
+<h2>
+How International Recruitment Works
+</h2>
 
-            <p>
-                Finding suitable manpower can be challenging.
-                We help employers with candidate sourcing and
-                recruitment support based on their requirements.
-            </p>
+<p>
+A structured recruitment process designed around
+employer requirements.
+</p>
 
-            <div class="check-list">
-
-                <div>✓ Understand manpower requirements</div>
-                <div>✓ Source suitable candidates</div>
-                <div>✓ Review candidate profiles</div>
-                <div>✓ Coordinate recruitment stages</div>
-                <div>✓ Support project-based requirements</div>
-
-            </div>
-
-            <a href="employers.html" class="primary-button">
-                Request Manpower
-            </a>
-
-        </div>
+</div>
 
 
-        <div class="section-image">
+<div class="process">
 
-            <div class="image-placeholder">
+<div class="step">
 
-                <span>MANPOWER</span>
+<div class="step-number">1</div>
 
-                <small>
-                    Recruitment Solutions
-                </small>
+<h3>
+Employer Requirement
+</h3>
 
-            </div>
+<p>
+We understand job roles, quantity, skills,
+experience, salary and deployment requirements.
+</p>
 
-        </div>
+</div>
 
-    </div>
+
+<div class="step">
+
+<div class="step-number">2</div>
+
+<h3>
+Candidate Sourcing
+</h3>
+
+<p>
+Our recruitment team sources suitable candidates
+from our network and database.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">3</div>
+
+<h3>
+Screening & Testing
+</h3>
+
+<p>
+Candidates are screened and assessed according
+to the position and employer requirements.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">4</div>
+
+<h3>
+Interview & Selection
+</h3>
+
+<p>
+Selected profiles are presented for employer
+interviews and final selection.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">5</div>
+
+<h3>
+Documentation
+</h3>
+
+<p>
+Selected candidates complete the required
+documentation and applicable formalities.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">6</div>
+
+<h3>
+Permit Processing
+</h3>
+
+<p>
+Work permit and related process coordination
+is completed according to the destination.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">7</div>
+
+<h3>
+Pre-Departure
+</h3>
+
+<p>
+Candidates receive applicable orientation and
+pre-departure preparation.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">8</div>
+
+<h3>
+Deployment
+</h3>
+
+<p>
+Travel, arrival and post-deployment coordination
+complete the recruitment journey.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- OVERSEAS RECRUITMENT -->
+<!-- EMPLOYER SOLUTION -->
 
-<section id="overseas" class="section">
+<section class="section">
 
-    <div class="container two-column">
+<div class="container two-col">
 
-        <div class="section-image">
+<div class="content">
 
-            <div class="image-placeholder">
+<span class="label">
+For Employers
+</span>
 
-                <span>GLOBAL</span>
+<h2>
+A complete recruitment partner for your workforce
+</h2>
 
-                <small>
-                    Overseas Opportunities
-                </small>
+<p>
+Finding qualified international workers can involve
+multiple stages, documents and coordination.
+</p>
 
-            </div>
+<p>
+Taj HR Services brings these stages together under
+one recruitment process designed around your workforce
+requirements.
+</p>
 
-        </div>
+<div class="check-list">
 
+<div>✓ Skilled and semi-skilled manpower sourcing</div>
+<div>✓ Candidate screening and trade assessment</div>
+<div>✓ Bulk recruitment for projects</div>
+<div>✓ Documentation coordination</div>
+<div>✓ Work permit process support</div>
+<div>✓ Deployment and arrival coordination</div>
+<div>✓ Applicable replacement support</div>
 
-        <div class="section-content">
+</div>
 
-            <span class="section-tag">
-                OVERSEAS RECRUITMENT
-            </span>
+<a href="employers.html"
+class="btn btn-dark">
+Request Employer Proposal
+</a>
 
-            <h2>
-                Connecting Candidates With
-                Overseas Opportunities
-            </h2>
-
-            <p>
-                Candidates looking for overseas employment can
-                explore available opportunities listed through
-                our recruitment channels.
-            </p>
-
-            <div class="check-list">
-
-                <div>✓ Current job opportunities</div>
-                <div>✓ Country-wise vacancies</div>
-                <div>✓ Skilled and technical positions</div>
-                <div>✓ Candidate profile submission</div>
-
-            </div>
-
-            <a href="jobs.html" class="primary-button">
-                View Jobs
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
+</div>
 
 
-<!-- CANDIDATE SCREENING -->
+<div class="dark-box">
 
-<section id="screening" class="section light-section">
+<h3>
+Why Employers Work With Us
+</h3>
 
-    <div class="container">
+<p>
+Our recruitment model is designed to reduce hiring
+complexity and provide employers with dependable
+candidate pipelines.
+</p>
 
-        <div class="section-heading">
+<ul>
+<li>Pre-screened candidate profiles</li>
+<li>Dedicated recruitment coordination</li>
+<li>International recruitment experience</li>
+<li>Transparent communication</li>
+<li>Project and bulk hiring capability</li>
+<li>Documentation support</li>
+<li>Post-deployment coordination</li>
+</ul>
 
-            <span class="section-tag">
-                CANDIDATE SCREENING
-            </span>
+</div>
 
-            <h2>
-                Focused Candidate Evaluation
-            </h2>
-
-            <p>
-                Candidate profiles can be reviewed against
-                the requirements of available positions.
-            </p>
-
-        </div>
-
-
-        <div class="process-grid">
-
-            <div class="process-step">
-
-                <span>1</span>
-
-                <h3>
-                    Profile
-                </h3>
-
-                <p>
-                    Collect candidate information,
-                    experience and skills.
-                </p>
-
-            </div>
-
-
-            <div class="process-step">
-
-                <span>2</span>
-
-                <h3>
-                    Review
-                </h3>
-
-                <p>
-                    Review the profile against
-                    the required position.
-                </p>
-
-            </div>
-
-
-            <div class="process-step">
-
-                <span>3</span>
-
-                <h3>
-                    Shortlist
-                </h3>
-
-                <p>
-                    Identify potentially suitable
-                    candidates for the requirement.
-                </p>
-
-            </div>
-
-
-            <div class="process-step">
-
-                <span>4</span>
-
-                <h3>
-                    Coordinate
-                </h3>
-
-                <p>
-                    Coordinate the next recruitment
-                    stage where applicable.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- CORPORATE HIRING -->
+<!-- INDUSTRIES -->
 
-<section id="corporate" class="section">
+<section class="section section-light">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="section-title">
 
-            <span class="section-tag">
-                CORPORATE HIRING
-            </span>
+<span class="label">
+Industry Expertise
+</span>
 
-            <h2>
-                Recruitment Support For Employers
-            </h2>
+<h2>
+Recruitment Across Multiple Industries
+</h2>
 
-            <p>
-                Whether you need manpower for an ongoing
-                operation or a project requirement, you can
-                share your requirement with our team.
-            </p>
+<p>
+Our recruitment services can be customized according
+to industry, project and workforce requirements.
+</p>
 
-        </div>
-
-
-        <div class="service-grid">
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    🏗️
-                </div>
-
-                <h3>
-                    Project Hiring
-                </h3>
-
-                <p>
-                    Manpower sourcing for construction,
-                    infrastructure and project requirements.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="industry-grid">
 
-                <div class="service-icon">
-                    🏭
-                </div>
+<div class="industry">
+<h3>Construction</h3>
+<p>
+Masons, electricians, plumbers, welders, steel fabricators,
+scaffolders, supervisors and construction professionals.
+</p>
+</div>
 
-                <h3>
-                    Industrial Hiring
-                </h3>
+<div class="industry">
+<h3>Manufacturing</h3>
+<p>
+Production workers, machine operators, technicians,
+fabricators and industrial workforce.
+</p>
+</div>
 
-                <p>
-                    Recruitment support for industrial
-                    and manufacturing manpower.
-                </p>
+<div class="industry">
+<h3>Engineering</h3>
+<p>
+Engineers, supervisors, technicians and specialized
+technical professionals.
+</p>
+</div>
 
-            </div>
+<div class="industry">
+<h3>Hospitality</h3>
+<p>
+Chefs, kitchen staff, servers, housekeeping and
+hotel professionals.
+</p>
+</div>
 
+<div class="industry">
+<h3>Healthcare</h3>
+<p>
+Nurses, healthcare professionals, technicians and
+support personnel.
+</p>
+</div>
 
-            <div class="service-card">
+<div class="industry">
+<h3>Logistics</h3>
+<p>
+Drivers, warehouse workers, logistics coordinators
+and supply-chain personnel.
+</p>
+</div>
 
-                <div class="service-icon">
-                    ⚙️
-                </div>
+<div class="industry">
+<h3>Oil & Gas</h3>
+<p>
+Skilled technical manpower for energy and
+industrial projects.
+</p>
+</div>
 
-                <h3>
-                    Technical Hiring
-                </h3>
+<div class="industry">
+<h3>Automotive</h3>
+<p>
+Automotive technicians, mechanics and manufacturing
+professionals.
+</p>
+</div>
 
-                <p>
-                    Skilled technical recruitment across
-                    various trades and job categories.
-                </p>
+<div class="industry">
+<h3>IT & Technology</h3>
+<p>
+Software, IT, engineering and technology
+professionals.
+</p>
+</div>
 
-            </div>
+</div>
 
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    🚚
-                </div>
-
-                <h3>
-                    Support Staff
-                </h3>
-
-                <p>
-                    Recruitment support for helpers,
-                    support staff and other workforce needs.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- SKILLED MANPOWER -->
-
-<section id="skilled" class="section light-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-tag">
-                SKILLED MANPOWER
-            </span>
-
-            <h2>
-                Skilled & Technical Recruitment
-            </h2>
-
-            <p>
-                Recruitment opportunities may include a wide
-                range of skilled trades depending on current
-                employer requirements.
-            </p>
-
-        </div>
-
-
-        <div class="industry-grid">
-
-            <div>⚡ Electricians</div>
-            <div>🔧 Technicians</div>
-            <div>🔥 Welders</div>
-            <div>🔩 Fabricators</div>
-            <div>🚰 Plumbers</div>
-            <div>🏗️ Masons</div>
-            <div>🛠️ Mechanics</div>
-            <div>👷 Supervisors</div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- CTA -->
+<!-- DESTINATIONS -->
 
-<section class="employer-section section">
+<section class="section">
 
-    <div class="container employer-content">
+<div class="container">
 
-        <div>
+<div class="section-title">
 
-            <span class="section-tag">
-                NEED MANPOWER?
-            </span>
+<span class="label">
+Global Recruitment
+</span>
 
-            <h2>
-                Tell Us Your Recruitment Requirement
-            </h2>
+<h2>
+International Destinations
+</h2>
 
-            <p>
-                Share your manpower requirement and
-                our team can discuss the recruitment process.
-            </p>
+<p>
+Recruitment support for employers across Europe,
+Canada and other international markets.
+</p>
 
-        </div>
+</div>
 
-        <a href="employers.html" class="primary-button">
-            Hire Manpower
-        </a>
 
-    </div>
+<div class="destination-grid">
+
+<div class="destination">
+<strong>Germany</strong>
+<span>Skilled workforce</span>
+</div>
+
+<div class="destination">
+<strong>Poland</strong>
+<span>Construction & industrial</span>
+</div>
+
+<div class="destination">
+<strong>Romania</strong>
+<span>Industrial workforce</span>
+</div>
+
+<div class="destination">
+<strong>Hungary</strong>
+<span>Manufacturing</span>
+</div>
+
+<div class="destination">
+<strong>Portugal</strong>
+<span>Hospitality & construction</span>
+</div>
+
+<div class="destination">
+<strong>Czech Republic</strong>
+<span>Industrial workforce</span>
+</div>
+
+<div class="destination">
+<strong>Croatia</strong>
+<span>Construction & hospitality</span>
+</div>
+
+<div class="destination">
+<strong>Ireland</strong>
+<span>Skilled professionals</span>
+</div>
+
+<div class="destination">
+<strong>United Kingdom</strong>
+<span>International recruitment</span>
+</div>
+
+<div class="destination">
+<strong>Netherlands</strong>
+<span>Technical workforce</span>
+</div>
+
+<div class="destination">
+<strong>Austria</strong>
+<span>Skilled workforce</span>
+</div>
+
+<div class="destination">
+<strong>Canada</strong>
+<span>International talent</span>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- DOCUMENTATION -->
 
-<footer class="footer">
+<section class="section section-light">
 
-    <div class="container footer-grid">
+<div class="container two-col">
 
-        <div>
+<div class="dark-box">
 
-            <div class="footer-logo">
-                TAJ HR SERVICES
-            </div>
+<h3>
+Documentation & Compliance
+</h3>
 
-            <p>
-                Professional manpower recruitment and
-                HR solutions for employers and candidates.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h3>Quick Links</h3>
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="contact.html">Contact</a>
-
-        </div>
-
-
-        <div>
-
-            <h3>For Candidates</h3>
-
-            <a href="jobs.html">Latest Jobs</a>
-            <a href="jobs.html">Apply Now</a>
-            <a href="contact.html">Submit CV</a>
-
-        </div>
-
-
-        <div>
-
-            <h3>For Employers</h3>
-
-            <a href="employers.html">Hire Manpower</a>
-            <a href="contact.html">Submit Requirement</a>
-            <a href="contact.html">Contact Us</a>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Taj HR Services. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-
-</body>
-</html>
+<p>
+International recruitment requires accurate documentation
+and coordination between candidates, employers and
