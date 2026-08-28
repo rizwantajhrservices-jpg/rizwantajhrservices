@@ -24,7 +24,7 @@
   .nav-links a:hover,.nav-links a.active{color:var(--gold);}
   .nav-cta{background:var(--gold);color:var(--navy);padding:10px 18px;border-radius:4px;font-weight:700;font-size:13.5px;white-space:nowrap;}
 
-  .page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:70px 24px;text-align:center;}
+  .page-hero{background:linear-gradient(135deg,rgba(11,31,58,.93) 0%,rgba(18,49,92,.93) 100%),url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;color:#fff;padding:70px 24px;text-align:center;}
   .page-hero .eyebrow{color:var(--gold-light);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:14px;}
   .page-hero h1{font-size:34px;font-weight:800;max-width:780px;margin:0 auto 16px;}
   .page-hero p{font-size:16px;color:#d8dde8;max-width:700px;margin:0 auto 30px;}
@@ -190,36 +190,38 @@
       <h2>Submit a Demand Letter</h2>
       <p>Fill in your requirement and our team will respond within 24 hours.</p>
     </div>
-    <form onsubmit="event.preventDefault(); alert('Thank you! Our team will contact you within 24 hours.');">
+    <form id="employer-form">
       <div class="form-row">
         <label>Company Name *</label>
-        <input type="text" required>
+        <input type="text" name="company_name" required>
       </div>
       <div class="form-row">
         <label>Contact Person *</label>
-        <input type="text" required>
+        <input type="text" name="contact_person" required>
       </div>
       <div class="form-row">
         <label>Email Address *</label>
-        <input type="email" required>
+        <input type="email" name="email" required>
       </div>
       <div class="form-row">
         <label>Phone Number</label>
-        <input type="tel">
+        <input type="tel" name="phone">
       </div>
       <div class="form-row">
         <label>Destination Country</label>
-        <input type="text" placeholder="e.g. Germany, Poland, Canada">
+        <input type="text" name="destination_country" placeholder="e.g. Germany, Poland, Canada">
       </div>
       <div class="form-row">
         <label>Trade / Role &amp; Headcount</label>
-        <input type="text" placeholder="e.g. 10 Electricians">
+        <input type="text" name="trade_headcount" placeholder="e.g. 10 Electricians">
       </div>
       <div class="form-row">
         <label>Message</label>
-        <textarea placeholder="Tell us more about your requirement..."></textarea>
+        <textarea name="message" placeholder="Tell us more about your requirement..."></textarea>
       </div>
-      <button type="submit" class="submit-btn">Submit Demand Letter</button>
+      <input type="hidden" name="_subject" value="New Demand Letter - TAJ HR Services">
+      <button type="submit" class="submit-btn" id="employer-submit-btn">Submit Demand Letter</button>
+      <p id="employer-form-status" style="margin-top:14px;font-size:14px;text-align:center;"></p>
     </form>
   </div>
 </section>
@@ -263,5 +265,39 @@
   <div class="footer-bottom">© 2026 TAJ HR Services. All rights reserved.</div>
 </footer>
 
+<script>
+  const employerForm = document.getElementById('employer-form');
+  const employerStatus = document.getElementById('employer-form-status');
+  const employerBtn = document.getElementById('employer-submit-btn');
+
+  employerForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    employerBtn.disabled = true;
+    employerBtn.textContent = 'Sending...';
+    employerStatus.textContent = '';
+
+    fetch('https://formspree.io/f/xppzznyk', {
+      method: 'POST',
+      body: new FormData(employerForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        employerStatus.style.color = '#1a7a3a';
+        employerStatus.textContent = 'Thank you! Our team will contact you within 24 hours.';
+        employerForm.reset();
+      } else {
+        employerStatus.style.color = '#c0392b';
+        employerStatus.textContent = 'Something went wrong. Please try again or email us directly.';
+      }
+    }).catch(() => {
+      employerStatus.style.color = '#c0392b';
+      employerStatus.textContent = 'Something went wrong. Please try again or email us directly.';
+    }).finally(() => {
+      employerBtn.disabled = false;
+      employerBtn.textContent = 'Submit Demand Letter';
+    });
+  });
+</script>
 </body>
+
 </html>
