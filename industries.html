@@ -1,1 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Industries We Serve | Taj HR Services</title>
+
+<meta name="description" content="Taj HR Services provides skilled and semi-skilled manpower recruitment solutions for construction, manufacturing, engineering, oil and gas, hospitality, healthcare, logistics, automotive and IT industries.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#172033;
+    background:#fff;
+    line-height:1.65;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+.header{
+    background:#fff;
+    border-bottom:1px solid #e5e9ee;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    color:#0b3157;
+    line-height:1;
+}
+
+.logo span{
+    display:block;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-top:5px;
+    color:#d19a25;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:21px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav a:hover{
+    color:#d19a25;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:6px;
+    font-weight:700;
+}
+
+.btn-primary{
+    background:#d19a25;
+    color:#fff;
+}
+
+.btn-dark{
+    background:#0b3157;
+    color:#fff;
+}
+
+.btn-outline{
+    border:1px solid #d19a25;
+    color:#0b3157;
+    background:#fff;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(120deg,#071f38,#0d4169);
+    color:#fff;
+    padding:90px 0;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid rgba(255,255,255,.35);
+    padding:7px 14px;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#e4b54d;
+}
+
+.hero p{
+    color:#d9e5ef;
+    font-size:18px;
+    max-width:780px;
+}
+
+.hero-buttons{
+    margin-top:28px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* SECTION */
+
+.section{
+    padding:85px 0;
+}
+
+.section-light{
+    background:#f7f9fb;
+}
+
+.section-title{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 45px;
+}
+
+.label{
+    color:#c18b1c;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    color:#0b3157;
+    font-size:38px;
+    line-height:1.2;
+    margin:10px 0 15px;
+}
+
+.section-title p{
+    color:#657286;
+}
+
+/* INDUSTRY CARDS */
+
+.industry-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.industry-card{
+    background:#fff;
+    border:1px solid #e1e7ed;
+    border-radius:13px;
+    padding:30px;
+    transition:.2s;
+}
+
+.industry-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.industry-icon{
+    width:60px;
+    height:60px;
+    background:#f1f4f7;
+    border-radius:11px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.industry-card h3{
+    color:#0b3157;
+    font-size:22px;
+    margin-bottom:10px;
+}
+
+.industry-card p{
+    color:#657286;
+    font-size:14px;
+    margin-bottom:17px;
+}
+
+.industry-card ul{
+    padding-left:19px;
+    color:#526174;
+    font-size:14px;
+}
+
+.industry-card li{
+    margin:6px 0;
+}
+
+/* FEATURE */
+
+.two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.content h2{
+    color:#0b3157;
+    font-size:38px;
+    line-height:1.2;
+    margin:10px 0 20px;
+}
+
+.content p{
+    color:#657286;
+    margin-bottom:16px;
+}
+
+.check-list{
+    margin:25px 0;
+}
+
+.check-list div{
+    margin:10px 0;
+    font-weight:600;
+}
+
+.dark-box{
+    background:#0b3157;
+    color:#fff;
+    padding:40px;
+    border-radius:15px;
+}
+
+.dark-box h3{
+    font-size:29px;
+    margin-bottom:15px;
+}
+
+.dark-box p{
+    color:#dce7f1;
+    margin-bottom:20px;
+}
+
+.dark-box ul{
+    padding-left:20px;
+}
+
+.dark-box li{
+    margin:9px 0;
+}
+
+/* ROLES */
+
+.role-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
+
+.role{
+    background:#fff;
+    border:1px solid #e1e7ed;
+    padding:20px;
+    border-radius:10px;
+}
+
+.role strong{
+    display:block;
+    color:#0b3157;
+}
+
+.role span{
+    color:#718094;
+    font-size:13px;
+}
+
+/* INDUSTRY DETAIL */
+
+.detail{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.detail-card{
+    border:1px solid #e1e7ed;
+    border-radius:12px;
+    padding:30px;
+    background:#fff;
+}
+
+.detail-card h3{
+    color:#0b3157;
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.detail-card p{
+    color:#657286;
+    margin-bottom:15px;
+}
+
+.detail-card ul{
+    padding-left:20px;
+    color:#526174;
+}
+
+.detail-card li{
+    margin:6px 0;
+}
+
+/* CTA */
+
+.cta{
+    background:#0b3157;
+    color:#fff;
+    border-radius:15px;
+    padding:50px;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:34px;
+    margin-bottom:14px;
+}
+
+.cta p{
+    color:#dce7f1;
+    max-width:750px;
+    margin:0 auto 25px;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#071d32;
+    color:#fff;
+    padding:60px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:35px;
+}
+
+.footer-logo{
+    font-size:24px;
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.footer h3{
+    color:#e4b54d;
+    margin-bottom:15px;
+}
+
+.footer p,
+.footer a{
+    color:#bdcbd8;
+    font-size:14px;
+}
+
+.footer a{
+    display:block;
+    margin:8px 0;
+}
+
+.footer a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    color:#9fb0c0;
+    font-size:13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:999;
+    background:#168c45;
+    color:#fff;
+    padding:14px 20px;
+    border-radius:40px;
+    font-weight:800;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+    .nav{
+        display:none;
+    }
+
+    .industry-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .role-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .two-col{
+        grid-template-columns:1fr;
+    }
+
+    .detail{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:65px 0;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .section{
+        padding:60px 0;
+    }
+
+    .section-title h2,
+    .content h2{
+        font-size:30px;
+    }
+
+    .industry-grid,
+    .role-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta{
+        padding:35px 22px;
+    }
+
+    .cta h2{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header class="header">
+
+<div class="container header-inner">
+
+<a href="index.html" class="logo">
+TAJ
+<span>HR SERVICES</span>
+</a>
+
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="industries.html">Industries</a>
+<a href="resources.html">Resources</a>
+<a href="employers.html">Employers</a>
+<a href="jobs.html">Careers</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<a href="https://wa.me/919651332002"
+target="_blank"
+class="btn btn-primary">
+WhatsApp
+</a>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<span class="badge">
+Industry-Specific Recruitment
+</span>
+
+<h1>
+Skilled Manpower for
+<span>Every Major Industry</span>
+</h1>
+
+<p>
+Taj HR Services connects international employers with
+skilled, semi-skilled and experienced professionals
+according to specific industry and project requirements.
+</p>
+
+<div class="hero-buttons">
+
+<a href="employers.html"
+class="btn btn-primary">
+Request Manpower
+</a>
+
+<a href="contact.html"
+class="btn btn-outline">
+Contact Our Team
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="section">
+
+<div class="container two-col">
+
+<div class="content">
+
+<span class="label">
+Industry Expertise
+</span>
+
+<h2>
+Recruitment designed around your industry
+</h2>
+
+<p>
+Different industries require different skills, certifications,
+experience and workforce structures.
+</p>
+
+<p>
+Our recruitment team works with employer requirements to
+source and shortlist candidates suitable for the position,
+project and destination.
+</p>
+
+<div class="check-list">
+
+<div>✓ Skilled manpower</div>
+<div>✓ Semi-skilled manpower</div>
+<div>✓ Technical professionals</div>
+<div>✓ Supervisors and foremen</div>
+<div>✓ Project-based recruitment</div>
+<div>✓ Bulk workforce recruitment</div>
+
+</div>
+
+</div>
+
+
+<div class="dark-box">
+
+<h3>
+One Recruitment Partner
+</h3>
+
+<p>
+From candidate sourcing to deployment, we coordinate
+the recruitment process around your workforce needs.
+</p>
+
+<ul>
+<li>Requirement analysis</li>
+<li>Candidate sourcing</li>
+<li>CV screening</li>
+<li>Trade testing</li>
+<li>Employer interviews</li>
+<li>Documentation coordination</li>
+<li>Deployment support</li>
+<li>Post-deployment coordination</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MAIN INDUSTRIES -->
+
+<section class="section section-light">
+
+<div class="container">
+
+<div class="section-title">
+
+<span class="label">
+Industries We Serve
+</span>
+
+<h2>
+Our Recruitment Expertise
+</h2>
+
+<p>
+Explore the industries where we can help employers
+build dependable international workforces.
+</p>
+
+</div>
+
+
+<div class="industry-grid">
+
+
+<div class="industry-card">
+
+<div class="industry-icon">🏗️</div>
+
+<h3>
+Construction
+</h3>
+
+<p>
+Skilled and semi-skilled workers for construction,
+infrastructure and building projects.
+</p>
+
+<ul>
+<li>Masons</li>
+<li>Carpenters</li>
+<li>Electricians</li>
+<li>Plumbers</li>
+<li>Welders</li>
+<li>Steel Fabricators</li>
+<li>Scaffolders</li>
+<li>Foremen & Supervisors</li>
+</ul>
+
+</div>
+
+
+<div class="industry-card">
+
+<div class="industry-icon">🏭</div>
+
+<h3>
+Manufacturing
+</h3>
+
+<p>
+Workforce solutions for production plants,
+factories and industrial operations.
+</p>
+
+<ul>
+<li>Machine Operators</li>
+<li>Production Workers</li>
+<li>Technicians</li>
+<li>Assembly Workers</li>
+<li>Quality Inspectors</li>
+<li>Maintenance Staff</li>
+<li>Supervisors</li>
+<li>Factory Workers</li>
+</ul>
+
+</div>
+
+
+<div class="industry-card">
+
+<div class="industry-icon">⚙️</div>
+
+<h3>
+Engineering
+</h3>
+
+<p>
+Technical recruitment for engineering, industrial
+and infrastructure projects.
+</p>
+
+<ul>
+<li>Civil Engineers</li>
+<li>Mechanical Engineers</li>
+<li>Electrical Engineers</li>
+<li>Site Engineers</li>
+<li>Planning Engineers</li>
+<li>QA/QC Engineers</li>
+<li>Technicians</li>
+<li>Supervisors</li>
+</ul>
+
+</div>
+
+
+<div class="industry-card">
+
+<div class="industry-icon">🛢️</div>
+
+<h3>
+Oil & Gas
+</h3>
+
+<p>
+Experienced technical manpower for oil, gas,
+energy and industrial projects.
+</p>
+
+<ul>
+<li>Welders</li>
+<li>Pipe Fitters</li>
+<li>Fabricators</li>
+<li>Mechanical Technicians</li>
+<li>Electrical Technicians</li>
+<li>Instrument Technicians</li>
+<li>Safety Professionals</li>
+<li>Supervisors</li>
+</ul>
+
+</div>
+
+
+<div class="industry-card">
+
+<div class="industry-icon">🏨</div>
+
+<h3>
+Hospitality
+</h3>
+
+<p>
+Hospitality workforce for hotels, restaurants,
+resorts and service businesses.
+</p>
+
+<ul>
+<li>Chefs</li>
+<li>Commis Chefs</li>
+<li>Waiters</li>
+<li>Housekeeping Staff</li>
+<li>Kitchen Helpers</li>
+<li>Front Office Staff</li>
+<li>Restaurant Staff</li>
+<li>Hotel Supervisors</li>
+</ul>
+
+</div>
+
+
+<div class="industry-card">
+
+<div class="industry-icon">🏥</div>
+
+<h3>
+Healthcare
+</h3>
+
+<p>
+Healthcare recruitment for hospitals, clinics
+and healthcare organizations.
+</p>
+
+<ul>
+<li>Registered Nurses</li>
+<li>Healthcare Assistants</li>
+<li>Technicians</li>
+<li>Care Workers</li>
+<li>Support Staff</li>
+<li>Medical Professionals</li>
+<li>Laboratory Staff</li>
+<li>Healthcare Administrators</li>
+</ul>
+
+</div>
+
+
+<div class="industry-card">
+
+<div class="industry-icon">🚚</div>
+
+<h3>
+Logistics & Transport
+</h3>
+
+<p>
+Manpower solutions for logistics, transportation,
+warehousing and supply-chain operations.
+</p>
+
+<ul>
+<li>Heavy Drivers</li>
+<li>Light Vehicle Drivers</li>
+<li>Warehouse Workers</li>
+<li>Forklift Operators</li>
+<li>Delivery Personnel</li>
+<li>Logistics Coordinators</li>
+<li>Storekeepers</li>
+<li>Supervisors</li>
+</ul>
+
+</div>
+
+
+<div class="industry-card">
+
+<div class="industry-icon">🚗</div>
+
+<h3>
+Automotive
+</h3>
+
+<p>
+Skilled automotive professionals for workshops,
+manufacturing and service operations.
+</p>
+
+<ul>
+<li>Auto Mechanics</li>
+<li>Diesel Mechanics</li>
+<li>Electricians</li>
+<li>Body Repair Technicians</li>
+<li>Paint Technicians</li>
+<li>Service Technicians</li>
+<li>Machine Operators</li>
+<li>Workshop Supervisors</li>
+</ul>
+
+</div>
+
+
+<div class="industry-card">
+
+<div class="industry-icon">💻</div>
+
+<h3>
+IT & Technology
+</h3>
+
+<p>
+Technology and digital professionals for international
+companies and growing businesses.
+</p>
+
+<ul>
+<li>Software Developers</li>
+<li>Web Developers</li>
+<li>System Administrators</li>
+<li>Network Engineers</li>
+<li>IT Support</li>
+<li>Data Professionals</li>
+<li>QA Engineers</li>
+<li>Technical Specialists</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLED ROLES -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<span class="label">
+Popular Workforce Categories
+</span>
+
+<h2>
+Roles We Frequently Recruit
+</h2>
+
+<p>
+Examples of skilled, semi-skilled and professional
+roles that can be sourced according to requirements.
+</p>
+
+</div>
+
+
+<div class="role-grid">
+
+<div class="role">
+<strong>Electricians</strong>
+<span>Electrical & industrial</span>
+</div>
+
+<div class="role">
+<strong>Welders</strong>
+<span>MIG / TIG / ARC / fabrication</span>
+</div>
+
+<div class="role">
+<strong>Plumbers</strong>
+<span>Construction & industrial</span>
+</div>
+
+<div class="role">
+<strong>Masons</strong>
+<span>Construction projects</span>
+</div>
+
+<div class="role">
+<strong>Carpenters</strong>
+<span>Construction & interiors</span>
+</div>
+
+<div class="role">
+<strong>Steel Fabricators</strong>
+<span>Structural & industrial</span>
+</div>
+
+<div class="role">
+<strong>Scaffolders</strong>
+<span>Construction projects</span>
+</div>
+
+<div class="role">
+<strong>Pipe Fitters</strong>
+<span>Industrial & energy</span>
+</div>
+
+<div class="role">
+<strong>Heavy Drivers</strong>
+<span>Transport & logistics</span>
+</div>
+
+<div class="role">
+<strong>Machine Operators</strong>
+<span>Manufacturing</span>
+</div>
+
+<div class="role">
+<strong>Technicians</strong>
+<span>Industrial & maintenance</span>
+</div>
+
+<div class="role">
+<strong>Engineers</strong>
+<span>Technical & project roles</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DETAILED INDUSTRY SOLUTIONS -->
+
+<section class="section section-light">
+
+<div class="container">
+
+<div class="section-title">
+
+<span class="label">
+Specialized Solutions
+</span>
+
+<h2>
+Built Around Employer Requirements
+</h2>
+
+<p>
+Every recruitment project can be customized according
+to the employer's workforce requirement.
+</p>
+
+</div>
+
+
+<div class="detail">
+
+
+<div class="detail-card">
+
+<h3>
+Construction & Infrastructure
+</h3>
+
+<p>
+For large construction and infrastructure projects,
+we can organize skilled and semi-skilled manpower
+according to project requirements.
+</p>
+
+<ul>
+<li>Bulk manpower sourcing</li>
+<li>Trade testing</li>
+<li>Project-based hiring</li>
+<li>Supervisor recruitment</li>
+<li>Phased deployment</li>
+</ul>
+
+</div>
+
+
+<div class="detail-card">
+
+<h3>
+Industrial & Manufacturing
+</h3>
+
+<p>
+Factories and manufacturing businesses can access
+workers for production, assembly, maintenance and
+technical operations.
+</p>
+
+<ul>
+<li>Production workforce</li>
+<li>Machine operators</li>
+<li>Maintenance technicians</li>
+<li>Quality personnel</li>
+<li>Industrial supervisors</li>
+</ul>
+
+</div>
+
+
+<div class="detail-card">
+
+<h3>
+Oil, Gas & Energy
+</h3>
+
+<p>
+Technical recruitment for energy and industrial
+projects requiring experienced skilled workers.
+</p>
+
+<ul>
+<li>Technical trades</li>
+<li>Welding & fabrication</li>
+<li>Mechanical workforce</li>
+<li>Electrical workforce</li>
+<li>Safety personnel</li>
+</ul>
+
+</div>
+
+
+<div class="detail-card">
+
+<h3>
+Hospitality & Services
+</h3>
+
+<p>
+Recruitment solutions for hotels, restaurants,
+resorts and hospitality businesses.
+</p>
+
+<ul>
+<li>Kitchen staff</li>
+<li>Chefs</li>
+<li>Service staff</li>
+<li>Housekeeping</li>
+<li>Front office professionals</li>
+</ul>
+
+</div>
+
+
+<div class="detail-card">
+
+<h3>
+Healthcare
+</h3>
+
+<p>
+Healthcare organizations can request candidates
+according to professional qualification and role.
+</p>
+
+<ul>
+<li>Nursing professionals</li>
+<li>Healthcare assistants</li>
+<li>Technicians</li>
+<li>Care workers</li>
+<li>Support personnel</li>
+</ul>
+
+</div>
+
+
+<div class="detail-card">
+
+<h3>
+Logistics & Transport
+</h3>
+
+<p>
+Recruitment support for businesses requiring drivers,
+warehouse teams and logistics personnel.
+</p>
+
+<ul>
+<li>Heavy vehicle drivers</li>
+<li>Warehouse workforce</li>
+<li>Forklift operators</li>
+<li>Storekeepers</li>
+<li>Logistics coordinators</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- WHY TAJ HR -->
+
+<section class="section">
+
+<div class="container two-col">
+
+<div class="dark-box">
+
+<h3>
+Why Employers Choose Taj HR Services
+</h3>
+
+<p>
+Our recruitment process focuses on candidate quality,
+communication and workforce requirements.
+</p>
+
+<ul>
+<li>International recruitment experience</li>
+<li>Government licensed recruitment agency</li>
+<li>ISO 9001:2015 quality system</li>
+<li>Candidate screening</li>
+<li>Trade assessment</li>
+<li>Bulk hiring capability</li>
+<li>Documentation coordination</li>
+<li>Deployment support</li>
+</ul>
+
+</div>
+
+
+<div class="content">
+
+<span class="label">
+Quality Recruitment
+</span>
+
+<h2>
+The right people for the right project
+</h2>
+
+<p>
+We understand that an employer's workforce requirements
+can change according to project size, location, trade,
+experience and deployment timeline.
+</p>
+
+<p>
+Our recruitment approach is therefore flexible and
+requirement-focused rather than one-size-fits-all.
+</p>
+
+<div class="check-list">
+
+<div>✓ Requirement-based sourcing</div>
+<div>✓ Candidate shortlist preparation</div>
+<div>✓ Skill and experience screening</div>
+<div>✓ Employer interview coordination</div>
+<div>✓ Documentation support</div>
+<div>✓ Deployment coordination</div>
+
+</div>
+
+<a href="employers.html"
+class="btn btn-dark">
+Discuss Your Requirement
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="section section-light">
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+Looking for Skilled Manpower?
+</h2>
+
+<p>
+Tell us your industry, job roles, required quantity,
+experience and destination. Our team can help you
+plan the recruitment process.
+</p>
+
+<a href="employers.html"
+class="btn btn-primary">
+Request Manpower
+</a>
+
+<a href="contact.html"
+class="btn btn-outline"
+style="margin-left:8px;">
+Contact Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="container footer-grid">
+
+<div>
+
+<div class="footer-logo">
+TAJ HR SERVICES
+</div>
+
+<p>
+Ethical international recruitment for employers
+and skilled professionals.
+</p>
+
+<p style="margin-top:15px;">
++91 96513 32002<br>
+info@tajhrservices.com
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Company</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="industries.html">Industries</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div>
+
+<h3>Employers</h3>
+
+<a href="employers.html">Employer Solutions</a>
+<a href="employers.html">Request Manpower</a>
+<a href="services.html">Recruitment Services</a>
+<a href="contact.html">Contact Team</a>
+
+</div>
+
+
+<div>
+
+<h3>Candidates</h3>
+
+<a href="jobs.html">Current Jobs</a>
+<a href="jobs.html">Submit Profile</a>
+<a href="resource
