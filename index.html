@@ -4,968 +4,1270 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Taj HR Services | Manpower Recruitment & HR Solutions</title>
+<title>Taj HR Services | Licensed Indian Manpower Partner</title>
 
-<meta name="description" content="Taj HR Services provides manpower recruitment, staffing and HR solutions for employers and job seekers.">
+<meta name="description" content="Taj HR Services - Government licensed Indian manpower recruitment partner providing pre-screened workers, recruitment, documentation, work permit support and deployment services.">
 
-<link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#172033;
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.header{
+    background:#fff;
+    border-bottom:1px solid #e7ebf0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    color:#0b3157;
+    line-height:1;
+}
+
+.logo span{
+    display:block;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-top:5px;
+    color:#d19a25;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:23px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav a:hover{
+    color:#d19a25;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:6px;
+    font-weight:700;
+    border:1px solid transparent;
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:#d19a25;
+    color:#fff;
+}
+
+.btn-dark{
+    background:#0b3157;
+    color:#fff;
+}
+
+.btn-outline{
+    border-color:#d19a25;
+    color:#0b3157;
+    background:#fff;
+}
+
+.hero{
+    background:linear-gradient(120deg,#071f38,#0d4169);
+    color:#fff;
+    padding:95px 0 85px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.4fr .8fr;
+    gap:60px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid rgba(255,255,255,.35);
+    padding:8px 14px;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.08;
+    max-width:750px;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:#e4b54d;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:18px;
+    color:#d9e4ef;
+    margin-bottom:28px;
+}
+
+.hero-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin:25px 0;
+}
+
+.hero-list div{
+    color:#e7eef5;
+    font-size:14px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.hero-card{
+    background:#fff;
+    color:#172033;
+    padding:32px;
+    border-radius:14px;
+    box-shadow:0 20px 60px rgba(0,0,0,.22);
+}
+
+.hero-card h3{
+    font-size:25px;
+    margin-bottom:15px;
+    color:#0b3157;
+}
+
+.hero-card p{
+    color:#657286;
+    font-size:15px;
+}
+
+.trust{
+    background:#f7f9fb;
+    padding:28px 0;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.trust-item{
+    text-align:center;
+    padding:15px;
+}
+
+.trust-item strong{
+    display:block;
+    font-size:30px;
+    color:#0b3157;
+}
+
+.trust-item span{
+    color:#657286;
+    font-size:14px;
+}
+
+.section{
+    padding:85px 0;
+}
+
+.section-light{
+    background:#f7f9fb;
+}
+
+.section-title{
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 45px;
+}
+
+.section-label{
+    color:#c48e20;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    color:#0b3157;
+    font-size:38px;
+    line-height:1.15;
+    margin:10px 0 15px;
+}
+
+.section-title p{
+    color:#657286;
+}
+
+.two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.content h2{
+    color:#0b3157;
+    font-size:38px;
+    line-height:1.2;
+    margin:10px 0 20px;
+}
+
+.content p{
+    color:#657286;
+    margin-bottom:15px;
+}
+
+.checks{
+    margin:25px 0;
+    display:grid;
+    gap:11px;
+}
+
+.checks div{
+    font-weight:600;
+}
+
+.checks div::first-letter{
+    color:#c48e20;
+}
+
+.info-box{
+    background:#0b3157;
+    color:#fff;
+    padding:40px;
+    border-radius:15px;
+}
+
+.info-box h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.info-box p{
+    color:#dce7f1;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid #e4e9ef;
+    border-radius:12px;
+    padding:28px;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+.card-icon{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#0b3157;
+    font-size:21px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#657286;
+    font-size:14px;
+}
+
+.card a{
+    display:inline-block;
+    color:#b77e12;
+    font-weight:700;
+    margin-top:15px;
+}
+
+.route-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.route{
+    background:#fff;
+    border:1px solid #e2e7ed;
+    padding:22px;
+    border-radius:10px;
+}
+
+.route strong{
+    color:#0b3157;
+}
+
+.route span{
+    display:block;
+    color:#b77e12;
+    font-size:13px;
+    margin-top:5px;
+}
+
+.industry-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.industry{
+    padding:28px;
+    border-radius:12px;
+    background:#0b3157;
+    color:#fff;
+}
+
+.industry h3{
+    margin-bottom:8px;
+}
+
+.industry p{
+    color:#d7e4ee;
+    font-size:14px;
+}
+
+.destination-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.destination{
+    border:1px solid #e2e7ed;
+    background:#fff;
+    border-radius:9px;
+    padding:20px;
+}
+
+.destination strong{
+    color:#0b3157;
+    display:block;
+}
+
+.destination span{
+    color:#718094;
+    font-size:13px;
+}
+
+.testimonial{
+    background:#0b3157;
+    color:#fff;
+    padding:45px;
+    border-radius:15px;
+    max-width:900px;
+    margin:auto;
+}
+
+.testimonial p{
+    font-size:19px;
+    color:#e3edf5;
+    font-style:italic;
+}
+
+.testimonial h4{
+    margin-top:25px;
+    color:#e4b54d;
+}
+
+.credential-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.credential{
+    border:1px solid #e2e7ed;
+    border-radius:12px;
+    padding:25px;
+    text-align:center;
+}
+
+.credential h3{
+    color:#0b3157;
+    margin-bottom:8px;
+}
+
+.credential p{
+    color:#657286;
+    font-size:14px;
+}
+
+.award-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.award{
+    background:#fff;
+    border:1px solid #e2e7ed;
+    border-radius:12px;
+    padding:25px;
+}
+
+.award .year{
+    color:#c48e20;
+    font-weight:800;
+}
+
+.award h3{
+    color:#0b3157;
+    margin:8px 0;
+}
+
+.employer-candidate{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.audience{
+    padding:40px;
+    border-radius:14px;
+    background:#0b3157;
+    color:#fff;
+}
+
+.audience.light{
+    background:#f1f4f7;
+    color:#172033;
+}
+
+.audience h2{
+    margin-bottom:15px;
+}
+
+.audience p{
+    margin-bottom:20px;
+    color:#dce7f1;
+}
+
+.audience.light p{
+    color:#657286;
+}
+
+.audience ul{
+    padding-left:20px;
+    margin-bottom:25px;
+}
+
+.faq{
+    max-width:900px;
+    margin:auto;
+}
+
+details{
+    border-bottom:1px solid #dfe5eb;
+    padding:18px 0;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:700;
+    color:#0b3157;
+}
+
+details p{
+    color:#657286;
+    margin-top:12px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:35px;
+}
+
+.contact-info{
+    background:#0b3157;
+    color:#fff;
+    border-radius:14px;
+    padding:35px;
+}
+
+.contact-info h2{
+    font-size:32px;
+    margin:10px 0 20px;
+}
+
+.contact-info p{
+    color:#dce7f1;
+}
+
+.contact-detail{
+    margin-top:25px;
+}
+
+.contact-detail strong{
+    display:block;
+    color:#e4b54d;
+}
+
+.contact-detail span{
+    display:block;
+    margin-top:5px;
+}
+
+.form-box{
+    background:#fff;
+    border:1px solid #e2e7ed;
+    border-radius:14px;
+    padding:35px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+input,textarea{
+    width:100%;
+    padding:14px;
+    border:1px solid #d7dee6;
+    border-radius:6px;
+    font:inherit;
+    margin-bottom:15px;
+}
+
+textarea{
+    min-height:130px;
+}
+
+.full{
+    grid-column:1/-1;
+}
+
+.footer{
+    background:#071d32;
+    color:#fff;
+    padding:65px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:35px;
+}
+
+.footer h3{
+    color:#e4b54d;
+    margin-bottom:15px;
+}
+
+.footer p{
+    color:#bdcbd8;
+    font-size:14px;
+}
+
+.footer a{
+    display:block;
+    color:#bdcbd8;
+    margin:8px 0;
+    font-size:14px;
+}
+
+.footer a:hover{
+    color:#fff;
+}
+
+.footer-logo{
+    font-size:25px;
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:45px;
+    padding-top:20px;
+    text-align:center;
+    color:#9fb0c0;
+    font-size:13px;
+}
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:999;
+    background:#168c45;
+    color:#fff;
+    padding:14px 20px;
+    border-radius:40px;
+    font-weight:800;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+@media(max-width:900px){
+
+    .nav{
+        display:none;
+    }
+
+    .hero-grid,
+    .two-col,
+    .contact-grid,
+    .employer-candidate{
+        grid-template-columns:1fr;
+    }
+
+    .cards,
+    .route-grid,
+    .industry-grid,
+    .award-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .destination-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .credential-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .trust-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:65px 0;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero-list{
+        grid-template-columns:1fr;
+    }
+
+    .cards,
+    .route-grid,
+    .industry-grid,
+    .award-grid,
+    .destination-grid,
+    .credential-grid,
+    .trust-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section{
+        padding:60px 0;
+    }
+
+    .section-title h2,
+    .content h2{
+        font-size:30px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .full{
+        grid-column:auto;
+    }
+
+    .header-button{
+        display:none;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
-<header class="main-header">
+<header class="header">
+<div class="container header-inner">
 
-    <div class="container header-content">
+<a href="index.html" class="logo">
+TAJ
+<span>HR SERVICES</span>
+</a>
 
-        <a href="index.html" class="logo">
-            <span class="logo-main">TAJ</span>
-            <span class="logo-sub">HR SERVICES</span>
-        </a>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="industries.html">Industries</a>
+<a href="resources.html">Resources</a>
+<a href="employers.html">Employers</a>
+<a href="jobs.html">Careers</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-        <nav class="main-nav">
+<a href="https://wa.me/919651332002"
+   class="btn btn-primary"
+   target="_blank">
+WhatsApp
+</a>
 
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="employers.html">Employers</a>
-            <a href="contact.html">Contact</a>
-
-        </nav>
-
-        <a
-            href="https://wa.me/919651332002"
-            class="header-button"
-            target="_blank"
-        >
-            WhatsApp
-        </a>
-
-    </div>
-
+</div>
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
-<section class="hero home-hero">
+<section class="hero">
 
-    <div class="container hero-content">
+<div class="container hero-grid">
 
-        <div class="hero-text">
+<div>
 
-            <span class="hero-tag">
-                PROFESSIONAL MANPOWER SOLUTIONS
-            </span>
+<span class="badge">
+Licensed Indian Manpower Partner
+</span>
 
-            <h1>
-                Connecting
-                <span>Talent With Opportunity</span>
-            </h1>
+<h1>
+Hire pre-screened Indian workers
+<span>with replacement cover.</span>
+</h1>
 
-            <p>
-                Taj HR Services provides professional manpower
-                recruitment and workforce solutions for employers
-                and job seekers across India and international
-                markets.
-            </p>
+<p>
+Get trade-tested, document-ready workers with
+work-permit file support, deployment planning,
+and 90-day replacement support for employer confidence.
+</p>
 
-            <div class="hero-buttons">
+<div class="hero-list">
 
-                <a
-                    href="jobs.html"
-                    class="primary-button"
-                >
-                    Find Jobs
-                </a>
+<div>✓ Shortlist-ready CVs with trade checks</div>
+<div>✓ Demand letter & permit-file guidance</div>
+<div>✓ Replacement support during first 90 days</div>
+<div>✓ Government Licensed Recruitment Agency</div>
 
-                <a
-                    href="employers.html"
-                    class="secondary-button"
-                >
-                    Hire Manpower
-                </a>
+</div>
 
-            </div>
+<div class="hero-buttons">
 
-        </div>
+<a href="employers.html" class="btn btn-primary">
+Request Employer Proposal
+</a>
 
+<a href="contact.html" class="btn btn-outline">
+Contact Us
+</a>
 
-        <div class="hero-card">
+</div>
 
-            <div class="hero-card-icon">
-                👥
-            </div>
-
-            <h3>
-                Your Recruitment Partner
-            </h3>
-
-            <p>
-                Skilled, semi-skilled, technical and
-                professional manpower recruitment support.
-            </p>
-
-            <a href="contact.html">
-                Talk To Our Team →
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
+</div>
 
 
-<!-- ================= TRUST STATS ================= -->
+<div class="hero-card">
 
-<section class="stats-section">
+<h3>
+Taj HR Services
+</h3>
 
-    <div class="container stats-grid">
+<p>
+Professional international manpower recruitment
+and workforce solutions from India.
+</p>
 
-        <div class="stat-item">
-            <strong>10+</strong>
-            <span>Years Experience</span>
-        </div>
+<div class="checks">
 
-        <div class="stat-item">
-            <strong>23+</strong>
-            <span>Recruitment Destinations</span>
-        </div>
+<div>✓ Govt. Licensed</div>
+<div>✓ ISO 9001:2015</div>
+<div>✓ 90-Day Replacement Support</div>
+<div>✓ Permit File Support</div>
 
-        <div class="stat-item">
-            <strong>1000+</strong>
-            <span>Candidates Supported</span>
-        </div>
+</div>
 
-        <div class="stat-item">
-            <strong>100+</strong>
-            <span>Recruitment Requirements</span>
-        </div>
+<a href="employers.html" class="btn btn-dark">
+Hire Manpower
+</a>
 
-    </div>
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= ABOUT INTRO ================= -->
+<!-- TRUST -->
+
+<section class="trust">
+
+<div class="container trust-grid">
+
+<div class="trust-item">
+<strong>50+</strong>
+<span>Partner Companies</span>
+</div>
+
+<div class="trust-item">
+<strong>90</strong>
+<span>Day Replacement Cover</span>
+</div>
+
+<div class="trust-item">
+<strong>24h</strong>
+<span>Proposal Response</span>
+</div>
+
+<div class="trust-item">
+<strong>10K+</strong>
+<span>Candidate Database</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CLIENTS -->
 
 <section class="section">
 
-    <div class="container two-column">
+<div class="container">
 
-        <div class="section-content">
+<div class="section-title">
 
-            <span class="section-tag">
-                ABOUT TAJ HR SERVICES
-            </span>
+<span class="section-label">
+Trusted By Industry Leaders
+</span>
 
-            <h2>
-                Building Reliable Connections
-                Between Employers & Talent
-            </h2>
+<h2>
+Our Clients
+</h2>
 
-            <p>
-                Taj HR Services works to connect employers
-                with suitable manpower while helping candidates
-                discover relevant employment opportunities.
-            </p>
+<p>
+Trusted by companies across Europe and the Middle East.
+</p>
 
-            <p>
-                Our recruitment approach focuses on understanding
-                employer requirements, sourcing suitable candidates,
-                screening profiles and coordinating the recruitment
-                process.
-            </p>
+</div>
 
-            <div class="check-list">
+<div class="cards">
 
-                <div>✓ Employer-focused recruitment</div>
-                <div>✓ Skilled & semi-skilled manpower</div>
-                <div>✓ Candidate sourcing & screening</div>
-                <div>✓ Recruitment coordination</div>
+<div class="card">
+<h3>Bechtel</h3>
+<p>International engineering and construction partner.</p>
+</div>
 
-            </div>
+<div class="card">
+<h3>Hyundai</h3>
+<p>Global engineering and infrastructure organization.</p>
+</div>
 
-            <a
-                href="about.html"
-                class="primary-button"
-            >
-                Learn More About Us
-            </a>
+<div class="card">
+<h3>DAEWOO</h3>
+<p>International industrial and construction organization.</p>
+</div>
 
-        </div>
+<div class="card">
+<h3>Doosan</h3>
+<p>Global industrial and engineering company.</p>
+</div>
 
+<div class="card">
+<h3>SNC-Lavalin</h3>
+<p>Engineering and infrastructure organization.</p>
+</div>
 
-        <div class="section-image">
+<div class="card">
+<h3>Stork</h3>
+<p>Industrial services and engineering organization.</p>
+</div>
 
-            <div class="image-placeholder">
+</div>
 
-                <span>TAJ HR</span>
+<p style="text-align:center;margin-top:25px;color:#657286;">
+And many more companies across Europe and the Middle East.
+</p>
 
-                <small>
-                    Manpower Recruitment
-                </small>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- WHY CHOOSE US -->
 
-<section class="section light-section">
+<section class="section section-light">
 
-    <div class="container">
+<div class="container two-col">
 
-        <div class="section-heading">
+<div class="content">
 
-            <span class="section-tag">
-                OUR SERVICES
-            </span>
+<span class="section-label">
+Why Choose Us
+</span>
 
-            <h2>
-                Complete Recruitment Support
-            </h2>
+<h2>
+A partner you can trust
+</h2>
 
-            <p>
-                Recruitment solutions designed around
-                employer and candidate requirements.
-            </p>
+<p>
+For over a decade, Taj HR Services has worked as a bridge
+between talented professionals and leading organizations.
+</p>
 
-        </div>
+<p>
+Our approach focuses on ethical recruitment, quality service,
+candidate preparation and employer requirements.
+</p>
 
+<div class="checks">
 
-        <div class="service-grid">
+<div>✓ Ethical and transparent recruitment</div>
+<div>✓ Licensed manpower consultant</div>
+<div>✓ ISO 9001:2015 quality management</div>
+<div>✓ Fast mobilization with end-to-end support</div>
+<div>✓ European labor compliance support</div>
+<div>✓ Dedicated account management</div>
 
+</div>
 
-            <div class="service-card">
+<a href="about.html" class="btn btn-dark">
+Learn More About Our Story
+</a>
 
-                <div class="service-icon">👥</div>
-
-                <h3>
-                    Manpower Recruitment
-                </h3>
-
-                <p>
-                    Sourcing and recruitment support for
-                    skilled, semi-skilled and general manpower.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">🔎</div>
-
-                <h3>
-                    Candidate Screening
-                </h3>
-
-                <p>
-                    Candidate profiles can be reviewed
-                    according to employer requirements.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="info-box">
 
-                <div class="service-icon">🧪</div>
+<h3>
+Our Commitment
+</h3>
 
-                <h3>
-                    Trade Testing
-                </h3>
+<p>
+We believe in transparent, ethical recruitment that benefits
+employers and candidates.
+</p>
 
-                <p>
-                    Practical skill assessment support
-                    for relevant technical trades.
-                </p>
+<div class="checks" style="margin-top:25px;">
+<div>✓ Transparent Pricing</div>
+<div>✓ No Hidden Fees</div>
+<div>✓ EU Compliance</div>
+<div>✓ 24/7 Support</div>
+</div>
 
-            </div>
+</div>
 
-
-            <div class="service-card">
-
-                <div class="service-icon">📄</div>
-
-                <h3>
-                    Documentation Support
-                </h3>
-
-                <p>
-                    Recruitment documentation and
-                    process coordination support.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">✈️</div>
-
-                <h3>
-                    Deployment Support
-                </h3>
-
-                <p>
-                    Coordination support through the
-                    recruitment and deployment process.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <div class="service-icon">🏢</div>
-
-                <h3>
-                    Bulk Hiring
-                </h3>
-
-                <p>
-                    Workforce sourcing support for
-                    projects and large manpower requirements.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="center-button">
-
-            <a
-                href="services.html"
-                class="primary-button"
-            >
-                View All Services
-            </a>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= INDUSTRIES ================= -->
+<!-- SERVICES -->
 
 <section class="section">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="section-title">
 
-            <span class="section-tag">
-                INDUSTRIES
-            </span>
+<span class="section-label">
+What We Do
+</span>
 
-            <h2>
-                Manpower Across Multiple Industries
-            </h2>
+<h2>
+From demand letter to worker on-site
+</h2>
 
-            <p>
-                Recruitment requirements can vary by
-                industry, project and skill category.
-            </p>
+<p>
+Every step of overseas hiring — tested candidates,
+permits, pre-departure preparation and aftercare.
+</p>
 
-        </div>
-
-
-        <div class="industry-grid">
-
-            <div class="industry-card">
-                🏗️
-                <h3>Construction</h3>
-            </div>
-
-            <div class="industry-card">
-                🏭
-                <h3>Manufacturing</h3>
-            </div>
-
-            <div class="industry-card">
-                ⚡
-                <h3>Electrical</h3>
-            </div>
-
-            <div class="industry-card">
-                🔧
-                <h3>Mechanical</h3>
-            </div>
-
-            <div class="industry-card">
-                🔥
-                <h3>Welding & Fabrication</h3>
-            </div>
-
-            <div class="industry-card">
-                🚚
-                <h3>Logistics</h3>
-            </div>
-
-            <div class="industry-card">
-                🏨
-                <h3>Hospitality</h3>
-            </div>
-
-            <div class="industry-card">
-                🛠️
-                <h3>Industrial Services</h3>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+</div>
 
 
-<!-- ================= DESTINATIONS ================= -->
+<div class="cards">
 
-<section class="section light-section">
+<div class="card">
+<div class="card-icon">🧪</div>
+<h3>Trade Testing & Candidate Screening</h3>
+<p>
+Practical trade testing, verified work history,
+police clearance and shortlist-ready profiles.
+</p>
+<a href="services.html">Full Details →</a>
+</div>
 
-    <div class="container">
+<div class="card">
+<div class="card-icon">👥</div>
+<h3>Bulk & Project Hiring</h3>
+<p>
+Phased mobilization for construction,
+infrastructure and manufacturing projects.
+</p>
+<a href="services.html">Full Details →</a>
+</div>
 
-        <div class="section-heading">
+<div class="card">
+<div class="card-icon">📄</div>
+<h3>European Work Permit Processing</h3>
+<p>
+Support for permit pathways and qualification
+recognition requirements.
+</p>
+<a href="services.html">Full Details →</a>
+</div>
 
-            <span class="section-tag">
-                RECRUITMENT DESTINATIONS
-            </span>
+<div class="card">
+<div class="card-icon">📋</div>
+<h3>Documentation & Compliance</h3>
+<p>
+Employment contracts, demand letters, apostille
+and documentation coordination.
+</p>
+<a href="services.html">Full Details →</a>
+</div>
 
-            <h2>
-                Connecting Candidates With
-                International Opportunities
-            </h2>
+<div class="card">
+<div class="card-icon">🎓</div>
+<h3>Pre-Departure Training</h3>
+<p>
+Orientation, destination-language basics,
+workplace safety and cultural preparation.
+</p>
+<a href="services.html">Full Details →</a>
+</div>
 
-            <p>
-                Recruitment requirements may be available
-                across multiple international destinations.
-            </p>
+<div class="card">
+<div class="card-icon">✈️</div>
+<h3>Deployment & Arrival Support</h3>
+<p>
+Airport coordination, registration guidance
+and post-arrival check-ins.
+</p>
+<a href="services.html">Full Details →</a>
+</div>
 
-        </div>
+</div>
 
-
-        <div class="country-grid">
-
-            <div class="country-card">
-                🇸🇦
-                <strong>Saudi Arabia</strong>
-            </div>
-
-            <div class="country-card">
-                🇦🇪
-                <strong>UAE</strong>
-            </div>
-
-            <div class="country-card">
-                🇶🇦
-                <strong>Qatar</strong>
-            </div>
-
-            <div class="country-card">
-                🇰🇼
-                <strong>Kuwait</strong>
-            </div>
-
-            <div class="country-card">
-                🇴🇲
-                <strong>Oman</strong>
-            </div>
-
-            <div class="country-card">
-                🇧🇭
-                <strong>Bahrain</strong>
-            </div>
-
-            <div class="country-card">
-                🇮🇳
-                <strong>India</strong>
-            </div>
-
-            <div class="country-card">
-                🌍
-                <strong>Other Destinations</strong>
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= JOBS ================= -->
+<!-- POPULAR ROUTES -->
+
+<section class="section section-light">
+
+<div class="container">
+
+<div class="section-title">
+
+<span class="section-label">
+Most Requested
+</span>
+
+<h2>
+Popular Hiring Routes
+</h2>
+
+</div>
+
+<div class="route-grid">
+
+<div class="route">
+<strong>Electricians → Germany</strong>
+<span>6 weeks</span>
+</div>
+
+<div class="route">
+<strong>Welders → Germany</strong>
+<span>6 weeks</span>
+</div>
+
+<div class="route">
+<strong>Construction → Poland</strong>
+<span>5 weeks</span>
+</div>
+
+<div class="route">
+<strong>Nurses → Germany</strong>
+<span>10 weeks</span>
+</div>
+
+<div class="route">
+<strong>Electricians → Ireland</strong>
+<span>8 weeks</span>
+</div>
+
+<div class="route">
+<strong>IT Workers → Canada</strong>
+<span>12 weeks</span>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:30px;">
+<a href="employers.html" class="btn btn-primary">
+Submit a Demand Letter
+</a>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INDUSTRIES -->
 
 <section class="section">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="section-title">
 
-            <span class="section-tag">
-                CURRENT OPPORTUNITIES
-            </span>
+<span class="section-label">
+Industry Expertise
+</span>
 
-            <h2>
-                Latest Job Opportunities
-            </h2>
+<h2>
+Industries We Serve
+</h2>
 
-            <p>
-                Explore available positions and apply
-                according to your skills and experience.
-            </p>
+<p>
+Specialized recruitment solutions tailored to sector,
+project and workforce requirements.
+</p>
 
-        </div>
+</div>
 
+<div class="industry-grid">
 
-        <div class="job-grid">
+<div class="industry">
+<h3>Construction</h3>
+<p>Skilled tradesmen, engineers and project managers.</p>
+</div>
 
+<div class="industry">
+<h3>Manufacturing</h3>
+<p>Machine operators, automotive workers and production staff.</p>
+</div>
 
-            <div class="job-card">
+<div class="industry">
+<h3>Hospitality</h3>
+<p>Chefs, servers and hotel management professionals.</p>
+</div>
 
-                <div class="job-country">
-                    🇸🇦 Saudi Arabia
-                </div>
+<div class="industry">
+<h3>Healthcare</h3>
+<p>Nurses, technicians and support staff.</p>
+</div>
 
-                <h3>
-                    Electrician
-                </h3>
+<div class="industry">
+<h3>Logistics</h3>
+<p>Truck drivers, warehouse staff and coordinators.</p>
+</div>
 
-                <p>
-                    Skilled electrician recruitment opportunity.
-                </p>
+<div class="industry">
+<h3>IT & Technology</h3>
+<p>Software developers, engineers and IT specialists.</p>
+</div>
 
-                <a href="job-electrician-saudi.html">
-                    View Details →
-                </a>
+</div>
 
-            </div>
-
-
-            <div class="job-card">
-
-                <div class="job-country">
-                    🇸🇦 Saudi Arabia
-                </div>
-
-                <h3>
-                    Welder
-                </h3>
-
-                <p>
-                    Recruitment opportunity for experienced
-                    welding professionals.
-                </p>
-
-                <a href="job-welder-saudi.html">
-                    View Details →
-                </a>
-
-            </div>
-
-
-            <div class="job-card">
-
-                <div class="job-country">
-                    🇦🇪 UAE
-                </div>
-
-                <h3>
-                    Plumber
-                </h3>
-
-                <p>
-                    Plumbing professionals required for
-                    current recruitment opportunities.
-                </p>
-
-                <a href="job-plumber-uae.html">
-                    View Details →
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="center-button">
-
-            <a
-                href="jobs.html"
-                class="primary-button"
-            >
-                View All Jobs
-            </a>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= WHY US ================= -->
-
-<section class="section light-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-tag">
-                WHY TAJ HR SERVICES
-            </span>
-
-            <h2>
-                A Recruitment Partner
-                You Can Work With
-            </h2>
-
-        </div>
-
-
-        <div class="why-grid">
-
-
-            <div class="why-card">
-
-                <span>01</span>
-
-                <h3>
-                    Requirement Understanding
-                </h3>
-
-                <p>
-                    We focus on understanding the employer's
-                    actual manpower and skill requirements.
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <span>02</span>
-
-                <h3>
-                    Candidate Sourcing
-                </h3>
-
-                <p>
-                    Candidate profiles can be sourced
-                    according to position and requirements.
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <span>03</span>
-
-                <h3>
-                    Recruitment Coordination
-                </h3>
-
-                <p>
-                    We support communication and coordination
-                    during the recruitment process.
-                </p>
-
-            </div>
-
-
-            <div class="why-card">
-
-                <span>04</span>
-
-                <h3>
-                    Candidate Support
-                </h3>
-
-                <p>
-                    Candidates receive guidance regarding
-                    available recruitment opportunities.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= EMPLOYER CTA ================= -->
-
-<section class="employer-section section">
-
-    <div class="container employer-content">
-
-        <div>
-
-            <span class="section-tag">
-                FOR EMPLOYERS
-            </span>
-
-            <h2>
-                Looking For Reliable Manpower?
-            </h2>
-
-            <p>
-                Tell us about your workforce requirement,
-                positions and manpower quantity.
-            </p>
-
-        </div>
-
-        <a
-            href="employers.html"
-            class="primary-button"
-        >
-            Submit Requirement
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CANDIDATE CTA ================= -->
-
-<section class="candidate-section section">
-
-    <div class="container candidate-content">
-
-        <div>
-
-            <span class="section-tag">
-                FOR JOB SEEKERS
-            </span>
-
-            <h2>
-                Looking For Your Next Opportunity?
-            </h2>
-
-            <p>
-                Explore current jobs or contact our team
-                regarding your profile.
-            </p>
-
-        </div>
-
-        <a
-            href="jobs.html"
-            class="primary-button"
-        >
-            Find Jobs
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FAQ ================= -->
-
-<section class="section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span class="section-tag">
-                FAQ
-            </span>
-
-            <h2>
-                Frequently Asked Questions
-            </h2>
-
-        </div>
-
-
-        <div class="faq-list">
-
-
-            <details>
-
-                <summary>
-                    How can I apply for a job?
-                </summary>
-
-                <p>
-                    Visit the Jobs section, select a suitable
-                    position and use the application option
-                    provided on the job detail page.
-                </p>
-
-            </details>
-
-
-            <details>
-
-                <summary>
-                    How can an employer hire manpower?
-                </summary>
-
-                <p>
-                    Employers can submit their manpower
-                    requirement through the Employers page
-                    or contact our team directly.
-                </p>
-
-            </details>
-
-
-            <details>
-
-                <summary>
-                    Can I contact Taj HR Services on WhatsApp?
-                </summary>
-
-                <p>
-                    Yes. You can contact us directly on
-                    WhatsApp at +91 96513 32002.
-                </p>
-
-            </details>
-
-
-            <details>
-
-                <summary>
-                    How can I submit my CV?
-                </summary>
-
-                <p>
-                    Candidates can contact our team through
-                    WhatsApp or email and share their profile
-                    for relevant opportunities.
-                </p>
-
-            </details>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT CTA ================= -->
-
-<section class="section light-section">
-
-    <div class="container contact-banner">
-
-        <div>
-
-            <span class="section-tag">
-                GET IN TOUCH
-            </span>
-
-            <h2>
-                Let's Discuss Your Requirement
-            </h2>
-
-            <p>
-                Employers and candidates can contact
-                Taj HR Services directly.
-            </p>
-
-        </div>
-
-
-        <div class="contact-buttons">
-
-            <a
-                href="https://wa.me/919651332002"
-                class="primary-button"
-                target="_blank"
-            >
-                WhatsApp Us
-            </a>
-
-            <a
-                href="tel:+919651332002"
-                class="secondary-button"
-            >
-                Call Us
-            </a>
-
-            <a
-                href="mailto:info@tajhrservices.com"
-                class="secondary-button"
-            >
-                Email Us
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-    <div class="container footer-grid">
-
-
-        <div>
-
-            <div class="footer-logo">
-                TAJ HR SERVICES
-            </div>
-
-            <p>
-                Professional manpower recruitment
-                and HR solutions for employers and
-                job seekers.
-            </p>
-
-            <p style="margin-top:15px;">
-                📱 +91 96513 32002<br>
-                ✉️ info@tajhrservices.com
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h3>
-                Company
-            </h3>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About Us
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a href="contact.html">
-     
+<!-- DESTINATIONS -->
+
+<section class="section section-light">
+
+<div class="container">
+
+<div class="section-title">
+
+<span class="section-label">
+Our Destinations
+</span>
+
+<h2>
+Recruiting for 23 Countries
+</h2>
+
+<p>
+Connecting employers across Europe, Canada and beyond
+with skilled professionals.
+</p>
+
+</div>
+
+<div class="destination-grid">
+
+<div class="destination"><strong>Germany</strong><span>1M+ vacancies</span></div>
+<div class="destination"><strong>Poland</strong><span>150K+ vacancies</span></div>
+<div class="destination"><strong>Romania</strong><span>200K+ vacancies</span></div>
+<div class="destination"><strong>Hungary</strong><span>100K+ vacancies</span></div>
+<div class="destination"><strong>Portugal</strong><span>80K+ vacancies</span></div>
+<div class="destination"><strong>Lithuania</strong><span>50K+ vacancies</span></div>
+<div class="destination"><strong>Czech Republic</strong><span>120K+ vacancies</span></div>
+<div class="destination"><strong>Croatia</strong><span>60K+ vacancies</span></div>
+<div class="destination"><strong>Greece</strong><span>70K+ vacancies</span></div>
+<div class="destination"><strong>Ireland</strong><span>90K+ vacancies</span></div>
+<div class="destination"><strong>United Kingdom</strong><span>250K+ vacancies</span></div>
+<div class="destination"><strong>Netherlands</strong><span>180K+ vacancies</span></div>
+<div class="destination"><strong>Sweden</strong><span>100K+ vacancies</span></div>
+<div class="destination"><strong>
