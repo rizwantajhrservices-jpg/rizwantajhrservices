@@ -24,7 +24,7 @@
   .nav-links a:hover,.nav-links a.active{color:var(--gold);}
   .nav-cta{background:var(--gold);color:var(--navy);padding:10px 18px;border-radius:4px;font-weight:700;font-size:13.5px;white-space:nowrap;}
 
-  .page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:70px 24px;text-align:center;}
+  .page-hero{background:linear-gradient(135deg,rgba(11,31,58,.93) 0%,rgba(18,49,92,.93) 100%),url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;color:#fff;padding:70px 24px;text-align:center;}
   .page-hero .eyebrow{color:var(--gold-light);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:14px;}
   .page-hero h1{font-size:34px;font-weight:800;max-width:780px;margin:0 auto 16px;}
   .page-hero p{font-size:16px;color:#d8dde8;max-width:700px;margin:0 auto;}
@@ -181,36 +181,38 @@
       <h2>Register Now</h2>
       <p>Share your details and our team will get in touch with matching opportunities.</p>
     </div>
-    <form onsubmit="event.preventDefault(); alert('Thank you for registering! Our team will contact you soon.');">
+    <form id="career-form">
       <div class="form-row">
         <label>Full Name *</label>
-        <input type="text" required>
+        <input type="text" name="name" required>
       </div>
       <div class="form-row">
         <label>Email Address *</label>
-        <input type="email" required>
+        <input type="email" name="email" required>
       </div>
       <div class="form-row">
         <label>Phone Number *</label>
-        <input type="tel" required>
+        <input type="tel" name="phone" required>
       </div>
       <div class="form-row">
         <label>Trade / Skill</label>
-        <input type="text" placeholder="e.g. Electrician, Welder, Driver">
+        <input type="text" name="trade_skill" placeholder="e.g. Electrician, Welder, Driver">
       </div>
       <div class="form-row">
         <label>Years of Experience</label>
-        <input type="text" placeholder="e.g. 5 years">
+        <input type="text" name="experience" placeholder="e.g. 5 years">
       </div>
       <div class="form-row">
         <label>Preferred Country</label>
-        <input type="text" placeholder="e.g. Germany, Poland, Canada">
+        <input type="text" name="preferred_country" placeholder="e.g. Germany, Poland, Canada">
       </div>
       <div class="form-row">
         <label>Message</label>
-        <textarea placeholder="Tell us about your experience and preferences..."></textarea>
+        <textarea name="message" placeholder="Tell us about your experience and preferences..."></textarea>
       </div>
-      <button type="submit" class="submit-btn">Register Now</button>
+      <input type="hidden" name="_subject" value="New Candidate Registration - TAJ HR Services">
+      <button type="submit" class="submit-btn" id="career-submit-btn">Register Now</button>
+      <p id="career-form-status" style="margin-top:14px;font-size:14px;text-align:center;"></p>
     </form>
   </div>
 </section>
@@ -254,6 +256,39 @@
   <div class="footer-bottom">© 2026 TAJ HR Services. All rights reserved.</div>
 </footer>
 
+<script>
+  const careerForm = document.getElementById('career-form');
+  const careerStatus = document.getElementById('career-form-status');
+  const careerBtn = document.getElementById('career-submit-btn');
+
+  careerForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    careerBtn.disabled = true;
+    careerBtn.textContent = 'Sending...';
+    careerStatus.textContent = '';
+
+    fetch('https://formspree.io/f/xppzznyk', {
+      method: 'POST',
+      body: new FormData(careerForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        careerStatus.style.color = '#1a7a3a';
+        careerStatus.textContent = 'Thank you for registering! Our team will contact you soon.';
+        careerForm.reset();
+      } else {
+        careerStatus.style.color = '#c0392b';
+        careerStatus.textContent = 'Something went wrong. Please try again or email us directly.';
+      }
+    }).catch(() => {
+      careerStatus.style.color = '#c0392b';
+      careerStatus.textContent = 'Something went wrong. Please try again or email us directly.';
+    }).finally(() => {
+      careerBtn.disabled = false;
+      careerBtn.textContent = 'Register Now';
+    });
+  });
+</script>
+
 </body>
 </html>
-
