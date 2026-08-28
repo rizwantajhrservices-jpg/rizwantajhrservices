@@ -24,7 +24,7 @@
   .nav-links a:hover,.nav-links a.active{color:var(--gold);}
   .nav-cta{background:var(--gold);color:var(--navy);padding:10px 18px;border-radius:4px;font-weight:700;font-size:13.5px;white-space:nowrap;}
 
-  .page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:60px 24px;text-align:center;}
+  .page-hero{background:linear-gradient(135deg,rgba(11,31,58,.93) 0%,rgba(18,49,92,.93) 100%),url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;color:#fff;padding:60px 24px;text-align:center;}
   .page-hero .eyebrow{color:var(--gold-light);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:14px;}
   .page-hero h1{font-size:34px;font-weight:800;max-width:760px;margin:0 auto 16px;}
   .page-hero p{font-size:16px;color:#d8dde8;max-width:760px;margin:0 auto;}
@@ -116,32 +116,34 @@
       </div>
     </div>
 
-    <form onsubmit="event.preventDefault(); alert('Thank you! We will get back to you shortly.');">
+    <form id="contact-form">
       <div class="toggle-row">
         <button type="button" class="active">I'm an Employer</button>
         <button type="button">I'm a Job Seeker</button>
       </div>
       <div class="form-row">
         <label>Full Name *</label>
-        <input type="text" required>
+        <input type="text" name="name" required>
       </div>
       <div class="form-row">
         <label>Email Address *</label>
-        <input type="email" required>
+        <input type="email" name="email" required>
       </div>
       <div class="form-row">
         <label>Phone Number</label>
-        <input type="tel">
+        <input type="tel" name="phone">
       </div>
       <div class="form-row">
         <label>Company Name</label>
-        <input type="text">
+        <input type="text" name="company">
       </div>
       <div class="form-row">
         <label>Message *</label>
-        <textarea required></textarea>
+        <textarea name="message" required></textarea>
       </div>
-      <button type="submit" class="submit-btn">Send Message</button>
+      <input type="hidden" name="_subject" value="New Contact Form Submission - TAJ HR Services">
+      <button type="submit" class="submit-btn" id="contact-submit-btn">Send Message</button>
+      <p id="contact-form-status" style="margin-top:14px;font-size:14px;text-align:center;"></p>
     </form>
   </div>
 </section>
@@ -193,7 +195,40 @@
       btn.classList.add('active');
     });
   });
+
+  const contactForm = document.getElementById('contact-form');
+  const contactStatus = document.getElementById('contact-form-status');
+  const contactBtn = document.getElementById('contact-submit-btn');
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    contactBtn.disabled = true;
+    contactBtn.textContent = 'Sending...';
+    contactStatus.textContent = '';
+
+    fetch('https://formspree.io/f/xppzznyk', {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        contactStatus.style.color = '#1a7a3a';
+        contactStatus.textContent = 'Thank you! We will get back to you shortly.';
+        contactForm.reset();
+      } else {
+        contactStatus.style.color = '#c0392b';
+        contactStatus.textContent = 'Something went wrong. Please try again or email us directly.';
+      }
+    }).catch(() => {
+      contactStatus.style.color = '#c0392b';
+      contactStatus.textContent = 'Something went wrong. Please try again or email us directly.';
+    }).finally(() => {
+      contactBtn.disabled = false;
+      contactBtn.textContent = 'Send Message';
+    });
+  });
 </script>
 
 </body>
 </html>
+
