@@ -1,1 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Careers | Job Opportunities Abroad | Taj HR Services</title>
+<style>
+  :root{
+    --navy:#0b1f3a; --navy-light:#12315c; --gold:#c9a227; --gold-light:#e6c85a;
+    --cream:#f7f5ef; --text-dark:#1a1a1a; --text-muted:#5c5c5c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI', Arial, sans-serif;color:var(--text-dark);background:#fff;line-height:1.6;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+
+  header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.15);}
+  .nav-wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;}
+  .logo{color:#fff;font-size:20px;font-weight:700;letter-spacing:.5px;}
+  .logo span{color:var(--gold);}
+  .nav-links{display:flex;gap:26px;flex-wrap:wrap;}
+  .nav-links a{color:#e8e8e8;font-size:14.5px;font-weight:500;}
+  .nav-links a:hover,.nav-links a.active{color:var(--gold);}
+  .nav-cta{background:var(--gold);color:var(--navy);padding:10px 18px;border-radius:4px;font-weight:700;font-size:13.5px;white-space:nowrap;}
+
+  .page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:70px 24px;text-align:center;}
+  .page-hero .eyebrow{color:var(--gold-light);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:14px;}
+  .page-hero h1{font-size:34px;font-weight:800;max-width:780px;margin:0 auto 16px;}
+  .page-hero p{font-size:16px;color:#d8dde8;max-width:700px;margin:0 auto;}
+
+  section{padding:70px 24px;}
+  .section-inner{max-width:1200px;margin:0 auto;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 48px;}
+  .eyebrow{color:var(--gold);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px;}
+  .section-head h2{font-size:30px;font-weight:800;color:var(--navy);margin-bottom:12px;}
+  .section-head p{color:var(--text-muted);font-size:15.5px;}
+
+  .benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .benefit-card{background:var(--cream);border-radius:8px;padding:26px;border-top:3px solid var(--gold);}
+  .benefit-card .ic{font-size:26px;margin-bottom:12px;}
+  .benefit-card h4{color:var(--navy);font-size:15.5px;margin-bottom:8px;}
+  .benefit-card p{font-size:13.5px;color:var(--text-muted);}
+
+  .roles{background:var(--cream);}
+  .role-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .role-card{background:#fff;border-radius:8px;padding:22px;box-shadow:0 4px 14px rgba(0,0,0,.05);}
+  .role-card h4{color:var(--navy);font-size:15.5px;margin-bottom:6px;}
+  .role-card p{font-size:13px;color:var(--text-muted);}
+
+  .process{background:var(--navy);color:#fff;}
+  .process .section-head h2{color:#fff;}
+  .process .section-head p{color:#c5cbdb;}
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .process-step{text-align:center;}
+  .num-circle{width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--navy);font-weight:800;font-size:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+  .process-step h4{font-size:16px;margin-bottom:8px;color:var(--gold-light);}
+  .process-step p{font-size:13.5px;color:#c5cbdb;}
+
+  .form-section{background:var(--cream);}
+  form{max-width:640px;margin:0 auto;background:#fff;border:1px solid #e8e4d8;border-radius:10px;padding:36px;box-shadow:0 4px 14px rgba(0,0,0,.05);}
+  .form-row{margin-bottom:18px;}
+  .form-row label{display:block;font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+  .form-row input, .form-row select, .form-row textarea{width:100%;padding:11px 14px;border:1px solid #d8d4c8;border-radius:6px;font-size:14.5px;font-family:inherit;}
+  .form-row textarea{min-height:100px;resize:vertical;}
+  .submit-btn{width:100%;background:var(--gold);color:var(--navy);padding:14px;border:none;border-radius:6px;font-weight:800;font-size:15px;cursor:pointer;}
+
+  .cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);text-align:center;}
+  .cta h2{color:var(--navy);font-size:26px;font-weight:800;margin-bottom:12px;}
+  .cta p{color:#3a3110;margin-bottom:22px;}
+  .btn-primary{background:var(--navy);color:#fff;padding:13px 24px;border-radius:4px;font-weight:700;font-size:14.5px;display:inline-block;}
+
+  footer{background:#08162c;color:#c5cbdb;padding:50px 24px 20px;}
+  .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:40px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .footer-grid h4{color:#fff;font-size:15px;margin-bottom:16px;}
+  .footer-grid p,.footer-grid li{font-size:13.5px;margin-bottom:8px;color:#a9b1c4;}
+  .footer-bottom{max-width:1200px;margin:0 auto;padding-top:18px;font-size:12.5px;text-align:center;color:#7c869e;}
+
+  @media(max-width:900px){
+    .benefit-grid,.role-grid,.process-grid,.footer-grid{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+    .page-hero h1{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="logo">TAJ <span>HR</span> SERVICES</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="employers.html">Employers</a>
+      <a href="careers.html" class="active">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">Request Manpower</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="eyebrow">For Job Seekers</div>
+  <h1>Build Your International Career with Confidence</h1>
+  <p>At TAJ HR Services, we believe every professional deserves the opportunity for a rewarding international career. For over a decade, we've been the bridge between talented individuals and leading organizations across Europe.</p>
+</section>
+
+<section>
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">Why Work Abroad</div>
+      <h2>Advantages of Working in Europe</h2>
+      <p>Europe offers unique advantages for international workers — strong protections and quality of life.</p>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit-card"><div class="ic">💰</div><h4>Competitive Salaries</h4><p>Earn European wages with strong social security protections built into every contract.</p></div>
+      <div class="benefit-card"><div class="ic">🛡️</div><h4>Worker Protections</h4><p>Excellent working conditions backed by European labour law and workplace standards.</p></div>
+      <div class="benefit-card"><div class="ic">📈</div><h4>Career Growth</h4><p>Exposure to world-class industries and a genuine path to permanent residency.</p></div>
+      <div class="benefit-card"><div class="ic">🤝</div><h4>Trusted Employers</h4><p>Our partnerships ensure you join organizations that genuinely value their workforce.</p></div>
+      <div class="benefit-card"><div class="ic">🎓</div><h4>Skill Development</h4><p>Language and safety training that builds long-term, transferable career skills.</p></div>
+      <div class="benefit-card"><div class="ic">✅</div><h4>Fair, Transparent Process</h4><p>Zero hidden fees and full visibility into every step of your placement journey.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="roles">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">Current Openings</div>
+      <h2>Trades We're Hiring For</h2>
+      <p>Browse our full inventory of trade pipelines across 15+ countries.</p>
+    </div>
+    <div class="role-grid">
+      <div class="role-card"><h4>Construction Workers</h4><p>Masons, carpenters, electricians, plumbers, general laborers</p></div>
+      <div class="role-card"><h4>Welders</h4><p>MIG, TIG, structural and project welders</p></div>
+      <div class="role-card"><h4>Nurses &amp; Healthcare Staff</h4><p>Nurses, lab technicians, caregivers</p></div>
+      <div class="role-card"><h4>Drivers &amp; Logistics</h4><p>Long-haul drivers, warehouse staff, coordinators</p></div>
+      <div class="role-card"><h4>Hospitality Staff</h4><p>Chefs, servers, housekeeping, hotel management</p></div>
+      <div class="role-card"><h4>IT Professionals</h4><p>Software developers, IT administrators, data analysts</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">How to Apply</div>
+      <h2>Your Path to an International Career</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="num-circle">1</div>
+        <h4>Register</h4>
+        <p>Fill out our contact form with your details, qualifications, and work experience.</p>
+      </div>
+      <div class="process-step">
+        <div class="num-circle">2</div>
+        <h4>Profile Review</h4>
+        <p>Our team reviews your profile and contacts you to discuss available opportunities.</p>
+      </div>
+      <div class="process-step">
+        <div class="num-circle">3</div>
+        <h4>Documentation &amp; Training</h4>
+        <p>We guide you through document preparation, work permit processing, and language training.</p>
+      </div>
+      <div class="process-step">
+        <div class="num-circle">4</div>
+        <h4>Deployment</h4>
+        <p>Travel and arrival support, plus ongoing check-ins during your first 90 days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-section">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">Get Started</div>
+      <h2>Register Now</h2>
+      <p>Share your details and our team will get in touch with matching opportunities.</p>
+    </div>
+    <form onsubmit="event.preventDefault(); alert('Thank you for registering! Our team will contact you soon.');">
+      <div class="form-row">
+        <label>Full Name *</label>
+        <input type="text" required>
+      </div>
+      <div class="form-row">
+        <label>Email Address *</label>
+        <input type="email" required>
+      </div>
+      <div class="form-row">
+        <label>Phone Number *</label>
+        <input type="tel" required>
+      </div>
+      <div class="form-row">
+        <label>Trade / Skill</label>
+        <input type="text" placeholder="e.g. Electrician, Welder, Driver">
+      </div>
+      <div class="form-row">
+        <label>Years of Experience</label>
+        <input type="text" placeholder="e.g. 5 years">
+      </div>
+      <div class="form-row">
+        <label>Preferred Country</label>
+        <input type="text" placeholder="e.g. Germany, Poland, Canada">
+      </div>
+      <div class="form-row">
+        <label>Message</label>
+        <textarea placeholder="Tell us about your experience and preferences..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Register Now</button>
+    </form>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="section-inner">
+    <h2>Ready to Start Your European Career Journey?</h2>
+    <p>Verified opportunities, complete visa support, and a fair, transparent process.</p>
+    <a href="contact.html" class="btn-primary">Contact Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>TAJ HR Services</h4>
+      <p>Ethical international recruitment for employers and skilled professionals.</p>
+      <p>18-B, 1st Floor, Taimoor Nagar, Nala Road, Near Honey Money Top, New Friends Colony, New Delhi, Delhi – 110025.</p>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </div>
+    <div>
+      <h4>Credentials</h4>
+      <li>ISO 9001:2015 Certified</li>
+      <li>Govt. of India Approved</li>
+      <li>Lic: B-3252/DEL/PER/1000+/5/11251/2025</li>
+      <li>Listed: MEA India, eMigrate, Udyam</li>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <li>info@tajhrservices.com</li>
+      <li>+91 96513 32002</li>
+      <li>Mon – Sat: 9:00 AM – 6:00 PM</li>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 TAJ HR Services. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
 
