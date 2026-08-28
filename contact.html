@@ -1,862 +1,1242 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<title>Contact Us | Taj HR Services</title>
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact Taj HR Services for manpower recruitment, overseas jobs and employer recruitment requirements.">
 
-    <title>Contact Taj HR Services | Recruitment & Manpower</title>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    <meta name="description"
-        content="Contact Taj HR Services for manpower recruitment, job opportunities, employer requirements and candidate enquiries.">
+html{
+scroll-behavior:smooth;
+}
 
-    <link rel="stylesheet" href="style.css">
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:#172033;
+background:#fff;
+line-height:1.65;
+}
 
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
+
+.header{
+background:#fff;
+border-bottom:1px solid #e5e9ee;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.header-inner{
+min-height:78px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px;
+}
+
+.logo{
+font-size:25px;
+font-weight:900;
+color:#0b3157;
+line-height:1;
+}
+
+.logo span{
+display:block;
+font-size:11px;
+letter-spacing:3px;
+color:#d19a25;
+margin-top:5px;
+}
+
+.nav{
+display:flex;
+align-items:center;
+gap:20px;
+font-size:14px;
+font-weight:600;
+}
+
+.nav a:hover{
+color:#d19a25;
+}
+
+.btn{
+display:inline-block;
+padding:13px 22px;
+border-radius:6px;
+font-weight:700;
+border:0;
+cursor:pointer;
+}
+
+.btn-primary{
+background:#d19a25;
+color:#fff;
+}
+
+.btn-dark{
+background:#0b3157;
+color:#fff;
+}
+
+.btn-outline{
+border:1px solid #d19a25;
+color:#0b3157;
+background:#fff;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(120deg,#071f38,#0d4169);
+color:#fff;
+padding:85px 0;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.badge{
+display:inline-block;
+border:1px solid rgba(255,255,255,.35);
+padding:7px 14px;
+border-radius:30px;
+font-size:13px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:52px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#e4b54d;
+}
+
+.hero p{
+color:#d9e5ef;
+font-size:18px;
+max-width:780px;
+}
+
+/* SECTION */
+
+.section{
+padding:80px 0;
+}
+
+.section-light{
+background:#f7f9fb;
+}
+
+.section-title{
+text-align:center;
+max-width:800px;
+margin:0 auto 45px;
+}
+
+.label{
+color:#c18b1c;
+font-size:13px;
+font-weight:800;
+letter-spacing:1.5px;
+text-transform:uppercase;
+}
+
+.section-title h2{
+color:#0b3157;
+font-size:38px;
+line-height:1.2;
+margin:10px 0 15px;
+}
+
+.section-title p{
+color:#657286;
+}
+
+/* CONTACT CARDS */
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.contact-card{
+background:#fff;
+border:1px solid #dfe5eb;
+border-radius:13px;
+padding:30px;
+text-align:center;
+}
+
+.contact-icon{
+font-size:34px;
+margin-bottom:12px;
+}
+
+.contact-card h3{
+color:#0b3157;
+margin-bottom:8px;
+}
+
+.contact-card p{
+color:#657286;
+font-size:14px;
+}
+
+.contact-card a{
+color:#0b3157;
+font-weight:700;
+word-break:break-word;
+}
+
+/* TWO COLUMN */
+
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:start;
+}
+
+.content h2{
+color:#0b3157;
+font-size:38px;
+line-height:1.2;
+margin:10px 0 20px;
+}
+
+.content p{
+color:#657286;
+margin-bottom:16px;
+}
+
+.check-list{
+margin:25px 0;
+}
+
+.check-list div{
+margin:11px 0;
+font-weight:600;
+}
+
+/* LICENCE */
+
+.license-box{
+background:#0b3157;
+color:#fff;
+padding:38px;
+border-radius:15px;
+}
+
+.license-box h3{
+font-size:27px;
+margin-bottom:18px;
+}
+
+.license-row{
+padding:14px 0;
+border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.license-row:last-child{
+border-bottom:0;
+}
+
+.license-row span{
+display:block;
+font-size:12px;
+color:#aebfce;
+margin-bottom:3px;
+text-transform:uppercase;
+letter-spacing:.5px;
+}
+
+.license-row strong{
+font-size:16px;
+}
+
+/* FORM */
+
+.form-box{
+background:#fff;
+border:1px solid #dfe5eb;
+border-radius:15px;
+padding:35px;
+box-shadow:0 10px 35px rgba(0,0,0,.05);
+}
+
+.form-box h3{
+color:#0b3157;
+font-size:27px;
+margin-bottom:8px;
+}
+
+.form-intro{
+color:#657286;
+font-size:14px;
+margin-bottom:25px;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:17px;
+}
+
+.field{
+display:flex;
+flex-direction:column;
+}
+
+.field.full{
+grid-column:1/-1;
+}
+
+.field label{
+font-size:13px;
+font-weight:700;
+color:#334155;
+margin-bottom:7px;
+}
+
+.field input,
+.field select,
+.field textarea{
+width:100%;
+padding:13px;
+border:1px solid #ccd6df;
+border-radius:6px;
+font:inherit;
+outline:none;
+}
+
+.field textarea{
+min-height:140px;
+resize:vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+border-color:#0b3157;
+}
+
+.note{
+font-size:12px;
+color:#718094;
+margin-top:12px;
+}
+
+/* MAP */
+
+.map-box{
+background:#e9eef3;
+border-radius:15px;
+min-height:360px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:30px;
+}
+
+.map-content{
+max-width:500px;
+}
+
+.map-content h3{
+font-size:28px;
+color:#0b3157;
+margin-bottom:12px;
+}
+
+.map-content p{
+color:#657286;
+margin-bottom:20px;
+}
+
+/* FAQ */
+
+.faq-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.faq{
+border:1px solid #dfe5eb;
+border-radius:10px;
+padding:22px;
+background:#fff;
+}
+
+.faq h3{
+font-size:17px;
+color:#0b3157;
+margin-bottom:8px;
+}
+
+.faq p{
+font-size:14px;
+color:#657286;
+}
+
+/* CTA */
+
+.cta{
+background:#0b3157;
+color:#fff;
+border-radius:15px;
+padding:50px;
+text-align:center;
+}
+
+.cta h2{
+font-size:34px;
+margin-bottom:14px;
+}
+
+.cta p{
+color:#dce7f1;
+max-width:760px;
+margin:0 auto 25px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#071d32;
+color:#fff;
+padding:60px 0 20px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1.4fr 1fr 1fr 1fr;
+gap:35px;
+}
+
+.footer-logo{
+font-size:24px;
+font-weight:900;
+margin-bottom:15px;
+}
+
+.footer h3{
+color:#e4b54d;
+margin-bottom:15px;
+}
+
+.footer p,
+.footer a{
+color:#bdcbd8;
+font-size:14px;
+}
+
+.footer a{
+display:block;
+margin:8px 0;
+}
+
+.footer a:hover{
+color:#fff;
+}
+
+.footer-bottom{
+border-top:1px solid rgba(255,255,255,.12);
+margin-top:40px;
+padding-top:20px;
+text-align:center;
+color:#9fb0c0;
+font-size:13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:999;
+background:#168c45;
+color:#fff;
+padding:14px 20px;
+border-radius:40px;
+font-weight:800;
+box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+.nav{
+display:none;
+}
+
+.contact-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.two-col{
+grid-template-columns:1fr;
+}
+
+.faq-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+padding:65px 0;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.section{
+padding:60px 0;
+}
+
+.section-title h2,
+.content h2{
+font-size:30px;
+}
+
+.contact-grid,
+.form-grid,
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.field.full{
+grid-column:auto;
+}
+
+.form-box{
+padding:24px 18px;
+}
+
+.cta{
+padding:35px 22px;
+}
+
+.cta h2{
+font-size:28px;
+}
+}
+</style>
 </head>
-
 
 <body>
 
+<!-- HEADER -->
 
-<!-- ================= HEADER ================= -->
+<header class="header">
 
-<header class="main-header">
+<div class="container header-inner">
 
-    <div class="container header-content">
+<a href="index.html" class="logo">
+TAJ
+<span>HR SERVICES</span>
+</a>
 
-        <a href="index.html" class="logo">
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="industries.html">Industries</a>
+<a href="resources.html">Resources</a>
+<a href="employers.html">Employers</a>
+<a href="jobs.html">Careers</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-            <span class="logo-main">
-                TAJ
-            </span>
+<a href="https://wa.me/919651332002"
+target="_blank"
+class="btn btn-primary">
+WhatsApp
+</a>
 
-            <span class="logo-sub">
-                HR SERVICES
-            </span>
-
-        </a>
-
-
-        <nav class="main-nav">
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About Us
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a href="jobs.html">
-                Jobs
-            </a>
-
-            <a href="employers.html">
-                Employers
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </nav>
-
-
-        <a
-            href="https://wa.me/919651332002"
-            class="header-button"
-            target="_blank"
-        >
-            WhatsApp
-        </a>
-
-    </div>
+</div>
 
 </header>
 
 
-
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero">
 
-    <div class="container hero-content">
+<div class="container hero-content">
 
-        <div class="hero-text">
+<span class="badge">
+Taj HR Services
+</span>
 
-            <span class="hero-tag">
-                CONTACT TAJ HR SERVICES
-            </span>
+<h1>
+Let's Start a
+<span>Conversation</span>
+</h1>
 
+<p>
+Whether you are an employer looking for manpower or a
+candidate looking for an overseas career opportunity,
+our team is available to discuss your requirement.
+</p>
 
-            <h1>
-
-                Let's Start A
-                <span>Conversation</span>
-
-            </h1>
-
-
-            <p>
-
-                Whether you are an employer looking for
-                manpower or a candidate looking for a job,
-                our team is available to assist you.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a
-                    href="https://wa.me/919651332002"
-                    class="primary-button"
-                    target="_blank"
-                >
-                    Chat On WhatsApp
-                </a>
-
-
-                <a
-                    href="tel:+919651332002"
-                    class="secondary-button"
-                >
-                    Call Us
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-card">
-
-            <div class="hero-card-icon">
-                📞
-            </div>
-
-
-            <h3>
-                Get In Touch
-            </h3>
-
-
-            <p>
-                Contact Taj HR Services for
-                recruitment and manpower enquiries.
-            </p>
-
-
-            <a href="mailto:info@tajhrservices.com">
-
-                Send Email →
-
-            </a>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-
-<!-- ================= CONTACT INFORMATION ================= -->
+<!-- CONTACT OPTIONS -->
 
 <section class="section">
 
-    <div class="container">
+<div class="container">
 
+<div class="section-title">
 
-        <div class="section-heading">
+<span class="label">
+Get In Touch
+</span>
 
-            <span class="section-tag">
-                CONTACT INFORMATION
-            </span>
+<h2>
+Contact Taj HR Services
+</h2>
 
+<p>
+Choose the most convenient way to contact our team.
+</p>
 
-            <h2>
-                We're Here To Help
-            </h2>
+</div>
 
 
-            <p>
+<div class="contact-grid">
 
-                Choose the easiest way to contact
-                Taj HR Services.
 
-            </p>
+<div class="contact-card">
 
-        </div>
+<div class="contact-icon">📞</div>
 
+<h3>
+Call Us
+</h3>
 
+<p>
+Speak directly with our team.
+</p>
 
-        <div class="service-grid">
+<br>
 
+<a href="tel:+919651332002">
++91 96513 32002
+</a>
 
-            <!-- PHONE -->
+</div>
 
-            <div class="service-card">
 
-                <div class="service-icon">
-                    📱
-                </div>
+<div class="contact-card">
 
+<div class="contact-icon">💬</div>
 
-                <h3>
-                    Phone / WhatsApp
-                </h3>
+<h3>
+WhatsApp
+</h3>
 
+<p>
+Send your enquiry directly on WhatsApp.
+</p>
 
-                <p>
-                    +91 96513 32002
-                </p>
+<br>
 
+<a href="https://wa.me/919651332002"
+target="_blank">
+Chat on WhatsApp
+</a>
 
-                <a
-                    href="https://wa.me/919651332002"
-                    target="_blank"
-                >
-                    Chat On WhatsApp →
-                </a>
+</div>
 
-            </div>
 
+<div class="contact-card">
 
+<div class="contact-icon">✉️</div>
 
-            <!-- EMAIL -->
+<h3>
+Email
+</h3>
 
-            <div class="service-card">
+<p>
+For recruitment and business enquiries.
+</p>
 
-                <div class="service-icon">
-                    ✉️
-                </div>
+<br>
 
+<a href="mailto:info@tajhrservices.com">
+info@tajhrservices.com
+</a>
 
-                <h3>
-                    Email
-                </h3>
+</div>
 
 
-                <p>
-                    info@tajhrservices.com
-                </p>
+</div>
 
-
-                <a
-                    href="mailto:info@tajhrservices.com"
-                >
-                    Send Email →
-                </a>
-
-            </div>
-
-
-
-            <!-- EMPLOYERS -->
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    🏢
-                </div>
-
-
-                <h3>
-                    Employers
-                </h3>
-
-
-                <p>
-
-                    Need manpower for your
-                    company or project?
-
-                </p>
-
-
-                <a href="employers.html">
-
-                    Submit Requirement →
-
-                </a>
-
-            </div>
-
-
-
-            <!-- CANDIDATES -->
-
-            <div class="service-card">
-
-                <div class="service-icon">
-                    👷
-                </div>
-
-
-                <h3>
-                    Candidates
-                </h3>
-
-
-                <p>
-
-                    Looking for current job
-                    opportunities?
-
-                </p>
-
-
-                <a href="jobs.html">
-
-                    View Jobs →
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
+<!-- OFFICE & LICENCE -->
 
-<!-- ================= CONTACT FORM ================= -->
+<section class="section section-light">
 
-<section class="section light-section">
+<div class="container two-col">
 
-    <div class="container">
+<div class="content">
 
+<span class="label">
+Our Office
+</span>
 
-        <div class="section-heading">
+<h2>
+Taj HR Services
+</h2>
 
-            <span class="section-tag">
-                SEND AN ENQUIRY
-            </span>
+<p>
+Taj HR Services provides recruitment and manpower
+coordination services for employers and candidates
+seeking international employment opportunities.
+</p>
 
+<div class="check-list">
 
-            <h2>
-                Contact Our Team
-            </h2>
+<div>✓ International recruitment</div>
 
+<div>✓ Skilled & semi-skilled manpower</div>
 
-            <p>
+<div>✓ Professional recruitment</div>
 
-                Fill in your details and select
-                what you need help with.
+<div>✓ Employer manpower solutions</div>
 
-            </p>
+<div>✓ Candidate recruitment support</div>
 
-        </div>
+</div>
 
+<p>
+For the latest office location and visiting instructions,
+please contact our team before visiting.
+</p>
 
+<a href="tel:+919651332002"
+class="btn btn-dark">
+Call Office
+</a>
 
-        <div class="contact-grid">
+</div>
 
 
-            <!-- FORM -->
+<div class="license-box">
 
-            <div class="contact-form">
+<h3>
+Registration & Licence
+</h3>
 
+<div class="license-row">
 
-                <form id="contactForm">
+<span>Agency Status</span>
 
+<strong>
+Government Licensed Recruitment Agency
+</strong>
 
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Full Name"
-                        required
-                    >
+</div>
 
 
-                    <input
-                        type="tel"
-                        id="phone"
-                        placeholder="Mobile / WhatsApp Number"
-                        required
-                    >
+<div class="license-row">
 
+<span>ISO Certification</span>
 
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Email Address"
-                    >
+<strong>
+ISO 9001:2015 Certified
+</strong>
 
+</div>
 
-                    <select
-                        id="enquiry"
-                        required
-                    >
 
-                        <option value="">
-                            Select Enquiry Type
-                        </option>
+<div class="license-row">
 
-                        <option value="Job Enquiry">
-                            Job Enquiry
-                        </option>
+<span>Licence Number</span>
 
-                        <option value="CV Submission">
-                            CV Submission
-                        </option>
+<strong>
+B-3252/DEL/PER/1000+/5/11251/2025
+</strong>
 
-                        <option value="Employer Requirement">
-                            Employer / Manpower Requirement
-                        </option>
+</div>
 
-                        <option value="General Enquiry">
-                            General Enquiry
-                        </option>
 
-                    </select>
+<div class="license-row">
 
+<span>Contact Number</span>
 
-                    <textarea
-                        id="message"
-                        rows="7"
-                        placeholder="Write your message..."
-                        required
-                    ></textarea>
+<strong>
++91 96513 32002
+</strong>
 
+</div>
 
-                    <button
-                        type="submit"
-                        class="primary-button"
-                    >
-                        Send Enquiry On WhatsApp
-                    </button>
 
+<div class="license-row">
 
-                </form>
+<span>Email</span>
 
-            </div>
+<strong>
+info@tajhrservices.com
+</strong>
 
+</div>
 
+</div>
 
-            <!-- INFORMATION -->
-
-            <div class="contact-info">
-
-
-                <span class="section-tag">
-                    QUICK CONTACT
-                </span>
-
-
-                <h2>
-                    Contact Us Directly
-                </h2>
-
-
-                <p>
-
-                    For faster assistance, you can
-                    contact us directly through
-                    WhatsApp, phone or email.
-
-                </p>
-
-
-
-                <div class="contact-item">
-
-                    <strong>
-                        📱 WhatsApp / Phone
-                    </strong>
-
-                    <span>
-                        +91 96513 32002
-                    </span>
-
-                </div>
-
-
-
-                <div class="contact-item">
-
-                    <strong>
-                        ✉️ Email
-                    </strong>
-
-                    <span>
-                        info@tajhrservices.com
-                    </span>
-
-                </div>
-
-
-
-                <div class="contact-item">
-
-                    <strong>
-                        👷 Job Seekers
-                    </strong>
-
-                    <span>
-
-                        Explore current opportunities
-                        and submit your enquiry.
-
-                    </span>
-
-                </div>
-
-
-
-                <div class="contact-item">
-
-                    <strong>
-                        🏢 Employers
-                    </strong>
-
-                    <span>
-
-                        Share your manpower requirement
-                        with our recruitment team.
-
-                    </span>
-
-                </div>
-
-
-
-                <a
-                    href="https://wa.me/919651332002"
-                    class="primary-button"
-                    target="_blank"
-                >
-
-                    WhatsApp Us
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
+<!-- CONTACT FORM -->
 
-<!-- ================= EMPLOYER CTA ================= -->
+<section class="section">
 
-<section class="employer-section section">
+<div class="container">
 
-    <div class="container employer-content">
+<div class="section-title">
 
+<span class="label">
+Send Enquiry
+</span>
 
-        <div>
+<h2>
+How Can We Help You?
+</h2>
 
-            <span class="section-tag">
-                FOR EMPLOYERS
-            </span>
+<p>
+Send us your details and enquiry. Our team can contact
+you regarding your requirement.
+</p>
 
-
-            <h2>
-                Looking For Manpower?
-            </h2>
-
-
-            <p>
-
-                Send us your manpower requirement
-                and our team will contact you.
-
-            </p>
-
-        </div>
+</div>
 
 
-        <a
-            href="employers.html"
-            class="primary-button"
-        >
+<div class="form-box">
 
-            Submit Requirement
+<h3>
+Contact Form
+</h3>
 
-        </a>
+<p class="form-intro">
+Please provide accurate information so that we can
+respond to your enquiry.
+</p>
 
-    </div>
+
+<form action="mailto:info@tajhrservices.com"
+method="post"
+enctype="text/plain">
+
+<div class="form-grid">
+
+
+<div class="field">
+
+<label>Full Name *</label>
+
+<input
+type="text"
+name="Full Name"
+required
+placeholder="Enter your name">
+
+</div>
+
+
+<div class="field">
+
+<label>Mobile / WhatsApp *</label>
+
+<input
+type="tel"
+name="Mobile"
+required
+placeholder="Enter mobile number">
+
+</div>
+
+
+<div class="field">
+
+<label>Email</label>
+
+<input
+type="email"
+name="Email"
+placeholder="Enter email">
+
+</div>
+
+
+<div class="field">
+
+<label>Enquiry Type</label>
+
+<select name="Enquiry Type">
+
+<option value="">Select enquiry type</option>
+
+<option>Employer / Manpower Requirement</option>
+
+<option>Job / Career Enquiry</option>
+
+<option>Business Partnership</option>
+
+<option>General Enquiry</option>
+
+</select>
+
+</div>
+
+
+<div class="field full">
+
+<label>Message *</label>
+
+<textarea
+name="Message"
+required
+placeholder="Write your enquiry here..."></textarea>
+
+</div>
+
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-primary"
+style="margin-top:20px;">
+Send Enquiry
+</button>
+
+
+<p class="note">
+You can also contact us directly on WhatsApp:
++91 96513 32002
+</p>
+
+</form>
+
+</div>
+
+</div>
 
 </section>
 
 
+<!-- LOCATION -->
 
-<!-- ================= CANDIDATE CTA ================= -->
+<section class="section section-light">
 
-<section class="candidate-section section">
+<div class="container">
 
-    <div class="container candidate-content">
+<div class="section-title">
 
+<span class="label">
+Location
+</span>
 
-        <div>
+<h2>
+Find Taj HR Services
+</h2>
 
-            <span class="section-tag">
-                FOR CANDIDATES
-            </span>
+<p>
+For the exact office location and visiting details,
+please contact our team before your visit.
+</p>
 
-
-            <h2>
-                Looking For A Job?
-            </h2>
-
-
-            <p>
-
-                Explore current opportunities
-                available through Taj HR Services.
-
-            </p>
-
-        </div>
+</div>
 
 
-        <a
-            href="jobs.html"
-            class="primary-button"
-        >
+<div class="map-box">
 
-            Find Jobs
+<div class="map-content">
 
-        </a>
+<div style="font-size:50px;">
+📍
+</div>
 
-    </div>
+<h3>
+Taj HR Services
+</h3>
+
+<p>
+Office location and visiting instructions can be
+confirmed directly with our team.
+</p>
+
+<a href="https://www.google.com/maps/search/?api=1&query=Taj+HR+Services"
+target="_blank"
+class="btn btn-dark">
+Open Google Maps
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
+<!-- FAQ -->
 
-<!-- ================= FOOTER ================= -->
+<section class="section">
+
+<div class="container">
+
+<div class="section-title">
+
+<span class="label">
+Frequently Asked Questions
+</span>
+
+<h2>
+Contact & Recruitment Questions
+</h2>
+
+</div>
+
+
+<div class="faq-grid">
+
+
+<div class="faq">
+
+<h3>
+How can an employer submit a manpower requirement?
+</h3>
+
+<p>
+Employers can use the Employers page requirement form
+or contact our team directly by phone, email or WhatsApp.
+</p>
+
+</div>
+
+
+<div class="faq">
+
+<h3>
+How can candidates apply for jobs?
+</h3>
+
+<p>
+Candidates can view available opportunities on the
+Jobs & Careers page and submit their profile.
+</p>
+
+</div>
+
+
+<div class="faq">
+
+<h3>
+Can I contact Taj HR Services on WhatsApp?
+</h3>
+
+<p>
+Yes. You can contact the team directly on
++91 96513 32002.
+</p>
+
+</div>
+
+
+<div class="faq">
+
+<h3>
+Can I visit the office?
+</h3>
+
+<p>
+Please contact the team before visiting so that the
+latest office location and visiting instructions can
+be confirmed.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+Have a Question?
+</h2>
+
+<p>
+Contact Taj HR Services today for employer recruitment,
+manpower requirements, job opportunities or general
+enquiries.
+</p>
+
+<a href="tel:+919651332002"
+class="btn btn-primary">
+Call Now
+</a>
+
+<a href="https://wa.me/919651332002"
+target="_blank"
+class="btn btn-outline"
+style="margin-left:8px;">
+WhatsApp Us
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer class="footer">
 
+<div class="container footer-grid">
 
-    <div class="container footer-grid">
+<div>
 
+<div class="footer-logo">
+TAJ HR SERVICES
+</div>
 
-        <div>
+<p>
+Ethical international recruitment for employers
+and skilled professionals.
+</p>
 
-            <div class="footer-logo">
-                TAJ HR SERVICES
-            </div>
+<p style="margin-top:15px;">
++91 96513 32002<br>
+info@tajhrservices.com
+</p>
 
-
-            <p>
-
-                Professional manpower recruitment
-                and HR solutions for employers
-                and candidates.
-
-            </p>
-
-
-            <p style="margin-top:15px;">
-
-                📱 +91 96513 32002<br>
-
-                ✉️ info@tajhrservices.com
-
-            </p>
-
-        </div>
+</div>
 
 
+<div>
 
-        <div>
+<h3>Company</h3>
 
-            <h3>
-                Quick Links
-            </h3>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="industries.html">Industries</a>
+<a href="resources.html">Resources</a>
 
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="about.html">
-                About Us
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a href="jobs.html">
-                Jobs
-            </a>
-
-            <a href="employers.html">
-                Employers
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
+</div>
 
 
+<div>
 
-        <div>
+<h3>Employers</h3>
 
-            <h3>
-                Candidates
-            </h3>
+<a href="employers.html">Employer Solutions</a>
+<a href="employers.html#requirement">Request Manpower</a>
+<a href="contact.html">Contact Team</a>
 
-
-            <a href="jobs.html">
-                Latest Jobs
-            </a>
-
-            <a href="contact.html">
-                Submit CV
-            </a>
-
-            <a
-                href="https://wa.me/919651332002"
-                target="_blank"
-            >
-                WhatsApp Us
-            </a>
-
-        </div>
+</div>
 
 
+<div>
 
-        <div>
+<h3>Candidates</h3>
 
-            <h3>
-                Employers
-            </h3>
+<a href="jobs.html">Current Jobs</a>
+<a href="jobs.html#apply">Submit Profile</a>
+<a href="contact.html">Contact Us</a>
 
+</div>
 
-            <a href="employers.html">
-                Hire Manpower
-            </a>
-
-            <a href="contact.html">
-                Submit Requirement
-            </a>
-
-            <a
-                href="mailto:info@tajhrservices.com"
-            >
-                Email Us
-            </a>
-
-        </div>
-
-    </div>
+</div>
 
 
+<div class="footer-bottom">
 
-    <div class="footer-bottom">
+© 2026 Taj HR Services. All rights reserved.<br>
 
-        <p>
+Government Licensed Recruitment Agency |
+ISO 9001:2015 Certified |
+Licence: B-3252/DEL/PER/1000+/5/11251/2025
 
-            © 2026 Taj HR Services.
-            All Rights Reserved.
-
-        </p>
-
-    </div>
+</div>
 
 </footer>
 
 
+<!-- WHATSAPP -->
 
-<!-- ================= WHATSAPP FLOATING BUTTON ================= -->
-
-<a
-    href="https://wa.me/919651332002"
-    class="whatsapp-button"
-    target="_blank"
-    aria-label="Chat with Taj HR Services on WhatsApp"
->
-    WhatsApp
+<a href="https://wa.me/919651332002"
+target="_blank"
+class="whatsapp">
+WhatsApp
 </a>
 
-
-
-<!-- ================= WHATSAPP FORM SCRIPT ================= -->
-
-<script>
-
-document
-    .getElementById("contactForm")
-    .addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-
-        const name =
-            document.getElementById("name").value.trim();
-
-
-        const phone =
-            document.getElementById("phone").value.trim();
-
-
-        const email =
-            document.getElementById("email").value.trim();
-
-
-        const enquiry =
-            document.getElementById("enquiry").value;
-
-
-        const message =
-            document.getElementById("message").value.trim();
-
-
-        const whatsappMessage =
-            "Hello Taj HR Services,%0A%0A" +
-
-            "Name: " + encodeURIComponent(name) +
-            "%0A" +
-
-            "Mobile: " + encodeURIComponent(phone) +
-            "%0A" +
-
-            "Email: " + encodeURIComponent(email) +
-            "%0A" +
-
-            "Enquiry: " + encodeURIComponent(enquiry) +
-            "%0A%0A" +
-
-            "Message:%0A" +
-            encodeURIComponent(message);
-
-
-        const whatsappURL =
-            "https://wa.me/919651332002?text=" +
-            whatsappMessage;
-
-
-        window.open(
-            whatsappURL,
-            "_blank"
-        );
-
-    });
-
-</script>
-
-
 </body>
-
 </html>
