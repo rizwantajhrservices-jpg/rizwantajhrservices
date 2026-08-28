@@ -6,7 +6,7 @@
 
 <title>About Us | Taj HR Services</title>
 
-<meta name="description" content="Learn about Taj HR Services, our leadership team, values, recruitment expertise and commitment to ethical international manpower recruitment.">
+<meta name="description" content="Learn about Taj HR Services, our recruitment approach, mission, vision and commitment to employers and candidates.">
 
 <style>
 *{
@@ -66,14 +66,14 @@ a{
     display:block;
     font-size:11px;
     letter-spacing:3px;
-    margin-top:5px;
     color:#d19a25;
+    margin-top:5px;
 }
 
 .nav{
     display:flex;
     align-items:center;
-    gap:22px;
+    gap:20px;
     font-size:14px;
     font-weight:600;
 }
@@ -129,7 +129,7 @@ a{
 .hero h1{
     font-size:52px;
     line-height:1.1;
-    margin-bottom:22px;
+    margin-bottom:20px;
 }
 
 .hero h1 span{
@@ -139,20 +139,13 @@ a{
 .hero p{
     color:#d9e5ef;
     font-size:18px;
-    max-width:760px;
-}
-
-.hero-buttons{
-    margin-top:28px;
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
+    max-width:800px;
 }
 
 /* SECTIONS */
 
 .section{
-    padding:85px 0;
+    padding:80px 0;
 }
 
 .section-light{
@@ -161,7 +154,7 @@ a{
 
 .section-title{
     text-align:center;
-    max-width:760px;
+    max-width:800px;
     margin:0 auto 45px;
 }
 
@@ -184,246 +177,215 @@ a{
     color:#657286;
 }
 
-/* STORY */
+/* TWO COLUMN */
 
-.story{
+.two-col{
     display:grid;
-    grid-template-columns:1.2fr .8fr;
+    grid-template-columns:1fr 1fr;
     gap:55px;
-    align-items:center;
+    align-items:start;
 }
 
-.story h2{
+.content h2{
     color:#0b3157;
     font-size:38px;
     line-height:1.2;
     margin:10px 0 20px;
 }
 
-.story p{
+.content p{
     color:#657286;
     margin-bottom:17px;
 }
 
-.story-card{
+.check-list{
+    margin:25px 0;
+}
+
+.check-list div{
+    margin:11px 0;
+    font-weight:600;
+}
+
+/* DARK BOX */
+
+.dark-box{
     background:#0b3157;
     color:#fff;
-    border-radius:15px;
-    padding:38px;
-}
-
-.story-card h3{
-    font-size:28px;
-    margin-bottom:15px;
-}
-
-.story-card p{
-    color:#dbe6ef;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-    margin-top:25px;
-}
-
-.stat{
-    background:rgba(255,255,255,.08);
-    padding:20px;
-    border-radius:9px;
-}
-
-.stat strong{
-    display:block;
-    color:#e4b54d;
-    font-size:30px;
-}
-
-.stat span{
-    font-size:13px;
-    color:#dbe6ef;
-}
-
-/* TEAM */
-
-.team-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:22px;
-}
-
-.team-card{
-    background:#fff;
-    border:1px solid #e1e7ed;
-    border-radius:12px;
-    overflow:hidden;
-    transition:.2s;
-}
-
-.team-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
-}
-
-.team-photo{
-    height:220px;
-    background:linear-gradient(135deg,#dfe6ed,#f7f9fb);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:70px;
-}
-
-.team-info{
-    padding:23px;
-}
-
-.team-info h3{
-    color:#0b3157;
-    font-size:19px;
-    margin-bottom:5px;
-}
-
-.team-role{
-    color:#c18b1c;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:12px;
-}
-
-.team-info p{
-    color:#657286;
-    font-size:14px;
-}
-
-/* VALUES */
-
-.values-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.value{
-    background:#fff;
-    border:1px solid #e1e7ed;
-    border-radius:12px;
-    padding:30px;
-}
-
-.value-icon{
-    font-size:32px;
-    margin-bottom:15px;
-}
-
-.value h3{
-    color:#0b3157;
-    margin-bottom:10px;
-}
-
-.value p{
-    color:#657286;
-    font-size:14px;
-}
-
-/* COMMITMENT */
-
-.commitment{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-}
-
-.commitment-box{
     padding:40px;
-    border-radius:14px;
-    background:#0b3157;
-    color:#fff;
+    border-radius:15px;
 }
 
-.commitment-box.light{
-    background:#f1f4f7;
-    color:#172033;
-}
-
-.commitment-box h2{
+.dark-box h3{
     font-size:29px;
     margin-bottom:15px;
 }
 
-.commitment-box p{
+.dark-box p{
     color:#dce7f1;
-    margin-bottom:18px;
+    margin-bottom:20px;
 }
 
-.commitment-box.light p{
-    color:#657286;
-}
-
-.commitment-box ul{
+.dark-box ul{
     padding-left:20px;
 }
 
-.commitment-box li{
-    margin:8px 0;
+.dark-box li{
+    margin:10px 0;
 }
 
-/* PARTNERS */
+/* VALUES */
 
-.partner-grid{
+.value-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
-.partner{
-    border:1px solid #e1e7ed;
-    border-radius:12px;
-    padding:28px;
+.value-card{
+    border:1px solid #e0e6ec;
+    border-radius:13px;
+    padding:30px;
     background:#fff;
 }
 
-.partner h3{
+.value-icon{
+    font-size:32px;
+    margin-bottom:14px;
+}
+
+.value-card h3{
+    color:#0b3157;
+    margin-bottom:9px;
+}
+
+.value-card p{
+    color:#657286;
+    font-size:14px;
+}
+
+/* MISSION */
+
+.mission-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.mission-card{
+    padding:35px;
+    border-radius:14px;
+    background:#fff;
+    border:1px solid #dfe5eb;
+}
+
+.mission-card h3{
+    color:#0b3157;
+    font-size:26px;
+    margin-bottom:12px;
+}
+
+.mission-card p{
+    color:#657286;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.stat{
+    text-align:center;
+    background:#fff;
+    border:1px solid #dfe5eb;
+    border-radius:12px;
+    padding:28px 15px;
+}
+
+.stat strong{
+    display:block;
+    color:#0b3157;
+    font-size:29px;
+}
+
+.stat span{
+    color:#657286;
+    font-size:13px;
+}
+
+/* PROCESS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.step{
+    background:#fff;
+    border:1px solid #e1e7ed;
+    padding:26px;
+    border-radius:12px;
+}
+
+.step-number{
+    width:42px;
+    height:42px;
+    background:#0b3157;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.step h3{
     color:#0b3157;
     margin-bottom:8px;
 }
 
-.partner p{
+.step p{
     color:#657286;
     font-size:14px;
 }
 
-/* CREDENTIALS */
+/* LICENCE */
 
-.credentials{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+.license{
+    background:#0b3157;
+    color:#fff;
+    padding:40px;
+    border-radius:15px;
 }
 
-.credential{
-    background:#fff;
-    border:1px solid #e1e7ed;
-    border-radius:12px;
-    padding:28px;
+.license h3{
+    font-size:28px;
+    margin-bottom:20px;
 }
 
-.credential h3{
-    color:#0b3157;
-    margin-bottom:10px;
+.license-row{
+    padding:13px 0;
+    border-bottom:1px solid rgba(255,255,255,.15);
 }
 
-.credential p{
-    color:#657286;
-    font-size:14px;
+.license-row:last-child{
+    border-bottom:0;
 }
 
-.license-number{
-    margin-top:15px;
-    font-weight:800;
-    color:#b77e12;
-    font-size:14px;
+.license-row span{
+    display:block;
+    color:#aebfce;
+    font-size:12px;
+    text-transform:uppercase;
+}
+
+.license-row strong{
+    font-size:16px;
 }
 
 /* CTA */
@@ -438,50 +400,13 @@ a{
 
 .cta h2{
     font-size:34px;
-    margin-bottom:15px;
+    margin-bottom:14px;
 }
 
 .cta p{
-    max-width:720px;
+    color:#dce7f1;
+    max-width:760px;
     margin:0 auto 25px;
-    color:#dbe6ef;
-}
-
-/* CONTACT */
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-}
-
-.contact-card{
-    border:1px solid #e1e7ed;
-    border-radius:12px;
-    padding:30px;
-}
-
-.contact-card h3{
-    color:#0b3157;
-    margin-bottom:15px;
-}
-
-.contact-card p{
-    color:#657286;
-}
-
-.contact-detail{
-    margin-top:18px;
-}
-
-.contact-detail strong{
-    display:block;
-    color:#c18b1c;
-}
-
-.contact-detail span{
-    display:block;
-    margin-top:4px;
 }
 
 /* FOOTER */
@@ -556,26 +481,24 @@ a{
         display:none;
     }
 
-    .story,
-    .commitment,
-    .contact-grid{
+    .two-col{
         grid-template-columns:1fr;
     }
 
-    .team-grid{
+    .value-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .values-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .partner-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .credentials{
+    .mission-grid{
         grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .steps{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .footer-grid{
@@ -598,15 +521,20 @@ a{
     }
 
     .section-title h2,
-    .story h2{
+    .content h2{
         font-size:30px;
     }
 
-    .team-grid,
-    .values-grid,
-    .partner-grid,
+    .value-grid,
+    .stats,
+    .steps,
     .footer-grid{
         grid-template-columns:1fr;
+    }
+
+    .dark-box,
+    .license{
+        padding:28px 22px;
     }
 
     .cta{
@@ -644,8 +572,7 @@ TAJ
 <a href="contact.html">Contact</a>
 </nav>
 
-<a
-href="https://wa.me/919651332002"
+<a href="https://wa.me/919651332002"
 target="_blank"
 class="btn btn-primary">
 WhatsApp
@@ -667,115 +594,89 @@ About Taj HR Services
 </span>
 
 <h1>
-Your Trusted Partner in
-<span>International Recruitment</span>
+Connecting Talent With
+<span>Global Opportunities</span>
 </h1>
 
 <p>
-For over a decade, Taj HR Services has been connecting
-skilled professionals with leading organizations across
-Europe and international markets.
+Taj HR Services is focused on international recruitment
+and manpower solutions, helping employers connect with
+skilled, semi-skilled and professional candidates from India.
 </p>
-
-<div class="hero-buttons">
-
-<a href="contact.html" class="btn btn-primary">
-Talk to Our Team
-</a>
-
-<a href="employers.html" class="btn btn-outline">
-Hire Skilled Workers
-</a>
-
-</div>
 
 </div>
 
 </section>
 
 
-<!-- OUR STORY -->
+<!-- WHO WE ARE -->
 
 <section class="section">
 
-<div class="container story">
+<div class="container two-col">
 
-<div>
+<div class="content">
 
 <span class="label">
-Our Story
+Who We Are
 </span>
 
 <h2>
-Building stronger connections between talent and opportunity
+A recruitment partner for employers and candidates
 </h2>
 
 <p>
-Taj HR Services is a professional international recruitment
-and manpower solutions company connecting skilled
-professionals with reputable employers.
+Taj HR Services works in the field of recruitment and
+manpower coordination, with a focus on international
+employment opportunities.
 </p>
 
 <p>
-For over a decade, our team has focused on ethical recruitment,
-quality candidate screening, documentation support and
-successful workforce deployment.
+We aim to understand the actual requirements of employers
+and connect those requirements with suitable candidates
+based on skills, experience and job specifications.
 </p>
 
 <p>
-We understand that international recruitment is more than
-matching a CV with a vacancy. Employers need dependable
-workers, proper documentation, efficient coordination and
-ongoing support.
+For candidates, our goal is to provide clear information
+about available opportunities and guide them through the
+applicable recruitment process.
 </p>
 
-<p>
-Candidates need legitimate opportunities, transparent guidance
-and preparation for their international career journey.
-</p>
+<div class="check-list">
 
-<p>
-Our goal is to make that entire process more structured,
-transparent and reliable.
-</p>
+<div>✓ Employer-focused recruitment</div>
+<div>✓ Skilled & semi-skilled manpower</div>
+<div>✓ Professional & technical recruitment</div>
+<div>✓ Candidate screening & coordination</div>
+<div>✓ Interview & selection coordination</div>
+<div>✓ International deployment support</div>
+
+</div>
 
 </div>
 
 
-<div class="story-card">
+<div class="dark-box">
 
 <h3>
-Taj HR Services
+Our Approach
 </h3>
 
 <p>
-A trusted bridge between talented professionals and
-organizations looking for dependable international manpower.
+Every recruitment requirement is different. We therefore
+focus on understanding the position before sourcing
+candidates.
 </p>
 
-<div class="stats">
-
-<div class="stat">
-<strong>10+</strong>
-<span>Years of trusted service</span>
-</div>
-
-<div class="stat">
-<strong>50+</strong>
-<span>Partner companies</span>
-</div>
-
-<div class="stat">
-<strong>10K+</strong>
-<span>Professionals deployed</span>
-</div>
-
-<div class="stat">
-<strong>98%</strong>
-<span>Client satisfaction</span>
-</div>
-
-</div>
+<ul>
+<li>Understand employer requirements</li>
+<li>Identify relevant candidate profiles</li>
+<li>Screen candidates according to requirements</li>
+<li>Coordinate interviews and assessments</li>
+<li>Support documentation processes</li>
+<li>Coordinate applicable deployment activities</li>
+</ul>
 
 </div>
 
@@ -784,7 +685,7 @@ organizations looking for dependable international manpower.
 </section>
 
 
-<!-- LEADERSHIP -->
+<!-- MISSION & VISION -->
 
 <section class="section section-light">
 
@@ -793,123 +694,50 @@ organizations looking for dependable international manpower.
 <div class="section-title">
 
 <span class="label">
-Our Team
+Our Purpose
 </span>
 
 <h2>
-Leadership Team
+Mission & Vision
 </h2>
 
 <p>
-Experienced professionals working together to deliver
-reliable recruitment and workforce solutions.
+The principles that guide our recruitment work.
 </p>
 
 </div>
 
 
-<div class="team-grid">
+<div class="mission-grid">
 
-<div class="team-card">
-
-<div class="team-photo">
-👤
-</div>
-
-<div class="team-info">
+<div class="mission-card">
 
 <h3>
-Mr. Abu Zaid Faizy
+Our Mission
 </h3>
 
-<div class="team-role">
-Managing Director
-</div>
-
 <p>
-Leading Taj HR Services with 15+ years of experience
-in international recruitment and business development.
+To provide organized and requirement-focused recruitment
+support that helps employers find suitable manpower while
+giving candidates access to genuine international employment
+opportunities.
 </p>
 
 </div>
 
-</div>
 
-
-<div class="team-card">
-
-<div class="team-photo">
-👤
-</div>
-
-<div class="team-info">
+<div class="mission-card">
 
 <h3>
-Mr. Mohammad Rizwan
+Our Vision
 </h3>
 
-<div class="team-role">
-Operations Manager
-</div>
-
 <p>
-Overseeing day-to-day operations and ensuring seamless
-recruitment processes across all departments.
+To build a trusted recruitment network connecting Indian
+talent with employers and projects across international
+markets through professional communication and responsible
+recruitment practices.
 </p>
-
-</div>
-
-</div>
-
-
-<div class="team-card">
-
-<div class="team-photo">
-👤
-</div>
-
-<div class="team-info">
-
-<h3>
-Mr. Abu Saleh
-</h3>
-
-<div class="team-role">
-International Client Relations Manager
-</div>
-
-<p>
-Managing relationships with international clients and
-ensuring exceptional service delivery.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="team-card">
-
-<div class="team-photo">
-👤
-</div>
-
-<div class="team-info">
-
-<h3>
-Mr. Khaliquzzaman
-</h3>
-
-<div class="team-role">
-Compliance & Legal Officer
-</div>
-
-<p>
-Ensuring regulatory compliance and legal adherence
-across recruitment operations.
-</p>
-
-</div>
 
 </div>
 
@@ -933,78 +761,110 @@ Our Values
 </span>
 
 <h2>
-What We Stand For
+What We Believe In
 </h2>
 
 <p>
-Our values guide every recruitment decision and every
-relationship with employers and candidates.
+Our work is guided by practical values that matter to both
+employers and candidates.
 </p>
 
 </div>
 
 
-<div class="values-grid">
+<div class="value-grid">
 
-<div class="value">
+<div class="value-card">
 
 <div class="value-icon">🤝</div>
 
 <h3>
-Integrity
+Trust
 </h3>
 
 <p>
-We maintain high ethical standards and focus on transparency
-and honesty in every interaction.
+We believe clear communication and responsible dealings
+are essential for long-term recruitment relationships.
 </p>
 
 </div>
 
 
-<div class="value">
+<div class="value-card">
 
-<div class="value-icon">❤️</div>
+<div class="value-icon">🎯</div>
 
 <h3>
-People First
+Right Fit
 </h3>
 
 <p>
-We prioritize the welfare and success of both candidates
-and clients, treating everyone with respect and dignity.
+We focus on matching candidate skills and experience with
+the actual requirements of the position.
 </p>
 
 </div>
 
 
-<div class="value">
+<div class="value-card">
 
-<div class="value-icon">⭐</div>
+<div class="value-icon">📋</div>
 
 <h3>
-Excellence
+Professional Process
 </h3>
 
 <p>
-We continuously strive to improve our service and deliver
-quality recruitment outcomes.
+We use a structured approach for requirement understanding,
+screening, interviews and recruitment coordination.
 </p>
 
 </div>
 
 
-<div class="value">
+<div class="value-card">
 
 <div class="value-icon">🌍</div>
 
 <h3>
-Global Perspective
+Global Opportunity
 </h3>
 
 <p>
-We embrace diversity and bring international best practices
-to our recruitment operations.
+We help connect Indian candidates with suitable international
+employment opportunities.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="value-icon">🔎</div>
+
+<h3>
+Transparency
+</h3>
+
+<p>
+We encourage candidates and employers to verify job details,
+requirements and recruitment information.
+</p>
+
+</div>
+
+
+<div class="value-card">
+
+<div class="value-icon">⚡</div>
+
+<h3>
+Responsiveness
+</h3>
+
+<p>
+Timely communication is important when employers have
+workforce requirements and projects have deadlines.
 </p>
 
 </div>
@@ -1016,7 +876,7 @@ to our recruitment operations.
 </section>
 
 
-<!-- OUR COMMITMENT -->
+<!-- RECRUITMENT AREAS -->
 
 <section class="section section-light">
 
@@ -1025,64 +885,41 @@ to our recruitment operations.
 <div class="section-title">
 
 <span class="label">
-Our Commitment
+Our Recruitment Areas
 </span>
 
 <h2>
-Ethical, transparent and responsible recruitment
+Manpower Across Multiple Sectors
 </h2>
+
+<p>
+Depending on employer requirements, recruitment may cover
+a wide range of skilled, technical and professional roles.
+</p>
 
 </div>
 
 
-<div class="commitment">
+<div class="stats">
 
-<div class="commitment-box">
-
-<h2>
-For Employers
-</h2>
-
-<p>
-We help employers reduce overseas hiring risk by providing
-screened candidates, documentation coordination,
-deployment planning and post-arrival support.
-</p>
-
-<ul>
-<li>Pre-screened candidates</li>
-<li>Trade and profile screening</li>
-<li>Documentation coordination</li>
-<li>Work permit support</li>
-<li>Deployment planning</li>
-<li>Replacement support</li>
-<li>Dedicated account management</li>
-</ul>
-
+<div class="stat">
+<strong>Skilled</strong>
+<span>Trade & technical manpower</span>
 </div>
 
+<div class="stat">
+<strong>Semi-Skilled</strong>
+<span>Project & operational roles</span>
+</div>
 
-<div class="commitment-box light">
+<div class="stat">
+<strong>Technical</strong>
+<span>Technicians & specialists</span>
+</div>
 
-<h2>
-For Candidates
-</h2>
-
-<p>
-We help professionals understand international opportunities
-and prepare for legitimate overseas employment.
-</p>
-
-<ul>
-<li>Verified job opportunities</li>
-<li>Profile screening</li>
-<li>Document guidance</li>
-<li>Work permit process guidance</li>
-<li>Pre-departure orientation</li>
-<li>Career guidance</li>
-<li>Post-deployment support</li>
-</ul>
-
+<div class="stat">
+<strong>Professional</strong>
+<span>Engineers & professional roles</span>
 </div>
 
 </div>
@@ -1092,7 +929,7 @@ and prepare for legitimate overseas employment.
 </section>
 
 
-<!-- PARTNERS -->
+<!-- PROCESS -->
 
 <section class="section">
 
@@ -1101,74 +938,146 @@ and prepare for legitimate overseas employment.
 <div class="section-title">
 
 <span class="label">
-Strategic Partnerships
+How We Work
 </span>
 
 <h2>
-Our Partners
+A Structured Recruitment Journey
 </h2>
 
 <p>
-We collaborate with specialized organizations to provide
-broader recruitment and workforce solutions.
+The exact process varies according to employer, job role,
+country and applicable requirements.
 </p>
 
 </div>
 
 
-<div class="partner-grid">
+<div class="steps">
 
-<div class="partner">
+<div class="step">
+
+<div class="step-number">1</div>
 
 <h3>
-Krewex Technologies
+Requirement
 </h3>
 
 <p>
-Corporate parent company providing global technology
-and infrastructure support.
+Understand the employer's position, workforce quantity,
+skills and other requirements.
 </p>
 
 </div>
 
 
-<div class="partner">
+<div class="step">
+
+<div class="step-number">2</div>
 
 <h3>
-Aegis Krew International
+Sourcing
 </h3>
 
 <p>
-Specialized sister agency focused on global executive
-search and talent strategy.
+Search for relevant candidates through available
+recruitment channels and candidate networks.
 </p>
 
 </div>
 
 
-<div class="partner">
+<div class="step">
+
+<div class="step-number">3</div>
 
 <h3>
-Mahad Manpower Consultant
+Screening
 </h3>
 
 <p>
-Sister agency managing local recruitment operations
-and manpower-related services.
+Review candidate profiles according to the employer's
+specified requirements.
 </p>
 
 </div>
 
 
-<div class="partner">
+<div class="step">
+
+<div class="step-number">4</div>
 
 <h3>
-Neuraforge Tech
+Selection
 </h3>
 
 <p>
-Technology-focused sister firm providing AI and
-software engineering solutions.
+Coordinate interviews, assessments and applicable
+selection procedures.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">5</div>
+
+<h3>
+Documentation
+</h3>
+
+<p>
+Coordinate applicable recruitment and employment
+documentation for selected candidates.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">6</div>
+
+<h3>
+Processing
+</h3>
+
+<p>
+Support applicable pre-departure and travel-related
+coordination.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">7</div>
+
+<h3>
+Deployment
+</h3>
+
+<p>
+Coordinate candidates through the applicable deployment
+process.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">8</div>
+
+<h3>
+Follow-Up
+</h3>
+
+<p>
+Maintain communication with relevant parties during
+the recruitment process.
 </p>
 
 </div>
@@ -1180,84 +1089,165 @@ software engineering solutions.
 </section>
 
 
-<!-- CREDENTIALS -->
+<!-- LICENCE -->
 
 <section class="section section-light">
 
-<div class="container">
+<div class="container two-col">
 
-<div class="section-title">
+<div class="content">
 
 <span class="label">
 Credentials
 </span>
 
 <h2>
-Licenses & Certifications
+Professional & Compliance Focus
 </h2>
 
 <p>
-Our credentials support transparent and compliant
-international recruitment operations.
+Taj HR Services operates with a focus on organized
+recruitment, responsible communication and applicable
+documentation.
 </p>
+
+<p>
+Candidates and employers should always verify current
+job details, recruitment terms and official information
+directly with the company before proceeding.
+</p>
+
+<a href="contact.html"
+class="btn btn-dark">
+Contact Us
+</a>
 
 </div>
 
 
-<div class="credentials">
-
-<div class="credential">
+<div class="license">
 
 <h3>
-Government Licensed
+Company Information
 </h3>
 
-<p>
-Registered with the Ministry of External Affairs,
-Government of India.
-</p>
+<div class="license-row">
 
-<div class="license-number">
+<span>Agency Status</span>
+
+<strong>
+Government Licensed Recruitment Agency
+</strong>
+
+</div>
+
+<div class="license-row">
+
+<span>ISO Certification</span>
+
+<strong>
+ISO 9001:2015 Certified
+</strong>
+
+</div>
+
+<div class="license-row">
+
+<span>Licence Number</span>
+
+<strong>
 B-3252/DEL/PER/1000+/5/11251/2025
+</strong>
+
+</div>
+
+<div class="license-row">
+
+<span>Phone</span>
+
+<strong>
++91 96513 32002
+</strong>
+
+</div>
+
+<div class="license-row">
+
+<span>Email</span>
+
+<strong>
+info@tajhrservices.com
+</strong>
+
 </div>
 
 </div>
 
+</div>
 
-<div class="credential">
+</section>
+
+
+<!-- EMPLOYERS & CANDIDATES -->
+
+<section class="section">
+
+<div class="container two-col">
+
+<div class="dark-box">
 
 <h3>
-ISO 9001:2015
+For Employers
 </h3>
 
 <p>
-Quality Management System certification for
-recruitment and HR services.
+Need manpower for your project or organization?
+Share your requirement with our recruitment team.
 </p>
 
-<div class="license-number">
-Quality Assured
-</div>
+<ul>
+<li>Skilled manpower</li>
+<li>Semi-skilled manpower</li>
+<li>Technical professionals</li>
+<li>Bulk recruitment</li>
+<li>Project manpower</li>
+<li>Interview coordination</li>
+</ul>
+
+<a href="employers.html"
+class="btn btn-primary"
+style="margin-top:20px;">
+Employer Solutions
+</a>
 
 </div>
 
 
-<div class="credential">
+<div class="dark-box">
 
 <h3>
-NSDC Partner
+For Candidates
 </h3>
 
 <p>
-National Skill Development Corporation
-certified training partnership.
+Looking for an international employment opportunity?
+Explore current openings and submit your profile.
 </p>
 
-<div class="license-number">
-Skill India Partner
-</div>
+<ul>
+<li>Current job opportunities</li>
+<li>Skilled & technical positions</li>
+<li>Candidate profile submission</li>
+<li>Interview coordination</li>
+<li>Recruitment guidance</li>
+<li>International opportunities</li>
+</ul>
 
-</div>
+<a href="jobs.html"
+class="btn btn-primary"
+style="margin-top:20px;">
+View Jobs
+</a>
 
 </div>
 
@@ -1275,152 +1265,26 @@ Skill India Partner
 <div class="cta">
 
 <h2>
-Are You a European Employer Looking for Skilled Workers?
+Let's Build the Right Connection
 </h2>
 
 <p>
-Get pre-screened candidates with recruitment,
-documentation and deployment support.
-Taj HR Services helps employers build dependable
-international workforces.
+Whether you represent a company looking for manpower
+or you are a candidate seeking an international opportunity,
+Taj HR Services is ready to discuss your requirement.
 </p>
 
-<a href="employers.html" class="btn btn-primary">
-Request Manpower
-</a>
-
 <a href="contact.html"
-class="btn btn-outline"
-style="margin-left:10px;">
+class="btn btn-primary">
 Contact Us
 </a>
 
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="section section-light">
-
-<div class="container">
-
-<div class="section-title">
-
-<span class="label">
-Get In Touch
-</span>
-
-<h2>
-Let's Connect
-</h2>
-
-<p>
-Ready to discuss your workforce requirements?
-</p>
-
-</div>
-
-
-<div class="contact-grid">
-
-<div class="contact-card">
-
-<h3>
-Taj HR Services
-</h3>
-
-<p>
-Professional international recruitment and
-manpower workforce solutions.
-</p>
-
-<div class="contact-detail">
-
-<strong>Office</strong>
-
-<span>
-18-B, 1st, Money Top, near Honey,
-Navjivan Buddh Vihar, Taimoor Nagar,
-New Friends Colony, New Delhi,
-Delhi 110025
-</span>
-
-</div>
-
-
-<div class="contact-detail">
-
-<strong>Phone</strong>
-
-<span>
-<a href="tel:+919651332002">
-+91 96513 32002
-</a>
-</span>
-
-</div>
-
-
-<div class="contact-detail">
-
-<strong>Email</strong>
-
-<span>
-<a href="mailto:info@tajhrservices.com">
-info@tajhrservices.com
-</a>
-</span>
-
-</div>
-
-
-<div class="contact-detail">
-
-<strong>License</strong>
-
-<span>
-B-3252/DEL/PER/1000+/5/11251/2025
-</span>
-
-</div>
-
-</div>
-
-
-<div class="contact-card">
-
-<h3>
-Start a Conversation
-</h3>
-
-<p>
-For employer manpower requirements, candidate enquiries
-or general information, contact our team.
-</p>
-
-<div style="margin-top:25px;">
-
-<a
-href="https://wa.me/919651332002"
+<a href="https://wa.me/919651332002"
 target="_blank"
-class="btn btn-primary">
-Chat on WhatsApp
-</a>
-
-<a
-href="mailto:info@tajhrservices.com"
-class="btn btn-dark"
+class="btn btn-outline"
 style="margin-left:8px;">
-Send Email
+WhatsApp
 </a>
-
-</div>
-
-</div>
 
 </div>
 
@@ -1456,28 +1320,23 @@ info@tajhrservices.com
 
 <div>
 
-<h3>
-Company
-</h3>
+<h3>Company</h3>
 
 <a href="index.html">Home</a>
 <a href="about.html">About Us</a>
 <a href="services.html">Services</a>
+<a href="industries.html">Industries</a>
 <a href="resources.html">Resources</a>
-<a href="contact.html">Contact</a>
 
 </div>
 
 
 <div>
 
-<h3>
-For Employers
-</h3>
+<h3>Employers</h3>
 
 <a href="employers.html">Employer Solutions</a>
-<a href="employers.html">Request Manpower</a>
-<a href="services.html">Recruitment Services</a>
+<a href="employers.html#requirement">Request Manpower</a>
 <a href="contact.html">Contact Team</a>
 
 </div>
@@ -1485,14 +1344,11 @@ For Employers
 
 <div>
 
-<h3>
-For Candidates
-</h3>
+<h3>Candidates</h3>
 
 <a href="jobs.html">Current Jobs</a>
-<a href="jobs.html">Submit Profile</a>
+<a href="jobs.html#apply">Submit Profile</a>
 <a href="contact.html">Contact Us</a>
-<a href="resources.html">Resources</a>
 
 </div>
 
@@ -1503,4 +1359,22 @@ For Candidates
 
 © 2026 Taj HR Services. All rights reserved.<br>
 
-Government Licensed Recruitment Agen
+Government Licensed Recruitment Agency |
+ISO 9001:2015 Certified |
+Licence: B-3252/DEL/PER/1000+/5/11251/2025
+
+</div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/919651332002"
+target="_blank"
+class="whatsapp">
+WhatsApp
+</a>
+
+</body>
+</html>
