@@ -3,1271 +3,358 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Taj HR Services | Licensed Indian Manpower Partner</title>
-
-<meta name="description" content="Taj HR Services - Government licensed Indian manpower recruitment partner providing pre-screened workers, recruitment, documentation, work permit support and deployment services.">
-
+<title>Global Manpower Supply from India | TAJ HR Services</title>
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    color:#172033;
-    background:#fff;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-.container{
-    width:92%;
-    max-width:1200px;
-    margin:auto;
-}
-
-.header{
-    background:#fff;
-    border-bottom:1px solid #e7ebf0;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.header-inner{
-    min-height:78px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:25px;
-}
-
-.logo{
-    font-size:25px;
-    font-weight:900;
-    color:#0b3157;
-    line-height:1;
-}
-
-.logo span{
-    display:block;
-    font-size:11px;
-    letter-spacing:3px;
-    margin-top:5px;
-    color:#d19a25;
-}
-
-.nav{
-    display:flex;
-    align-items:center;
-    gap:23px;
-    font-size:14px;
-    font-weight:600;
-}
-
-.nav a:hover{
-    color:#d19a25;
-}
-
-.btn{
-    display:inline-block;
-    padding:13px 22px;
-    border-radius:6px;
-    font-weight:700;
-    border:1px solid transparent;
-    cursor:pointer;
-}
-
-.btn-primary{
-    background:#d19a25;
-    color:#fff;
-}
-
-.btn-dark{
-    background:#0b3157;
-    color:#fff;
-}
-
-.btn-outline{
-    border-color:#d19a25;
-    color:#0b3157;
-    background:#fff;
-}
-
-.hero{
-    background:linear-gradient(120deg,#071f38,#0d4169);
-    color:#fff;
-    padding:95px 0 85px;
-}
-
-.hero-grid{
-    display:grid;
-    grid-template-columns:1.4fr .8fr;
-    gap:60px;
-    align-items:center;
-}
-
-.badge{
-    display:inline-block;
-    border:1px solid rgba(255,255,255,.35);
-    padding:8px 14px;
-    border-radius:30px;
-    font-size:13px;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-size:52px;
-    line-height:1.08;
-    max-width:750px;
-    margin-bottom:22px;
-}
-
-.hero h1 span{
-    color:#e4b54d;
-}
-
-.hero p{
-    max-width:700px;
-    font-size:18px;
-    color:#d9e4ef;
-    margin-bottom:28px;
-}
-
-.hero-list{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:12px;
-    margin:25px 0;
-}
-
-.hero-list div{
-    color:#e7eef5;
-    font-size:14px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.hero-card{
-    background:#fff;
-    color:#172033;
-    padding:32px;
-    border-radius:14px;
-    box-shadow:0 20px 60px rgba(0,0,0,.22);
-}
-
-.hero-card h3{
-    font-size:25px;
-    margin-bottom:15px;
-    color:#0b3157;
-}
-
-.hero-card p{
-    color:#657286;
-    font-size:15px;
-}
-
-.trust{
-    background:#f7f9fb;
-    padding:28px 0;
-}
-
-.trust-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.trust-item{
-    text-align:center;
-    padding:15px;
-}
-
-.trust-item strong{
-    display:block;
-    font-size:30px;
-    color:#0b3157;
-}
-
-.trust-item span{
-    color:#657286;
-    font-size:14px;
-}
-
-.section{
-    padding:85px 0;
-}
-
-.section-light{
-    background:#f7f9fb;
-}
-
-.section-title{
-    text-align:center;
-    max-width:760px;
-    margin:0 auto 45px;
-}
-
-.section-label{
-    color:#c48e20;
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-}
-
-.section-title h2{
-    color:#0b3157;
-    font-size:38px;
-    line-height:1.15;
-    margin:10px 0 15px;
-}
-
-.section-title p{
-    color:#657286;
-}
-
-.two-col{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:55px;
-    align-items:center;
-}
-
-.content h2{
-    color:#0b3157;
-    font-size:38px;
-    line-height:1.2;
-    margin:10px 0 20px;
-}
-
-.content p{
-    color:#657286;
-    margin-bottom:15px;
-}
-
-.checks{
-    margin:25px 0;
-    display:grid;
-    gap:11px;
-}
-
-.checks div{
-    font-weight:600;
-}
-
-.checks div::first-letter{
-    color:#c48e20;
-}
-
-.info-box{
-    background:#0b3157;
-    color:#fff;
-    padding:40px;
-    border-radius:15px;
-}
-
-.info-box h3{
-    font-size:28px;
-    margin-bottom:15px;
-}
-
-.info-box p{
-    color:#dce7f1;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.card{
-    background:#fff;
-    border:1px solid #e4e9ef;
-    border-radius:12px;
-    padding:28px;
-    transition:.2s;
-}
-
-.card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
-}
-
-.card-icon{
-    font-size:32px;
-    margin-bottom:15px;
-}
-
-.card h3{
-    color:#0b3157;
-    font-size:21px;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#657286;
-    font-size:14px;
-}
-
-.card a{
-    display:inline-block;
-    color:#b77e12;
-    font-weight:700;
-    margin-top:15px;
-}
-
-.route-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.route{
-    background:#fff;
-    border:1px solid #e2e7ed;
-    padding:22px;
-    border-radius:10px;
-}
-
-.route strong{
-    color:#0b3157;
-}
-
-.route span{
-    display:block;
-    color:#b77e12;
-    font-size:13px;
-    margin-top:5px;
-}
-
-.industry-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.industry{
-    padding:28px;
-    border-radius:12px;
-    background:#0b3157;
-    color:#fff;
-}
-
-.industry h3{
-    margin-bottom:8px;
-}
-
-.industry p{
-    color:#d7e4ee;
-    font-size:14px;
-}
-
-.destination-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:14px;
-}
-
-.destination{
-    border:1px solid #e2e7ed;
-    background:#fff;
-    border-radius:9px;
-    padding:20px;
-}
-
-.destination strong{
-    color:#0b3157;
-    display:block;
-}
-
-.destination span{
-    color:#718094;
-    font-size:13px;
-}
-
-.testimonial{
-    background:#0b3157;
-    color:#fff;
-    padding:45px;
-    border-radius:15px;
-    max-width:900px;
-    margin:auto;
-}
-
-.testimonial p{
-    font-size:19px;
-    color:#e3edf5;
-    font-style:italic;
-}
-
-.testimonial h4{
-    margin-top:25px;
-    color:#e4b54d;
-}
-
-.credential-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.credential{
-    border:1px solid #e2e7ed;
-    border-radius:12px;
-    padding:25px;
-    text-align:center;
-}
-
-.credential h3{
-    color:#0b3157;
-    margin-bottom:8px;
-}
-
-.credential p{
-    color:#657286;
-    font-size:14px;
-}
-
-.award-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.award{
-    background:#fff;
-    border:1px solid #e2e7ed;
-    border-radius:12px;
-    padding:25px;
-}
-
-.award .year{
-    color:#c48e20;
-    font-weight:800;
-}
-
-.award h3{
-    color:#0b3157;
-    margin:8px 0;
-}
-
-.employer-candidate{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:25px;
-}
-
-.audience{
-    padding:40px;
-    border-radius:14px;
-    background:#0b3157;
-    color:#fff;
-}
-
-.audience.light{
-    background:#f1f4f7;
-    color:#172033;
-}
-
-.audience h2{
-    margin-bottom:15px;
-}
-
-.audience p{
-    margin-bottom:20px;
-    color:#dce7f1;
-}
-
-.audience.light p{
-    color:#657286;
-}
-
-.audience ul{
-    padding-left:20px;
-    margin-bottom:25px;
-}
-
-.faq{
-    max-width:900px;
-    margin:auto;
-}
-
-details{
-    border-bottom:1px solid #dfe5eb;
-    padding:18px 0;
-}
-
-summary{
-    cursor:pointer;
-    font-weight:700;
-    color:#0b3157;
-}
-
-details p{
-    color:#657286;
-    margin-top:12px;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:35px;
-}
-
-.contact-info{
-    background:#0b3157;
-    color:#fff;
-    border-radius:14px;
-    padding:35px;
-}
-
-.contact-info h2{
-    font-size:32px;
-    margin:10px 0 20px;
-}
-
-.contact-info p{
-    color:#dce7f1;
-}
-
-.contact-detail{
-    margin-top:25px;
-}
-
-.contact-detail strong{
-    display:block;
-    color:#e4b54d;
-}
-
-.contact-detail span{
-    display:block;
-    margin-top:5px;
-}
-
-.form-box{
-    background:#fff;
-    border:1px solid #e2e7ed;
-    border-radius:14px;
-    padding:35px;
-}
-
-.form-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-input,textarea{
-    width:100%;
-    padding:14px;
-    border:1px solid #d7dee6;
-    border-radius:6px;
-    font:inherit;
-    margin-bottom:15px;
-}
-
-textarea{
-    min-height:130px;
-}
-
-.full{
-    grid-column:1/-1;
-}
-
-.footer{
-    background:#071d32;
-    color:#fff;
-    padding:65px 0 20px;
-}
-
-.footer-grid{
-    display:grid;
-    grid-template-columns:1.4fr 1fr 1fr 1fr;
-    gap:35px;
-}
-
-.footer h3{
-    color:#e4b54d;
-    margin-bottom:15px;
-}
-
-.footer p{
-    color:#bdcbd8;
-    font-size:14px;
-}
-
-.footer a{
-    display:block;
-    color:#bdcbd8;
-    margin:8px 0;
-    font-size:14px;
-}
-
-.footer a:hover{
-    color:#fff;
-}
-
-.footer-logo{
-    font-size:25px;
-    font-weight:900;
-    margin-bottom:15px;
-}
-
-.footer-bottom{
-    border-top:1px solid rgba(255,255,255,.12);
-    margin-top:45px;
-    padding-top:20px;
-    text-align:center;
-    color:#9fb0c0;
-    font-size:13px;
-}
-
-.whatsapp{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    z-index:999;
-    background:#168c45;
-    color:#fff;
-    padding:14px 20px;
-    border-radius:40px;
-    font-weight:800;
-    box-shadow:0 8px 25px rgba(0,0,0,.2);
-}
-
-@media(max-width:900px){
-
-    .nav{
-        display:none;
-    }
-
-    .hero-grid,
-    .two-col,
-    .contact-grid,
-    .employer-candidate{
-        grid-template-columns:1fr;
-    }
-
-    .cards,
-    .route-grid,
-    .industry-grid,
-    .award-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .destination-grid{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    .credential-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .trust-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .footer-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:600px){
-
-    .hero{
-        padding:65px 0;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero-list{
-        grid-template-columns:1fr;
-    }
-
-    .cards,
-    .route-grid,
-    .industry-grid,
-    .award-grid,
-    .destination-grid,
-    .credential-grid,
-    .trust-grid,
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    .section{
-        padding:60px 0;
-    }
-
-    .section-title h2,
-    .content h2{
-        font-size:30px;
-    }
-
-    .form-grid{
-        grid-template-columns:1fr;
-    }
-
-    .full{
-        grid-column:auto;
-    }
-
-    .header-button{
-        display:none;
-    }
-}
+  :root{
+    --navy:#0b1f3a; --navy-light:#12315c; --gold:#c9a227; --gold-light:#e6c85a;
+    --cream:#f7f5ef; --text-dark:#1a1a1a; --text-muted:#5c5c5c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI', Arial, sans-serif;color:var(--text-dark);background:#fff;line-height:1.6;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+
+  header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.15);}
+  .nav-wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;}
+  .logo{color:#fff;font-size:20px;font-weight:700;letter-spacing:.5px;}
+  .logo span{color:var(--gold);}
+  .nav-links{display:flex;gap:26px;flex-wrap:wrap;}
+  .nav-links a{color:#e8e8e8;font-size:14.5px;font-weight:500;}
+  .nav-links a:hover,.nav-links a.active{color:var(--gold);}
+  .nav-cta{background:var(--gold);color:var(--navy);padding:10px 18px;border-radius:4px;font-weight:700;font-size:13.5px;white-space:nowrap;}
+
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:80px 24px 60px;position:relative;overflow:hidden;}
+  .hero::after{content:"";position:absolute;right:-100px;top:-100px;width:400px;height:400px;border:2px solid rgba(201,162,39,.15);border-radius:50%;}
+  .hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:2;}
+  .hero-eyebrow{color:var(--gold-light);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:14px;}
+  .hero h1{font-size:38px;font-weight:800;max-width:680px;line-height:1.3;margin-bottom:16px;}
+  .hero p{font-size:16px;color:#d8dde8;max-width:600px;margin-bottom:22px;}
+  .hero-checks{margin-bottom:26px;}
+  .hero-checks li{display:flex;gap:8px;font-size:14.5px;color:#e4e8f2;margin-bottom:6px;}
+  .hero-checks li::before{content:"✓";color:var(--gold);font-weight:800;}
+  .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;}
+  .btn-primary{background:var(--gold);color:var(--navy);padding:13px 24px;border-radius:4px;font-weight:700;font-size:14.5px;}
+  .btn-outline{border:1.5px solid #fff;color:#fff;padding:13px 24px;border-radius:4px;font-weight:700;font-size:14.5px;}
+  .badge-row{display:flex;gap:12px;flex-wrap:wrap;}
+  .badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);padding:7px 14px;border-radius:20px;font-size:12.5px;color:#e4e8f2;font-weight:600;}
+
+  .stats-strip{background:var(--cream);padding:36px 24px;border-bottom:1px solid #e8e4d8;}
+  .stats-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;}
+  .stats-inner .num{font-size:30px;font-weight:800;color:var(--navy);}
+  .stats-inner .lbl{font-size:13px;color:var(--text-muted);font-weight:600;}
+
+  section{padding:70px 24px;}
+  .section-inner{max-width:1200px;margin:0 auto;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 48px;}
+  .eyebrow{color:var(--gold);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px;}
+  .section-head h2{font-size:30px;font-weight:800;color:var(--navy);margin-bottom:12px;}
+  .section-head p{color:var(--text-muted);font-size:15.5px;}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+  .about-grid h2{font-size:28px;color:var(--navy);font-weight:800;margin-bottom:16px;}
+  .about-grid p{color:var(--text-muted);margin-bottom:14px;font-size:15px;}
+  .about-list li{display:flex;gap:10px;margin-bottom:10px;font-size:14.5px;color:var(--text-dark);}
+  .about-list li::before{content:"✓";color:var(--gold);font-weight:800;}
+  .about-card{background:var(--navy);border-radius:8px;padding:30px;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .about-card .num{font-size:26px;font-weight:800;color:var(--gold-light);}
+  .about-card .lbl{font-size:12.5px;color:#c5cbdb;}
+
+  .services{background:var(--cream);}
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  .service-card{background:#fff;border-radius:8px;padding:26px;border-top:3px solid var(--gold);box-shadow:0 4px 14px rgba(0,0,0,.05);}
+  .service-card .tag{color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;}
+  .service-card h3{color:var(--navy);font-size:17px;font-weight:700;margin-bottom:8px;}
+  .service-card p{color:var(--text-muted);font-size:14px;}
+
+  .industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .industry-card{background:var(--cream);border-radius:8px;padding:22px;border-left:3px solid var(--gold);}
+  .industry-card h4{color:var(--navy);font-size:16px;margin-bottom:6px;}
+  .industry-card p{font-size:13.5px;color:var(--text-muted);margin-bottom:6px;}
+  .industry-card .dep{font-size:12.5px;color:var(--gold);font-weight:700;}
+
+  .countries-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;}
+  .country-chip{background:var(--cream);border:1px solid #e8e4d8;border-radius:6px;padding:12px 8px;font-size:13px;font-weight:600;color:var(--navy);text-align:center;}
+  .country-chip .vac{display:block;font-size:11px;color:var(--gold);font-weight:700;margin-top:3px;}
+
+  .testimonial{background:var(--navy);color:#fff;}
+  .testimonial-box{max-width:720px;margin:0 auto;text-align:center;}
+  .testimonial-box p.quote{font-size:19px;font-style:italic;color:#e4e8f2;margin-bottom:24px;}
+  .testimonial-box .name{color:var(--gold-light);font-weight:700;}
+  .testimonial-box .role{font-size:13.5px;color:#c5cbdb;}
+  .testimonial-stats{display:flex;justify-content:center;gap:40px;margin-top:36px;flex-wrap:wrap;}
+  .testimonial-stats .num{font-size:24px;font-weight:800;color:var(--gold-light);}
+  .testimonial-stats .lbl{font-size:12.5px;color:#c5cbdb;}
+
+  .cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .cred-card{text-align:center;padding:26px 16px;background:var(--cream);border-radius:8px;}
+  .cred-card .ic{font-size:26px;margin-bottom:10px;}
+  .cred-card h4{color:var(--navy);font-size:15px;margin-bottom:6px;}
+  .cred-card p{font-size:12.5px;color:var(--text-muted);}
+  .cred-card .pill{display:inline-block;margin-top:8px;background:var(--gold);color:var(--navy);font-size:11px;font-weight:700;padding:4px 10px;border-radius:12px;}
+
+  .split{background:var(--cream);}
+  .split-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .split-card{background:#fff;border-radius:8px;padding:32px;box-shadow:0 4px 14px rgba(0,0,0,.05);}
+  .split-card .tag{color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
+  .split-card h3{color:var(--navy);font-size:20px;font-weight:800;margin:8px 0 14px;}
+  .split-card li{display:flex;gap:8px;font-size:14px;color:var(--text-dark);margin-bottom:8px;}
+  .split-card li::before{content:"✓";color:var(--gold);font-weight:800;}
+  .split-card .btn-primary{margin-top:18px;display:inline-block;}
+
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;}
+  .contact-info li{margin-bottom:18px;font-size:14.5px;}
+  .contact-info b{display:block;color:var(--navy);margin-bottom:4px;}
+  .contact-info p{color:var(--text-muted);}
+
+  .cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);text-align:center;}
+  .cta h2{color:var(--navy);font-size:26px;font-weight:800;margin-bottom:12px;}
+  .cta p{color:#3a3110;margin-bottom:22px;}
+  .cta .btn-primary{background:var(--navy);color:#fff;}
+
+  footer{background:#08162c;color:#c5cbdb;padding:50px 24px 20px;}
+  .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:40px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .footer-grid h4{color:#fff;font-size:15px;margin-bottom:16px;}
+  .footer-grid p,.footer-grid li{font-size:13.5px;margin-bottom:8px;color:#a9b1c4;}
+  .footer-bottom{max-width:1200px;margin:0 auto;padding-top:18px;font-size:12.5px;text-align:center;color:#7c869e;}
+
+  @media(max-width:900px){
+    .about-grid,.service-grid,.industry-grid,.split-grid,.contact-grid,.footer-grid,.about-card{grid-template-columns:1fr;}
+    .countries-grid{grid-template-columns:repeat(3,1fr);}
+    .cred-grid{grid-template-columns:repeat(2,1fr);}
+    .stats-inner{grid-template-columns:repeat(2,1fr);}
+    .nav-links{display:none;}
+    .hero h1{font-size:28px;}
+  }
 </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
-
-<header class="header">
-<div class="container header-inner">
-
-<a href="index.html" class="logo">
-TAJ
-<span>HR SERVICES</span>
-</a>
-
-<nav class="nav">
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="services.html">Services</a>
-<a href="industries.html">Industries</a>
-<a href="resources.html">Resources</a>
-<a href="employers.html">Employers</a>
-<a href="jobs.html">Careers</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-<a href="https://wa.me/919651332002"
-   class="btn btn-primary"
-   target="_blank">
-WhatsApp
-</a>
-
-</div>
+<header>
+  <div class="nav-wrap">
+    <div class="logo">TAJ <span>HR</span> SERVICES</div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="employers.html">Employers</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">Request Manpower</a>
+  </div>
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero">
-
-<div class="container hero-grid">
-
-<div>
-
-<span class="badge">
-Licensed Indian Manpower Partner
-</span>
-
-<h1>
-Hire pre-screened Indian workers
-<span>with replacement cover.</span>
-</h1>
-
-<p>
-Get trade-tested, document-ready workers with
-work-permit file support, deployment planning,
-and 90-day replacement support for employer confidence.
-</p>
-
-<div class="hero-list">
-
-<div>✓ Shortlist-ready CVs with trade checks</div>
-<div>✓ Demand letter & permit-file guidance</div>
-<div>✓ Replacement support during first 90 days</div>
-<div>✓ Government Licensed Recruitment Agency</div>
-
-</div>
-
-<div class="hero-buttons">
-
-<a href="employers.html" class="btn btn-primary">
-Request Employer Proposal
-</a>
-
-<a href="contact.html" class="btn btn-outline">
-Contact Us
-</a>
-
-</div>
-
-</div>
-
-
-<div class="hero-card">
-
-<h3>
-Taj HR Services
-</h3>
-
-<p>
-Professional international manpower recruitment
-and workforce solutions from India.
-</p>
-
-<div class="checks">
-
-<div>✓ Govt. Licensed</div>
-<div>✓ ISO 9001:2015</div>
-<div>✓ 90-Day Replacement Support</div>
-<div>✓ Permit File Support</div>
-
-</div>
-
-<a href="employers.html" class="btn btn-dark">
-Hire Manpower
-</a>
-
-</div>
-
-</div>
-
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Licensed Indian Manpower Partner</div>
+    <h1>Hire Pre-Screened Indian Workers with Replacement Cover</h1>
+    <p>Get trade-tested, document-ready workers for Europe with work-permit file support, 4–12 week deployment planning, and 90-day replacement support for employer confidence.</p>
+    <ul class="hero-checks">
+      <li>Shortlist-ready CVs with trade checks</li>
+      <li>Demand letter and permit-file guidance</li>
+      <li>Replacement support during the first 90 days</li>
+    </ul>
+    <div class="hero-btns">
+      <a href="employers.html" class="btn-primary">Request Employer Proposal</a>
+      <a href="#" class="btn-outline">Download Brochure</a>
+    </div>
+    <div class="badge-row">
+      <span class="badge">Govt. Licensed</span>
+      <span class="badge">ISO 9001:2015</span>
+      <span class="badge">90-Day Replacement</span>
+      <span class="badge">Permit File Support</span>
+    </div>
+  </div>
 </section>
 
-
-<!-- TRUST -->
-
-<section class="trust">
-
-<div class="container trust-grid">
-
-<div class="trust-item">
-<strong>50+</strong>
-<span>Partner Companies</span>
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div><div class="num">10+</div><div class="lbl">Years of Experience</div></div>
+    <div><div class="num">50+</div><div class="lbl">Client Companies</div></div>
+    <div><div class="num">23</div><div class="lbl">Destination Countries</div></div>
+    <div><div class="num">10K+</div><div class="lbl">Candidates Database</div></div>
+  </div>
 </div>
 
-<div class="trust-item">
-<strong>90</strong>
-<span>Day Replacement Cover</span>
-</div>
-
-<div class="trust-item">
-<strong>24h</strong>
-<span>Proposal Response</span>
-</div>
-
-<div class="trust-item">
-<strong>10K+</strong>
-<span>Candidate Database</span>
-</div>
-
-</div>
-
+<section id="about">
+  <div class="section-inner about-grid">
+    <div>
+      <div class="eyebrow">Why Choose Us</div>
+      <h2>A Partner You Can Trust</h2>
+      <p>For over a decade, TAJ HR Services has been the trusted bridge between talented professionals and leading organizations across Europe. Our commitment to ethical recruitment and quality service sets us apart.</p>
+      <p>We understand that successful recruitment goes beyond matching skills to requirements — it's about preparing candidates for international careers and providing ongoing support for lasting success.</p>
+      <ul class="about-list">
+        <li>Ethical and transparent recruitment practices</li>
+        <li>Licensed manpower consultant (Reg. No. B-3252/DEL/PER/1000+/5/11251/2025)</li>
+        <li>ISO 9001:2015 certified quality management</li>
+        <li>Fast mobilization with end-to-end support</li>
+        <li>Deep expertise in European labour compliance &amp; work permits</li>
+        <li>Dedicated account managers for each client</li>
+      </ul>
+    </div>
+    <div class="about-card">
+      <div><div class="num">10+</div><div class="lbl">Years of trusted service</div></div>
+      <div><div class="num">50+</div><div class="lbl">Partner companies</div></div>
+      <div><div class="num">10K+</div><div class="lbl">Professionals deployed</div></div>
+      <div><div class="num">98%</div><div class="lbl">Client satisfaction rate</div></div>
+    </div>
+  </div>
 </section>
 
-
-<!-- CLIENTS -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span class="section-label">
-Trusted By Industry Leaders
-</span>
-
-<h2>
-Our Clients
-</h2>
-
-<p>
-Trusted by companies across Europe and the Middle East.
-</p>
-
-</div>
-
-<div class="cards">
-
-<div class="card">
-<h3>Bechtel</h3>
-<p>International engineering and construction partner.</p>
-</div>
-
-<div class="card">
-<h3>Hyundai</h3>
-<p>Global engineering and infrastructure organization.</p>
-</div>
-
-<div class="card">
-<h3>DAEWOO</h3>
-<p>International industrial and construction organization.</p>
-</div>
-
-<div class="card">
-<h3>Doosan</h3>
-<p>Global industrial and engineering company.</p>
-</div>
-
-<div class="card">
-<h3>SNC-Lavalin</h3>
-<p>Engineering and infrastructure organization.</p>
-</div>
-
-<div class="card">
-<h3>Stork</h3>
-<p>Industrial services and engineering organization.</p>
-</div>
-
-</div>
-
-<p style="text-align:center;margin-top:25px;color:#657286;">
-And many more companies across Europe and the Middle East.
-</p>
-
-</div>
-
+<section class="services">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">What We Do</div>
+      <h2>From Demand Letter to Worker On-Site</h2>
+      <p>Every step of your overseas hire — tested candidates, permits, pre-departure training, and 90-day aftercare — handled under one roof.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="tag">10,000+ Tested Candidates</div>
+        <h3>Trade Testing &amp; Candidate Screening</h3>
+        <p>Every candidate sits a practical trade test at our New Delhi assessment centre, plus work history and police clearance checks before your interview.</p>
+      </div>
+      <div class="service-card">
+        <div class="tag">50–500+ Worker Batches</div>
+        <h3>Bulk &amp; Project Hiring</h3>
+        <p>Phased mobilizations for construction, infrastructure and manufacturing projects, with a dedicated project coordinator for every large deployment.</p>
+      </div>
+      <div class="service-card">
+        <div class="tag">8+ Permit Pathways</div>
+        <h3>European Work Permit Processing</h3>
+        <p>Full permit stack handling — German Skilled Worker Visa, Polish Zezwolenie, Irish Employment Permit, Dutch GVVA, Austrian RWR card and more.</p>
+      </div>
+      <div class="service-card">
+        <div class="tag">Zero Rejection Guarantee</div>
+        <h3>Documentation &amp; Compliance</h3>
+        <p>Employment contracts, demand letter drafting, apostille, embassy submission and pre-approvals — compliant with destination-country labour law.</p>
+      </div>
+      <div class="service-card">
+        <div class="tag">Language + Safety Certified</div>
+        <h3>Pre-Departure Training</h3>
+        <p>Mandatory orientation before departure covering destination-language basics, workplace safety standards and cultural integration prep.</p>
+      </div>
+      <div class="service-card">
+        <div class="tag">90-Day Aftercare Included</div>
+        <h3>Deployment &amp; Arrival Support</h3>
+        <p>Airport transfer coordination, day-one registration, bank account guidance, and 30/60/90-day check-in calls with employer and worker.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<!-- WHY CHOOSE US -->
-
-<section class="section section-light">
-
-<div class="container two-col">
-
-<div class="content">
-
-<span class="section-label">
-Why Choose Us
-</span>
-
-<h2>
-A partner you can trust
-</h2>
-
-<p>
-For over a decade, Taj HR Services has worked as a bridge
-between talented professionals and leading organizations.
-</p>
-
-<p>
-Our approach focuses on ethical recruitment, quality service,
-candidate preparation and employer requirements.
-</p>
-
-<div class="checks">
-
-<div>✓ Ethical and transparent recruitment</div>
-<div>✓ Licensed manpower consultant</div>
-<div>✓ ISO 9001:2015 quality management</div>
-<div>✓ Fast mobilization with end-to-end support</div>
-<div>✓ European labor compliance support</div>
-<div>✓ Dedicated account management</div>
-
-</div>
-
-<a href="about.html" class="btn btn-dark">
-Learn More About Our Story
-</a>
-
-</div>
-
-
-<div class="info-box">
-
-<h3>
-Our Commitment
-</h3>
-
-<p>
-We believe in transparent, ethical recruitment that benefits
-employers and candidates.
-</p>
-
-<div class="checks" style="margin-top:25px;">
-<div>✓ Transparent Pricing</div>
-<div>✓ No Hidden Fees</div>
-<div>✓ EU Compliance</div>
-<div>✓ 24/7 Support</div>
-</div>
-
-</div>
-
-</div>
-
+<section id="industries">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">Industry Expertise</div>
+      <h2>Industries We Serve</h2>
+      <p>Specialized recruitment solutions tailored to the unique requirements of each sector.</p>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-card"><h4>Construction</h4><p>Skilled tradesmen, engineers, and project managers</p><div class="dep">5,000+ deployed</div></div>
+      <div class="industry-card"><h4>Manufacturing</h4><p>Machine operators, automotive workers, and production staff</p><div class="dep">3,500+ deployed</div></div>
+      <div class="industry-card"><h4>Hospitality</h4><p>Chefs, servers, and hotel management</p><div class="dep">3,200+ deployed</div></div>
+      <div class="industry-card"><h4>Healthcare</h4><p>Nurses, technicians, and support staff</p><div class="dep">1,200+ deployed</div></div>
+      <div class="industry-card"><h4>Logistics</h4><p>Truck drivers, warehouse staff, and coordinators</p><div class="dep">2,500+ deployed</div></div>
+      <div class="industry-card"><h4>IT &amp; Technology</h4><p>Software developers, engineers, and IT specialists</p><div class="dep">800+ deployed</div></div>
+    </div>
+  </div>
 </section>
 
-
-<!-- SERVICES -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span class="section-label">
-What We Do
-</span>
-
-<h2>
-From demand letter to worker on-site
-</h2>
-
-<p>
-Every step of overseas hiring — tested candidates,
-permits, pre-departure preparation and aftercare.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-<div class="card">
-<div class="card-icon">🧪</div>
-<h3>Trade Testing & Candidate Screening</h3>
-<p>
-Practical trade testing, verified work history,
-police clearance and shortlist-ready profiles.
-</p>
-<a href="services.html">Full Details →</a>
-</div>
-
-<div class="card">
-<div class="card-icon">👥</div>
-<h3>Bulk & Project Hiring</h3>
-<p>
-Phased mobilization for construction,
-infrastructure and manufacturing projects.
-</p>
-<a href="services.html">Full Details →</a>
-</div>
-
-<div class="card">
-<div class="card-icon">📄</div>
-<h3>European Work Permit Processing</h3>
-<p>
-Support for permit pathways and qualification
-recognition requirements.
-</p>
-<a href="services.html">Full Details →</a>
-</div>
-
-<div class="card">
-<div class="card-icon">📋</div>
-<h3>Documentation & Compliance</h3>
-<p>
-Employment contracts, demand letters, apostille
-and documentation coordination.
-</p>
-<a href="services.html">Full Details →</a>
-</div>
-
-<div class="card">
-<div class="card-icon">🎓</div>
-<h3>Pre-Departure Training</h3>
-<p>
-Orientation, destination-language basics,
-workplace safety and cultural preparation.
-</p>
-<a href="services.html">Full Details →</a>
-</div>
-
-<div class="card">
-<div class="card-icon">✈️</div>
-<h3>Deployment & Arrival Support</h3>
-<p>
-Airport coordination, registration guidance
-and post-arrival check-ins.
-</p>
-<a href="services.html">Full Details →</a>
-</div>
-
-</div>
-
-</div>
-
+<section id="countries" style="background:var(--cream);">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">Our Destinations</div>
+      <h2>Recruiting for 23 Countries</h2>
+      <p>We connect employers across Europe, Canada and beyond with skilled Indian professionals.</p>
+    </div>
+    <div class="countries-grid">
+      <div class="country-chip">Germany<span class="vac">1M+ vacancies</span></div>
+      <div class="country-chip">Poland<span class="vac">150K+ vacancies</span></div>
+      <div class="country-chip">Romania<span class="vac">200K+ vacancies</span></div>
+      <div class="country-chip">Ireland<span class="vac">90K+ vacancies</span></div>
+      <div class="country-chip">United Kingdom<span class="vac">250K+ vacancies</span></div>
+      <div class="country-chip">Netherlands<span class="vac">180K+ vacancies</span></div>
+      <div class="country-chip">Canada<span class="vac">500K+ vacancies</span></div>
+      <div class="country-chip">Hungary<span class="vac">100K+ vacancies</span></div>
+      <div class="country-chip">Portugal<span class="vac">80K+ vacancies</span></div>
+      <div class="country-chip">Czech Republic<span class="vac">120K+ vacancies</span></div>
+      <div class="country-chip">Austria<span class="vac">120K+ vacancies</span></div>
+      <div class="country-chip">+ 12 More</div>
+    </div>
+  </div>
 </section>
 
-
-<!-- POPULAR ROUTES -->
-
-<section class="section section-light">
-
-<div class="container">
-
-<div class="section-title">
-
-<span class="section-label">
-Most Requested
-</span>
-
-<h2>
-Popular Hiring Routes
-</h2>
-
-</div>
-
-<div class="route-grid">
-
-<div class="route">
-<strong>Electricians → Germany</strong>
-<span>6 weeks</span>
-</div>
-
-<div class="route">
-<strong>Welders → Germany</strong>
-<span>6 weeks</span>
-</div>
-
-<div class="route">
-<strong>Construction → Poland</strong>
-<span>5 weeks</span>
-</div>
-
-<div class="route">
-<strong>Nurses → Germany</strong>
-<span>10 weeks</span>
-</div>
-
-<div class="route">
-<strong>Electricians → Ireland</strong>
-<span>8 weeks</span>
-</div>
-
-<div class="route">
-<strong>IT Workers → Canada</strong>
-<span>12 weeks</span>
-</div>
-
-</div>
-
-<div style="text-align:center;margin-top:30px;">
-<a href="employers.html" class="btn btn-primary">
-Submit a Demand Letter
-</a>
-</div>
-
-</div>
-
+<section class="testimonial">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow" style="color:var(--gold-light)">Client Success Stories</div>
+      <h2 style="color:#fff;">Trusted by European Employers</h2>
+    </div>
+    <div class="testimonial-box">
+      <p class="quote">"TAJ HR Services has been instrumental in building our construction workforce. Their understanding of European work permit requirements and quality of candidates is unmatched."</p>
+      <div class="name">Hans Müller</div>
+      <div class="role">HR Director, Deutsche Bau GmbH, Germany</div>
+    </div>
+    <div class="testimonial-stats">
+      <div><div class="num">98%</div><div class="lbl">Client Satisfaction</div></div>
+      <div><div class="num">85%</div><div class="lbl">Repeat Clients</div></div>
+      <div><div class="num">72hrs</div><div class="lbl">Avg. Response Time</div></div>
+      <div><div class="num">500+</div><div class="lbl">Partner Companies</div></div>
+    </div>
+  </div>
 </section>
 
-
-<!-- INDUSTRIES -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span class="section-label">
-Industry Expertise
-</span>
-
-<h2>
-Industries We Serve
-</h2>
-
-<p>
-Specialized recruitment solutions tailored to sector,
-project and workforce requirements.
-</p>
-
-</div>
-
-<div class="industry-grid">
-
-<div class="industry">
-<h3>Construction</h3>
-<p>Skilled tradesmen, engineers and project managers.</p>
-</div>
-
-<div class="industry">
-<h3>Manufacturing</h3>
-<p>Machine operators, automotive workers and production staff.</p>
-</div>
-
-<div class="industry">
-<h3>Hospitality</h3>
-<p>Chefs, servers and hotel management professionals.</p>
-</div>
-
-<div class="industry">
-<h3>Healthcare</h3>
-<p>Nurses, technicians and support staff.</p>
-</div>
-
-<div class="industry">
-<h3>Logistics</h3>
-<p>Truck drivers, warehouse staff and coordinators.</p>
-</div>
-
-<div class="industry">
-<h3>IT & Technology</h3>
-<p>Software developers, engineers and IT specialists.</p>
-</div>
-
-</div>
-
-</div>
-
+<section>
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">Credentials</div>
+      <h2>Licenses &amp; Certifications</h2>
+    </div>
+    <div class="cred-grid">
+      <div class="cred-card">
+        <div class="ic">🏛️</div>
+        <h4>Government Licensed</h4>
+        <p>Registered with Ministry of External Affairs, Govt. of India — Reg. No. B-3252/DEL/PER/1000+/5/11251/2025</p>
+      </div>
+      <div class="cred-card">
+        <div class="ic">✅</div>
+        <h4>ISO 9001:2015 Certified</h4>
+        <p>Quality Management System certification for recruitment services</p>
+        <span class="pill">Quality Assured</span>
+      </div>
+      <div class="cred-card">
+        <div class="ic">🎓</div>
+        <h4>NSDC Partner</h4>
+        <p>National Skill Development Corporation certified training partner</p>
+        <span class="pill">Skill India Partner</span>
+      </div>
+      <div class="cred-card">
+        <div class="ic">🤝</div>
+        <h4>Ethical Recruitment</h4>
+        <p>Committed to fair and transparent recruitment practices</p>
+        <span class="pill">Zero Fee Policy</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<!-- DESTINATIONS -->
-
-<section class="section section-light">
-
-<div class="container">
-
-<div class="section-title">
-
-<span class="section-label">
-Our Destinations
-</span>
-
-<h2>
-Recruiting for 23 Countries
-</h2>
-
-<p>
-Connecting employers across Europe, Canada and beyond
-with skilled professionals.
-</p>
-
-</div>
-
-<div class="destination-grid">
-
-<div class="destination"><strong>Germany</strong><span>1M+ vacancies</span></div>
-<div class="destination"><strong>Poland</strong><span>150K+ vacancies</span></div>
-<div class="destination"><strong>Romania</strong><span>200K+ vacancies</span></div>
-<div class="destination"><strong>Hungary</strong><span>100K+ vacancies</span></div>
-<div class="destination"><strong>Portugal</strong><span>80K+ vacancies</span></div>
-<div class="destination"><strong>Lithuania</strong><span>50K+ vacancies</span></div>
-<div class="destination"><strong>Czech Republic</strong><span>120K+ vacancies</span></div>
-<div class="destination"><strong>Croatia</strong><span>60K+ vacancies</span></div>
-<div class="destination"><strong>Greece</strong><span>70K+ vacancies</span></div>
-<div class="destination"><strong>Ireland</strong><span>90K+ vacancies</span></div>
-<div class="destination"><strong>United Kingdom</strong><span>250K+ vacancies</span></div>
-<div class="destination"><strong>Netherlands</strong><span>180K+ vacancies</span></div>
-<div class="destination"><strong>Sweden</strong><span>100K+ vacancies</span></div>
-<div class="destination"><strong>
+<section class="split">
+  <div class="section-inner">
+    <div class="section-head">
+      <div class="eyebrow">Partner With Us</div>
+      <h2>Hire with Document Checks, Deployment Control &amp; Replacement Support</h2>
+      <p>We help employers reduce overseas hiring risk with screened Indian workers, compliant documentation, arrival planning, and 90-day replacement support.</p>
+    </div>
+    <div class="split-grid">
+      <div class="split-card">
+        <div class="tag">For Employers</div>
+        <h3>European Companies &amp; Organizations</h3>
+        <ul>
+          <li>Access to 10,000+ pre-screened candidates</li>
+          <li>Custom recruitment solutions for European markets</li>
+          <li>Bulk manpower supply capability</li>
+          <li>Complete documentation &amp; work permit handling</li>
+        
