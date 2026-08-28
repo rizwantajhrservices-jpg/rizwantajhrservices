@@ -3,1408 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Industries | Taj HR Services</title>
-
-<meta name="description" content="Taj HR Services provides manpower recruitment solutions across construction, engineering, manufacturing, oil and gas, hospitality, logistics and other industries.">
-
+<title>Industries We Serve | Taj HR Services</title>
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-color:#172033;
-background:#fff;
-line-height:1.65;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-.container{
-width:92%;
-max-width:1200px;
-margin:auto;
-}
-
-/* HEADER */
-
-.header{
-background:#fff;
-border-bottom:1px solid #e5e9ee;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-.header-inner{
-min-height:78px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:25px;
-}
-
-.logo{
-font-size:25px;
-font-weight:900;
-color:#0b3157;
-line-height:1;
-}
-
-.logo span{
-display:block;
-font-size:11px;
-letter-spacing:3px;
-color:#d19a25;
-margin-top:5px;
-}
-
-.nav{
-display:flex;
-align-items:center;
-gap:20px;
-font-size:14px;
-font-weight:600;
-}
-
-.nav a:hover{
-color:#d19a25;
-}
-
-.btn{
-display:inline-block;
-padding:13px 22px;
-border-radius:6px;
-font-weight:700;
-}
-
-.btn-primary{
-background:#d19a25;
-color:#fff;
-}
-
-.btn-dark{
-background:#0b3157;
-color:#fff;
-}
-
-.btn-outline{
-border:1px solid #d19a25;
-color:#0b3157;
-background:#fff;
-}
-
-/* HERO */
-
-.hero{
-background:linear-gradient(120deg,#071f38,#0d4169);
-color:#fff;
-padding:90px 0;
-}
-
-.hero-content{
-max-width:880px;
-}
-
-.badge{
-display:inline-block;
-border:1px solid rgba(255,255,255,.35);
-padding:7px 14px;
-border-radius:30px;
-font-size:13px;
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:52px;
-line-height:1.1;
-margin-bottom:20px;
-}
-
-.hero h1 span{
-color:#e4b54d;
-}
-
-.hero p{
-color:#d9e5ef;
-font-size:18px;
-max-width:820px;
-}
-
-/* SECTIONS */
-
-.section{
-padding:80px 0;
-}
-
-.section-light{
-background:#f7f9fb;
-}
-
-.section-title{
-text-align:center;
-max-width:820px;
-margin:0 auto 45px;
-}
-
-.label{
-color:#c18b1c;
-font-size:13px;
-font-weight:800;
-letter-spacing:1.5px;
-text-transform:uppercase;
-}
-
-.section-title h2{
-color:#0b3157;
-font-size:38px;
-line-height:1.2;
-margin:10px 0 15px;
-}
-
-.section-title p{
-color:#657286;
-}
-
-/* INDUSTRY GRID */
-
-.industry-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:22px;
-}
-
-.industry-card{
-background:#fff;
-border:1px solid #dfe5eb;
-border-radius:14px;
-padding:30px;
-transition:.25s;
-}
-
-.industry-card:hover{
-transform:translateY(-4px);
-box-shadow:0 12px 30px rgba(0,0,0,.08);
-}
-
-.industry-icon{
-font-size:38px;
-margin-bottom:15px;
-}
-
-.industry-card h3{
-color:#0b3157;
-font-size:21px;
-margin-bottom:10px;
-}
-
-.industry-card p{
-color:#657286;
-font-size:14px;
-margin-bottom:15px;
-}
-
-.industry-card ul{
-padding-left:18px;
-color:#536276;
-font-size:14px;
-}
-
-.industry-card li{
-margin:6px 0;
-}
-
-/* TWO COLUMN */
-
-.two-col{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:55px;
-align-items:start;
-}
-
-.content h2{
-color:#0b3157;
-font-size:38px;
-line-height:1.2;
-margin:10px 0 20px;
-}
-
-.content p{
-color:#657286;
-margin-bottom:17px;
-}
-
-.check-list{
-margin:25px 0;
-}
-
-.check-list div{
-margin:11px 0;
-font-weight:600;
-}
-
-/* SECTOR TABLE */
-
-.table-wrap{
-overflow-x:auto;
-border:1px solid #dfe5eb;
-border-radius:12px;
-background:#fff;
-}
-
-table{
-width:100%;
-border-collapse:collapse;
-min-width:700px;
-}
-
-th{
-background:#0b3157;
-color:#fff;
-padding:16px;
-text-align:left;
-font-size:14px;
-}
-
-td{
-padding:16px;
-border-bottom:1px solid #e5e9ee;
-color:#536276;
-font-size:14px;
-}
-
-tr:last-child td{
-border-bottom:0;
-}
-
-/* BENEFITS */
-
-.benefit-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:18px;
-}
-
-.benefit{
-background:#fff;
-border:1px solid #dfe5eb;
-border-radius:12px;
-padding:25px;
-text-align:center;
-}
-
-.benefit-icon{
-font-size:32px;
-margin-bottom:10px;
-}
-
-.benefit h3{
-color:#0b3157;
-font-size:17px;
-margin-bottom:8px;
-}
-
-.benefit p{
-font-size:13px;
-color:#657286;
-}
-
-/* EMPLOYER BOX */
-
-.employer-box{
-background:#0b3157;
-color:#fff;
-padding:42px;
-border-radius:15px;
-}
-
-.employer-box h2{
-font-size:32px;
-margin-bottom:15px;
-}
-
-.employer-box p{
-color:#dce7f1;
-margin-bottom:20px;
-}
-
-.employer-list{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-margin:20px 0;
-}
-
-.employer-list div{
-font-weight:600;
-}
-
-/* LICENSE */
-
-.license{
-background:#0b3157;
-color:#fff;
-border-radius:15px;
-padding:40px;
-}
-
-.license h3{
-font-size:28px;
-margin-bottom:20px;
-}
-
-.license-row{
-padding:13px 0;
-border-bottom:1px solid rgba(255,255,255,.15);
-}
-
-.license-row:last-child{
-border-bottom:0;
-}
-
-.license-row span{
-display:block;
-font-size:12px;
-color:#aebfce;
-text-transform:uppercase;
-}
-
-.license-row strong{
-font-size:16px;
-}
-
-/* CTA */
-
-.cta{
-background:#0b3157;
-color:#fff;
-border-radius:15px;
-padding:50px;
-text-align:center;
-}
-
-.cta h2{
-font-size:34px;
-margin-bottom:14px;
-}
-
-.cta p{
-color:#dce7f1;
-max-width:760px;
-margin:0 auto 25px;
-}
-
-/* FOOTER */
-
-.footer{
-background:#071d32;
-color:#fff;
-padding:60px 0 20px;
-}
-
-.footer-grid{
-display:grid;
-grid-template-columns:1.4fr 1fr 1fr 1fr;
-gap:35px;
-}
-
-.footer-logo{
-font-size:24px;
-font-weight:900;
-margin-bottom:15px;
-}
-
-.footer h3{
-color:#e4b54d;
-margin-bottom:15px;
-}
-
-.footer p,
-.footer a{
-color:#bdcbd8;
-font-size:14px;
-}
-
-.footer a{
-display:block;
-margin:8px 0;
-}
-
-.footer a:hover{
-color:#fff;
-}
-
-.footer-bottom{
-border-top:1px solid rgba(255,255,255,.12);
-margin-top:40px;
-padding-top:20px;
-text-align:center;
-color:#9fb0c0;
-font-size:13px;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-z-index:999;
-background:#168c45;
-color:#fff;
-padding:14px 20px;
-border-radius:40px;
-font-weight:800;
-box-shadow:0 8px 25px rgba(0,0,0,.2);
-}
-
-/* MOBILE */
-
-@media(max-width:950px){
-
-.nav{
-display:none;
-}
-
-.industry-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.two-col{
-grid-template-columns:1fr;
-}
-
-.benefit-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.footer-grid{
-grid-template-columns:1fr 1fr;
-}
-
-}
-
-@media(max-width:600px){
-
-.hero{
-padding:65px 0;
-}
-
-.hero h1{
-font-size:38px;
-}
-
-.section{
-padding:60px 0;
-}
-
-.section-title h2,
-.content h2{
-font-size:30px;
-}
-
-.industry-grid,
-.benefit-grid,
-.footer-grid{
-grid-template-columns:1fr;
-}
-
-.employer-list{
-grid-template-columns:1fr;
-}
-
-.employer-box,
-.license{
-padding:28px 22px;
-}
-
-.cta{
-padding:35px 22px;
-}
-
-.cta h2{
-font-size:28px;
-}
-}
+  :root{
+    --navy:#0b1f3a; --navy-light:#12315c; --gold:#c9a227; --gold-light:#e6c85a;
+    --cream:#f7f5ef; --text-dark:#1a1a1a; --text-muted:#5c5c5c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Segoe UI', Arial, sans-serif;color:var(--text-dark);background:#fff;line-height:1.6;}
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+
+  header{background:var(--navy);position:sticky;top:0;z-index:100;box-shadow:0 2px 10px rgba(0,0,0,.15);}
+  .nav-wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;}
+  .logo{color:#fff;font-size:20px;font-weight:700;letter-spacing:.5px;}
+  .logo span{color:var(--gold);}
+  .nav-links{display:flex;gap:26px;flex-wrap:wrap;}
+  .nav-links a{color:#e8e8e8;font-size:14.5px;font-weight:500;}
+  .nav-links a:hover,.nav-links a.active{color:var(--gold);}
+  .nav-cta{background:var(--gold);color:var(--navy);padding:10px 18px;border-radius:4px;font-weight:700;font-size:13.5px;white-space:nowrap;}
+
+  .page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:60px 24px;text-align:center;}
+  .page-hero .eyebrow{color:var(--gold-light);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:14px;}
+  .page-hero h1{font-size:34px;font-weight:800;max-width:760px;margin:0 auto 16px;}
+  .page-hero p{font-size:16px;color:#d8dde8;max-width:760px;margin:0 auto;}
+
+  section{padding:70px 24px;}
+  .section-inner{max-width:1200px;margin:0 auto;}
+
+  .industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .industry-card{background:var(--cream);border-radius:10px;padding:30px;border-top:3px solid var(--gold);}
+  .industry-card .ic{font-size:32px;margin-bottom:14px;}
+  .industry-card h3{color:var(--navy);font-size:19px;margin-bottom:10px;}
+  .industry-card p{font-size:14px;color:var(--text-muted);margin-bottom:14px;}
+  .industry-card .roles{font-size:13px;color:var(--text-dark);margin-bottom:14px;}
+  .industry-card .roles b{color:var(--navy);}
+  .industry-card .dep{display:inline-block;background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:5px 12px;border-radius:14px;}
+
+  .cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);text-align:center;}
+  .cta h2{color:var(--navy);font-size:26px;font-weight:800;margin-bottom:12px;}
+  .cta p{color:#3a3110;margin-bottom:22px;}
+  .btn-primary{background:var(--navy);color:#fff;padding:13px 24px;border-radius:4px;font-weight:700;font-size:14.5px;display:inline-block;}
+
+  footer{background:#08162c;color:#c5cbdb;padding:50px 24px 20px;}
+  .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:40px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .footer-grid h4{color:#fff;font-size:15px;margin-bottom:16px;}
+  .footer-grid p,.footer-grid li{font-size:13.5px;margin-bottom:8px;color:#a9b1c4;}
+  .footer-bottom{max-width:1200px;margin:0 auto;padding-top:18px;font-size:12.5px;text-align:center;color:#7c869e;}
+
+  @media(max-width:900px){
+    .industry-grid, .footer-grid{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+    .page-hero h1{font-size:26px;}
+  }
 </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
-
-<header class="header">
-
-<div class="container header-inner">
-
-<a href="index.html" class="logo">
-TAJ
-<span>HR SERVICES</span>
-</a>
-
-<nav class="nav">
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="services.html">Services</a>
-<a href="industries.html">Industries</a>
-<a href="resources.html">Resources</a>
-<a href="employers.html">Employers</a>
-<a href="jobs.html">Careers</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-<a href="https://wa.me/919651332002"
-target="_blank"
-class="btn btn-primary">
-WhatsApp
-</a>
-
-</div>
-
+<header>
+  <div class="nav-wrap">
+    <div class="logo">TAJ <span>HR</span> SERVICES</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html" class="active">Industries</a>
+      <a href="employers.html">Employers</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="contact.html" class="nav-cta">Request Manpower</a>
+  </div>
 </header>
 
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="container hero-content">
-
-<span class="badge">
-Industry Solutions
-</span>
-
-<h1>
-Manpower Across
-<span>Key Industries</span>
-</h1>
-
-<p>
-Taj HR Services supports employers with recruitment and
-manpower sourcing across construction, engineering,
-manufacturing, industrial projects, hospitality, logistics
-and other workforce sectors.
-</p>
-
-</div>
-
+<section class="page-hero">
+  <div class="eyebrow">Industry Expertise</div>
+  <h1>Industries We Serve</h1>
+  <p>Specialized recruitment solutions tailored to the unique requirements of each sector. With deep expertise across all major European industries, we understand what success looks like in your field.</p>
 </section>
 
-
-<!-- INDUSTRIES -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="section-title">
-
-<span class="label">
-Our Industry Coverage
-</span>
-
-<h2>
-Industries We Serve
-</h2>
-
-<p>
-Our recruitment coverage can vary according to current
-employer requirements and available positions.
-</p>
-
-</div>
-
-
-<div class="industry-grid">
-
-
-<div class="industry-card">
-
-<div class="industry-icon">🏗️</div>
-
-<h3>
-Construction
-</h3>
-
-<p>
-Manpower for construction projects, civil works and
-building-related activities.
-</p>
-
-<ul>
-<li>Civil Workers</li>
-<li>Masons</li>
-<li>Carpenters</li>
-<li>Steel Fixers</li>
-<li>Helpers</li>
-<li>Site Supervisors</li>
-</ul>
-
-</div>
-
-
-<div class="industry-card">
-
-<div class="industry-icon">⚙️</div>
-
-<h3>
-Engineering
-</h3>
-
-<p>
-Technical and professional manpower for engineering
-projects and operations.
-</p>
-
-<ul>
-<li>Engineers</li>
-<li>Supervisors</li>
-<li>Technicians</li>
-<li>Inspectors</li>
-<li>Draftsmen</li>
-<li>Technical Staff</li>
-</ul>
-
-</div>
-
-
-<div class="industry-card">
-
-<div class="industry-icon">🏭</div>
-
-<h3>
-Manufacturing
-</h3>
-
-<p>
-Workforce solutions for factories, production facilities
-and manufacturing operations.
-</p>
-
-<ul>
-<li>Production Workers</li>
-<li>Machine Operators</li>
-<li>Fabricators</li>
-<li>Welders</li>
-<li>Fitters</li>
-<li>Maintenance Staff</li>
-</ul>
-
-</div>
-
-
-<div class="industry-card">
-
-<div class="industry-icon">🛢️</div>
-
-<h3>
-Oil & Gas
-</h3>
-
-<p>
-Recruitment support for oil, gas, refinery and related
-industrial projects.
-</p>
-
-<ul>
-<li>Welders</li>
-<li>Pipe Fitters</li>
-<li>Fabricators</li>
-<li>Mechanical Technicians</li>
-<li>Electrical Technicians</li>
-<li>Project Staff</li>
-</ul>
-
-</div>
-
-
-<div class="industry-card">
-
-<div class="industry-icon">🔧</div>
-
-<h3>
-Industrial Maintenance
-</h3>
-
-<p>
-Manpower for equipment maintenance, plant operations and
-industrial facilities.
-</p>
-
-<ul>
-<li>Mechanical Technicians</li>
-<li>Electrical Technicians</li>
-<li>Maintenance Workers</li>
-<li>HVAC Technicians</li>
-<li>Instrument Technicians</li>
-<li>Helpers</li>
-</ul>
-
-</div>
-
-
-<div class="industry-card">
-
-<div class="industry-icon">🏨</div>
-
-<h3>
-Hospitality
-</h3>
-
-<p>
-Recruitment support for hotels, restaurants and hospitality
-operations.
-</p>
-
-<ul>
-<li>Chefs</li>
-<li>Kitchen Staff</li>
-<li>Waiters</li>
-<li>Housekeeping</li>
-<li>Stewards</li>
-<li>Hotel Staff</li>
-</ul>
-
-</div>
-
-
-<div class="industry-card">
-
-<div class="industry-icon">🚚</div>
-
-<h3>
-Logistics & Warehousing
-</h3>
-
-<p>
-Workforce solutions for warehouses, distribution and
-logistics operations.
-</p>
-
-<ul>
-<li>Warehouse Workers</li>
-<li>Storekeepers</li>
-<li>Forklift Operators</li>
-<li>Loaders</li>
-<li>Drivers</li>
-<li>Supervisors</li>
-</ul>
-
-</div>
-
-
-<div class="industry-card">
-
-<div class="industry-icon">🏢</div>
-
-<h3>
-Facilities Management
-</h3>
-
-<p>
-Manpower for building maintenance, facilities and
-property operations.
-</p>
-
-<ul>
-<li>Electricians</li>
-<li>Plumbers</li>
-<li>HVAC Technicians</li>
-<li>Cleaning Staff</li>
-<li>Maintenance Workers</li>
-<li>Supervisors</li>
-</ul>
-
-</div>
-
-
-<div class="industry-card">
-
-<div class="industry-icon">🛣️</div>
-
-<h3>
-Infrastructure
-</h3>
-
-<p>
-Recruitment support for infrastructure, roads and major
-development projects.
-</p>
-
-<ul>
-<li>Heavy Equipment Operators</li>
-<li>Civil Workers</li>
-<li>Surveyors</li>
-<li>Technicians</li>
-<li>Helpers</li>
-<li>Site Staff</li>
-</ul>
-
-</div>
-
-
-<div class="industry-card">
-
-<div class="industry-icon">🔩</div>
-
-<h3>
-Fabrication & Welding
-</h3>
-
-<p>
-Skilled manpower for fabrication, welding and metalwork
-requirements.
-</p>
-
-<ul>
-<li>Steel Fabricators</li>
-<li>Pipe Fabricators</li>
-<li>Arc Welders</li>
-<li>TIG Welders</li>
-<li>MIG Welders</li>
-<li>Fitters</li>
-</ul>
-
-</div>
-
-
-<div class="industry-card">
-
-<div class="industry-icon">⚡</div>
-
-<h3>
-Electrical & Power
-</h3>
-
-<p>
-Technical workforce for electrical installations,
-maintenance and power-related projects.
-</p>
-
-<ul>
-<li>Electricians</li>
-<li>Electrical Engineers</li>
-<li>Cable Jointers</li>
-<li>Panel Technicians</li>
-<li>Electrical Helpers</li>
-<li>Supervisors</li>
-</ul>
-
-</div>
-
-
-<div class="industry-card">
-
-<div class="industry-icon">❄️</div>
-
-<h3>
-HVAC & Refrigeration
-</h3>
-
-<p>
-Technicians and support workforce for air-conditioning,
-refrigeration and cooling systems.
-</p>
-
-<ul>
-<li>HVAC Technicians</li>
-<li>AC Technicians</li>
-<li>Refrigeration Technicians</li>
-<li>Chillers Technicians</li>
-<li>Duct Workers</li>
-<li>Helpers</li>
-</ul>
-
-</div>
-
-
-</div>
-
-</div>
-
+<section>
+  <div class="section-inner">
+    <div class="industry-grid">
+      <div class="industry-card">
+        <div class="ic">🏗️</div>
+        <h3>Construction</h3>
+        <p>Skilled tradesmen, engineers, and project managers for construction and infrastructure projects across Europe.</p>
+        <div class="roles"><b>Roles:</b> Masons, carpenters, electricians, plumbers, general laborers</div>
+        <span class="dep">5,000+ deployed</span>
+      </div>
+      <div class="industry-card">
+        <div class="ic">⚙️</div>
+        <h3>Manufacturing</h3>
+        <p>Machine operators, automotive workers, and production staff for growing European manufacturing plants.</p>
+        <div class="roles"><b>Roles:</b> Machine operators, welders, assembly line staff</div>
+        <span class="dep">3,500+ deployed</span>
+      </div>
+      <div class="industry-card">
+        <div class="ic">🍽️</div>
+        <h3>Hospitality</h3>
+        <p>Chefs, servers, and hotel management professionals for hotels, resorts, and restaurants abroad.</p>
+        <div class="roles"><b>Roles:</b> Chefs, servers, housekeeping, hotel management</div>
+        <span class="dep">3,200+ deployed</span>
+      </div>
+      <div class="industry-card">
+        <div class="ic">🏥</div>
+        <h3>Healthcare</h3>
+        <p>Nurses, technicians, and support staff for hospitals and care facilities across Europe.</p>
+        <div class="roles"><b>Roles:</b> Nurses, lab technicians, caregivers</div>
+        <span class="dep">1,200+ deployed</span>
+      </div>
+      <div class="industry-card">
+        <div class="ic">🚛</div>
+        <h3>Logistics</h3>
+        <p>Long-haul and regional truck drivers, warehouse workers, and logistics coordinators for European transport companies.</p>
+        <div class="roles"><b>Roles:</b> Truck drivers, warehouse staff, coordinators</div>
+        <span class="dep">2,500+ deployed</span>
+      </div>
+      <div class="industry-card">
+        <div class="ic">💻</div>
+        <h3>IT &amp; Technology</h3>
+        <p>Software developers, IT administrators, data analysts, and technology specialists for growing European tech companies.</p>
+        <div class="roles"><b>Roles:</b> Developers, IT admins, data analysts</div>
+        <span class="dep">800+ deployed</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-<!-- SECTOR REQUIREMENTS -->
-
-<section class="section section-light">
-
-<div class="container">
-
-<div class="section-title">
-
-<span class="label">
-Recruitment Categories
-</span>
-
-<h2>
-From Skilled Workers to Professionals
-</h2>
-
-<p>
-Employers can share specific requirements for the type
-of workforce they need.
-</p>
-
-</div>
-
-
-<div class="table-wrap">
-
-<table>
-
-<thead>
-
-<tr>
-<th>Category</th>
-<th>Typical Roles</th>
-<th>Recruitment Focus</th>
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-<td><strong>Skilled Manpower</strong></td>
-<td>Welders, Fitters, Electricians, Masons, Fabricators</td>
-<td>Trade skills, experience and job-specific requirements</td>
-</tr>
-
-<tr>
-<td><strong>Semi-Skilled</strong></td>
-<td>Helpers, Operators, Assistants, General Workers</td>
-<td>Relevant experience and work capability</td>
-</tr>
-
-<tr>
-<td><strong>Technical</strong></td>
-<td>Technicians, Inspectors, Supervisors</td>
-<td>Technical qualifications and experience</td>
-</tr>
-
-<tr>
-<td><strong>Professional</strong></td>
-<td>Engineers, Managers, Administrators</td>
-<td>Education, professional experience and specialization</td>
-</tr>
-
-<tr>
-<td><strong>Project Workforce</strong></td>
-<td>Construction, Industrial and Infrastructure Staff</td>
-<td>Project-specific manpower requirements</td>
-</tr>
-
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-
+<section class="cta">
+  <div class="section-inner">
+    <h2>Looking for Skilled Workers in Your Industry?</h2>
+    <p>Get pre-screened candidates deployed within 4–12 weeks. 10,000+ workers ready across 30+ trades.</p>
+    <a href="employers.html" class="btn-primary">Request Manpower</a>
+  </div>
 </section>
 
-
-<!-- EMPLOYER REQUIREMENTS -->
-
-<section class="section">
-
-<div class="container two-col">
-
-<div class="content">
-
-<span class="label">
-Employer Requirements
-</span>
-
-<h2>
-Tell Us What Manpower You Need
-</h2>
-
-<p>
-Every employer requirement is different. Providing
-complete job information helps us understand the
-requirement and source relevant candidate profiles.
-</p>
-
-<div class="check-list">
-
-<div>✓ Job title and description</div>
-<div>✓ Required manpower quantity</div>
-<div>✓ Skills and experience</div>
-<div>✓ Salary and benefits</div>
-<div>✓ Duty hours and work location</div>
-<div>✓ Interview and selection process</div>
-<div>✓ Joining and deployment requirements</div>
-
-</div>
-
-<a href="employers.html"
-class="btn btn-dark">
-Submit Employer Requirement
-</a>
-
-</div>
-
-
-<div class="employer-box">
-
-<h2>
-Why Employers Work With Us
-</h2>
-
-<p>
-Our recruitment approach focuses on understanding the
-requirement before candidate sourcing.
-</p>
-
-<div class="employer-list">
-
-<div>✓ Requirement Understanding</div>
-<div>✓ Candidate Sourcing</div>
-<div>✓ Profile Screening</div>
-<div>✓ Shortlisting</div>
-<div>✓ Interview Coordination</div>
-<div>✓ Documentation Support</div>
-<div>✓ Deployment Coordination</div>
-<div>✓ Recruitment Follow-Up</div>
-
-</div>
-
-<a href="contact.html"
-class="btn btn-primary">
-Talk to Our Team
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- BENEFITS -->
-
-<section class="section section-light">
-
-<div class="container">
-
-<div class="section-title">
-
-<span class="label">
-Our Approach
-</span>
-
-<h2>
-What Employers Can Expect
-</h2>
-
-</div>
-
-
-<div class="benefit-grid">
-
-
-<div class="benefit">
-
-<div class="benefit-icon">🎯</div>
-
-<h3>
-Requirement Focus
-</h3>
-
-<p>
-Candidate sourcing based on the employer's stated job
-requirements.
-</p>
-
-</div>
-
-
-<div class="benefit">
-
-<div class="benefit-icon">🔎</div>
-
-<h3>
-Profile Screening
-</h3>
-
-<p>
-Review of candidate profiles against relevant skills
-and experience.
-</p>
-
-</div>
-
-
-<div class="benefit">
-
-<div class="benefit-icon">🤝</div>
-
-<h3>
-Coordination
-</h3>
-
-<p>
-Communication support between employers and candidates
-during recruitment.
-</p>
-
-</div>
-
-
-<div class="benefit">
-
-<div class="benefit-icon">🌍</div>
-
-<h3>
-International Recruitment
-</h3>
-
-<p>
-Connecting Indian manpower with suitable international
-employment requirements.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- LICENCE -->
-
-<section class="section">
-
-<div class="container two-col">
-
-<div class="content">
-
-<span class="label">
-Credentials
-</span>
-
-<h2>
-Responsible Recruitment
-</h2>
-
-<p>
-Taj HR Services focuses on professional recruitment
-coordination and clear communication with employers
-and candidates.
-</p>
-
-<p>
-Job details, recruitment terms and applicable requirements
-should always be verified before proceeding.
-</p>
-
-<a href="about.html"
-class="btn btn-dark">
-About Taj HR Services
-</a>
-
-</div>
-
-
-<div class="license">
-
-<h3>
-Company Information
-</h3>
-
-<div class="license-row">
-
-<span>Agency Status</span>
-
-<strong>
-Government Licensed Recruitment Agency
-</strong>
-
-</div>
-
-<div class="license-row">
-
-<span>ISO Certification</span>
-
-<strong>
-ISO 9001:2015 Certified
-</strong>
-
-</div>
-
-<div class="license-row">
-
-<span>Licence Number</span>
-
-<strong>
-B-3252/DEL/PER/1000+/5/11251/2025
-</strong>
-
-</div>
-
-<div class="license-row">
-
-<span>Phone</span>
-
-<strong>
-+91 96513 32002
-</strong>
-
-</div>
-
-<div class="license-row">
-
-<span>Email</span>
-
-<strong>
-info@tajhrservices.com
-</strong>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="section">
-
-<div class="container">
-
-<div class="cta">
-
-<h2>
-Looking for Manpower?
-</h2>
-
-<p>
-Share your industry, job categories, required quantity
-and workforce requirements with Taj HR Services.
-</p>
-
-<a href="employers.html"
-class="btn btn-primary">
-Request Manpower
-</a>
-
-<a href="https://wa.me/919651332002"
-target="_blank"
-class="btn btn-outline"
-style="margin-left:8px;">
-WhatsApp Us
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-<div class="container footer-grid">
-
-<div>
-
-<div class="footer-logo">
-TAJ HR SERVICES
-</div>
-
-<p>
-Ethical international recruitment for employers
-and skilled professionals.
-</p>
-
-<p style="margin-top:15px;">
-+91 96513 32002<br>
-info@tajhrservices.com
-</p>
-
-</div>
-
-
-<div>
-
-<h3>Company</h3>
-
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="services.html">Services</a>
-<a href="industries.html">Industries</a>
-<a href="resources.html">Resources</a>
-
-</div>
-
-
-<div>
-
-<h3>Employers</h3>
-
-<a href="employers.html">Employer Solutions</a>
-<a href="employers.html#requirement">Request Manpower</a>
-<a href="contact.html">Contact Team</a>
-
-</div>
-
-
-<div>
-
-<h3>Candidates</h3>
-
-<a href="jobs.html">Current Jobs</a>
-<a href="jobs.html#apply">Submit Profile</a>
-<a href="contact.html">Contact Us</a>
-
-</div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-© 2026 Taj HR Services. All rights reserved.<br>
-
-Government Licensed Recruitment Agency |
-ISO 9001:2015 Certified |
-Licence: B-3252/DEL/PER/1000+/5/11251/2025
-
-</div>
-
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>TAJ HR Services</h4>
+      <p>Ethical international recruitment for employers and skilled professionals.</p>
+      <p>18-B, 1st Floor, Taimoor Nagar, Nala Road, Near Honey Money Top, New Friends Colony, New Delhi, Delhi – 110025.</p>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="careers.html">Careers</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </div>
+    <div>
+      <h4>Credentials</h4>
+      <li>ISO 9001:2015 Certified</li>
+      <li>Govt. of India Approved</li>
+      <li>Lic: B-3252/DEL/PER/1000+/5/11251/2025</li>
+      <li>Listed: MEA India, eMigrate, Udyam</li>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <li>info@tajhrservices.com</li>
+      <li>+91 96513 32002</li>
+      <li>Mon – Sat: 9:00 AM – 6:00 PM</li>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 TAJ HR Services. All rights reserved.</div>
 </footer>
-
-
-<!-- WHATSAPP -->
-
-<a href="https://wa.me/919651332002"
-target="_blank"
-class="whatsapp">
-WhatsApp
-</a>
 
 </body>
 </html>
