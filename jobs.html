@@ -1,633 +1,1477 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Latest Jobs & Vacancies | Taj HR Services</title>
+<title>Jobs & Careers | Taj HR Services</title>
 
-    <meta name="description"
-        content="Find latest job opportunities and manpower vacancies through Taj HR Services. Explore jobs by country, category and position.">
+<meta name="description" content="Explore current overseas job opportunities with Taj HR Services. Find skilled, semi-skilled and professional employment opportunities.">
 
-    <link rel="stylesheet" href="style.css">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:#172033;
+background:#fff;
+line-height:1.65;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
+
+.header{
+background:#fff;
+border-bottom:1px solid #e5e9ee;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.header-inner{
+min-height:78px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:25px;
+}
+
+.logo{
+font-size:25px;
+font-weight:900;
+color:#0b3157;
+line-height:1;
+}
+
+.logo span{
+display:block;
+font-size:11px;
+letter-spacing:3px;
+color:#d19a25;
+margin-top:5px;
+}
+
+.nav{
+display:flex;
+align-items:center;
+gap:20px;
+font-size:14px;
+font-weight:600;
+}
+
+.nav a:hover{
+color:#d19a25;
+}
+
+.btn{
+display:inline-block;
+padding:13px 22px;
+border-radius:6px;
+font-weight:700;
+border:0;
+cursor:pointer;
+}
+
+.btn-primary{
+background:#d19a25;
+color:#fff;
+}
+
+.btn-dark{
+background:#0b3157;
+color:#fff;
+}
+
+.btn-outline{
+border:1px solid #d19a25;
+color:#0b3157;
+background:#fff;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(120deg,#071f38,#0d4169);
+color:#fff;
+padding:85px 0;
+}
+
+.hero-content{
+max-width:850px;
+}
+
+.badge{
+display:inline-block;
+border:1px solid rgba(255,255,255,.35);
+padding:7px 14px;
+border-radius:30px;
+font-size:13px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:52px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#e4b54d;
+}
+
+.hero p{
+color:#d9e5ef;
+font-size:18px;
+max-width:780px;
+}
+
+.hero-buttons{
+margin-top:28px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+/* SECTION */
+
+.section{
+padding:80px 0;
+}
+
+.section-light{
+background:#f7f9fb;
+}
+
+.section-title{
+text-align:center;
+max-width:800px;
+margin:0 auto 42px;
+}
+
+.label{
+color:#c18b1c;
+font-size:13px;
+font-weight:800;
+letter-spacing:1.5px;
+text-transform:uppercase;
+}
+
+.section-title h2{
+color:#0b3157;
+font-size:38px;
+line-height:1.2;
+margin:10px 0 15px;
+}
+
+.section-title p{
+color:#657286;
+}
+
+/* SEARCH */
+
+.search-box{
+background:#fff;
+border:1px solid #e0e6ec;
+border-radius:14px;
+padding:25px;
+margin-bottom:30px;
+}
+
+.search-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr auto;
+gap:12px;
+}
+
+.search-grid input,
+.search-grid select{
+width:100%;
+padding:13px;
+border:1px solid #ccd6df;
+border-radius:6px;
+font:inherit;
+}
+
+/* JOB CARDS */
+
+.jobs-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+}
+
+.job-card{
+background:#fff;
+border:1px solid #dfe5eb;
+border-radius:13px;
+padding:28px;
+transition:.2s;
+}
+
+.job-card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.job-top{
+display:flex;
+justify-content:space-between;
+gap:15px;
+align-items:flex-start;
+margin-bottom:18px;
+}
+
+.job-card h3{
+color:#0b3157;
+font-size:23px;
+line-height:1.25;
+}
+
+.job-location{
+color:#718094;
+font-size:14px;
+margin-top:5px;
+}
+
+.job-tag{
+background:#edf4fa;
+color:#0b3157;
+padding:6px 10px;
+border-radius:20px;
+font-size:11px;
+font-weight:800;
+white-space:nowrap;
+}
+
+.job-info{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin:18px 0;
+}
+
+.info{
+background:#f7f9fb;
+padding:12px;
+border-radius:7px;
+}
+
+.info strong{
+display:block;
+color:#0b3157;
+font-size:13px;
+}
+
+.info span{
+font-size:13px;
+color:#657286;
+}
+
+.job-card ul{
+padding-left:20px;
+color:#657286;
+font-size:14px;
+margin:15px 0 22px;
+}
+
+.job-card li{
+margin:5px 0;
+}
+
+/* NOTICE */
+
+.notice{
+background:#fff8e7;
+border:1px solid #ead59b;
+border-radius:10px;
+padding:18px 20px;
+color:#66521d;
+margin-bottom:25px;
+font-size:14px;
+}
+
+/* CANDIDATE */
+
+.two-col{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:start;
+}
+
+.content h2{
+color:#0b3157;
+font-size:38px;
+line-height:1.2;
+margin:10px 0 20px;
+}
+
+.content p{
+color:#657286;
+margin-bottom:16px;
+}
+
+.check-list{
+margin:25px 0;
+}
+
+.check-list div{
+margin:11px 0;
+font-weight:600;
+}
+
+.dark-box{
+background:#0b3157;
+color:#fff;
+padding:40px;
+border-radius:15px;
+}
+
+.dark-box h3{
+font-size:29px;
+margin-bottom:15px;
+}
+
+.dark-box p{
+color:#dce7f1;
+margin-bottom:20px;
+}
+
+.dark-box ul{
+padding-left:20px;
+}
+
+.dark-box li{
+margin:9px 0;
+}
+
+/* APPLICATION */
+
+.application{
+background:#fff;
+border:1px solid #dfe5eb;
+border-radius:15px;
+padding:35px;
+box-shadow:0 10px 35px rgba(0,0,0,.05);
+}
+
+.application h3{
+color:#0b3157;
+font-size:27px;
+margin-bottom:8px;
+}
+
+.application p{
+color:#657286;
+font-size:14px;
+margin-bottom:25px;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:17px;
+}
+
+.field{
+display:flex;
+flex-direction:column;
+}
+
+.field.full{
+grid-column:1/-1;
+}
+
+.field label{
+font-size:13px;
+font-weight:700;
+color:#334155;
+margin-bottom:7px;
+}
+
+.field input,
+.field select,
+.field textarea{
+width:100%;
+padding:13px;
+border:1px solid #ccd6df;
+border-radius:6px;
+font:inherit;
+outline:none;
+}
+
+.field textarea{
+min-height:120px;
+resize:vertical;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+border-color:#0b3157;
+}
+
+.note{
+font-size:12px;
+color:#718094;
+margin-top:12px;
+}
+
+/* PROCESS */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.step{
+background:#fff;
+border:1px solid #e1e7ed;
+padding:25px;
+border-radius:12px;
+}
+
+.step-number{
+width:42px;
+height:42px;
+background:#0b3157;
+color:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.step h3{
+color:#0b3157;
+margin-bottom:8px;
+}
+
+.step p{
+color:#657286;
+font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+background:#0b3157;
+color:#fff;
+border-radius:15px;
+padding:50px;
+text-align:center;
+}
+
+.cta h2{
+font-size:34px;
+margin-bottom:14px;
+}
+
+.cta p{
+color:#dce7f1;
+max-width:760px;
+margin:0 auto 25px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#071d32;
+color:#fff;
+padding:60px 0 20px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1.4fr 1fr 1fr 1fr;
+gap:35px;
+}
+
+.footer-logo{
+font-size:24px;
+font-weight:900;
+margin-bottom:15px;
+}
+
+.footer h3{
+color:#e4b54d;
+margin-bottom:15px;
+}
+
+.footer p,
+.footer a{
+color:#bdcbd8;
+font-size:14px;
+}
+
+.footer a{
+display:block;
+margin:8px 0;
+}
+
+.footer a:hover{
+color:#fff;
+}
+
+.footer-bottom{
+border-top:1px solid rgba(255,255,255,.12);
+margin-top:40px;
+padding-top:20px;
+text-align:center;
+color:#9fb0c0;
+font-size:13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:999;
+background:#168c45;
+color:#fff;
+padding:14px 20px;
+border-radius:40px;
+font-weight:800;
+box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+.nav{
+display:none;
+}
+
+.jobs-grid{
+grid-template-columns:1fr;
+}
+
+.search-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.two-col{
+grid-template-columns:1fr;
+}
+
+.steps{
+grid-template-columns:repeat(2,1fr);
+}
+
+.footer-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+padding:65px 0;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.section{
+padding:60px 0;
+}
+
+.section-title h2,
+.content h2{
+font-size:30px;
+}
+
+.search-grid,
+.form-grid,
+.steps,
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.field.full{
+grid-column:auto;
+}
+
+.job-info{
+grid-template-columns:1fr;
+}
+
+.application{
+padding:24px 18px;
+}
+
+.cta{
+padding:35px 22px;
+}
+
+.cta h2{
+font-size:28px;
+}
+}
+</style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
-<header class="main-header">
+<header class="header">
 
-    <div class="container header-content">
+<div class="container header-inner">
 
-        <a href="index.html" class="logo">
-            <span class="logo-main">TAJ</span>
-            <span class="logo-sub">HR SERVICES</span>
-        </a>
+<a href="index.html" class="logo">
+TAJ
+<span>HR SERVICES</span>
+</a>
 
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="employers.html">Employers</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="industries.html">Industries</a>
+<a href="resources.html">Resources</a>
+<a href="employers.html">Employers</a>
+<a href="jobs.html">Careers</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-        <a href="jobs.html" class="header-button">
-            Find Jobs
-        </a>
+<a href="https://wa.me/919651332002"
+target="_blank"
+class="btn btn-primary">
+WhatsApp
+</a>
 
-    </div>
+</div>
 
 </header>
 
 
-<!-- ================= PAGE HERO ================= -->
+<!-- HERO -->
 
 <section class="hero">
 
-    <div class="container hero-content">
+<div class="container hero-content">
 
-        <div class="hero-text">
+<span class="badge">
+Career Opportunities
+</span>
 
-            <span class="hero-tag">
-                LATEST JOB OPPORTUNITIES
-            </span>
+<h1>
+Find Your Next
+<span>Career Opportunity</span>
+</h1>
 
-            <h1>
-                Find Your
-                <span>Next Opportunity</span>
-            </h1>
+<p>
+Explore overseas employment opportunities through
+Taj HR Services. We connect qualified candidates with
+employers seeking skilled, semi-skilled and professional
+manpower.
+</p>
 
-            <p>
-                Explore current recruitment opportunities
-                and find positions according to your skills,
-                experience and preferred destination.
-            </p>
+<div class="hero-buttons">
 
-        </div>
+<a href="#jobs"
+class="btn btn-primary">
+View Current Jobs
+</a>
 
-    </div>
+<a href="#apply"
+class="btn btn-outline">
+Submit Your Profile
+</a>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= JOB SEARCH ================= -->
+<!-- JOBS -->
 
-<section class="section jobs-section">
+<section class="section" id="jobs">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="section-title">
 
-            <span class="section-tag">
-                SEARCH JOBS
-            </span>
+<span class="label">
+Current Opportunities
+</span>
 
-            <h2>
-                Find The Right Job
-            </h2>
+<h2>
+Latest Job Opportunities
+</h2>
 
-            <p>
-                Search and explore available recruitment
-                opportunities.
-            </p>
+<p>
+Job openings are subject to employer requirements,
+candidate selection and applicable recruitment procedures.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="job-search">
+<div class="notice">
+<strong>Important:</strong>
+Always verify the job title, salary, benefits, location,
+selection process and other terms before applying.
+Do not make any payment to an unauthorized person
+claiming to represent Taj HR Services.
+</div>
 
-            <input
-                type="text"
-                id="jobSearch"
-                placeholder="Search job title, trade or position..."
-            >
 
-            <select id="countryFilter">
+<!-- SEARCH -->
 
-                <option value="all">
-                    All Countries
-                </option>
+<div class="search-box">
 
-                <option value="saudi">
-                    Saudi Arabia
-                </option>
+<div class="search-grid">
 
-                <option value="uae">
-                    UAE
-                </option>
+<input
+type="text"
+placeholder="Search job title or skill">
 
-                <option value="qatar">
-                    Qatar
-                </option>
+<select>
+<option>All Countries</option>
+<option>Saudi Arabia</option>
+<option>United Arab Emirates</option>
+<option>Qatar</option>
+<option>Kuwait</option>
+<option>Oman</option>
+<option>Bahrain</option>
+</select>
 
-                <option value="kuwait">
-                    Kuwait
-                </option>
+<select>
+<option>All Categories</option>
+<option>Construction</option>
+<option>Engineering</option>
+<option>Manufacturing</option>
+<option>Hospitality</option>
+<option>Healthcare</option>
+<option>Logistics</option>
+</select>
 
-                <option value="oman">
-                    Oman
-                </option>
+<button
+class="btn btn-dark"
+type="button">
+Search
+</button>
 
-                <option value="bahrain">
-                    Bahrain
-                </option>
+</div>
 
-                <option value="india">
-                    India
-                </option>
+</div>
 
-            </select>
 
-        </div>
+<div class="jobs-grid">
 
 
-        <!-- ================= JOB LIST ================= -->
+<!-- JOB 1 -->
 
-        <div class="job-grid" id="jobList">
+<article class="job-card">
 
+<div class="job-top">
 
-            <!-- JOB 1 -->
+<div>
+<h3>Electrician</h3>
+<div class="job-location">
+Saudi Arabia
+</div>
+</div>
 
-            <div
-                class="job-card vacancy-card"
-                data-country="saudi"
-                data-title="electrician"
-            >
+<span class="job-tag">
+SKILLED
+</span>
 
-                <div class="job-country">
-                    🇸🇦 Saudi Arabia
-                </div>
+</div>
 
-                <h3>
-                    Electrician
-                </h3>
+<div class="job-info">
 
-                <p>
-                    Skilled electrician required for
-                    current manpower requirement.
-                </p>
+<div class="info">
+<strong>Category</strong>
+<span>Electrical</span>
+</div>
+
+<div class="info">
+<strong>Experience</strong>
+<span>As per requirement</span>
+</div>
 
-                <div class="job-details">
+<div class="info">
+<strong>Salary</strong>
+<span>As per employer</span>
+</div>
 
-                    <span>
-                        👷 Skilled
-                    </span>
+<div class="info">
+<strong>Positions</strong>
+<span>As required</span>
+</div>
 
-                    <span>
-                        ⏱️ Full Time
-                    </span>
+</div>
 
-                </div>
+<ul>
+<li>Electrical installation and maintenance</li>
+<li>Relevant trade experience required</li>
+<li>Ability to work according to project requirements</li>
+<li>Employer selection applicable</li>
+</ul>
 
-                <a href="job-electrician-saudi.html">
-                    View Details →
-                </a>
+<a href="#apply"
+class="btn btn-primary">
+Apply Now
+</a>
 
-            </div>
+<a href="https://wa.me/919651332002?text=Hello%20Taj%20HR%20Services%2C%20I%20am%20interested%20in%20the%20Electrician%20job."
+target="_blank"
+class="btn btn-outline"
+style="margin-left:7px;">
+WhatsApp
+</a>
 
+</article>
 
-            <!-- JOB 2 -->
 
-            <div
-                class="job-card vacancy-card"
-                data-country="saudi"
-                data-title="welder"
-            >
+<!-- JOB 2 -->
 
-                <div class="job-country">
-                    🇸🇦 Saudi Arabia
-                </div>
+<article class="job-card">
 
-                <h3>
-                    Welder
-                </h3>
+<div class="job-top">
 
-                <p>
-                    Recruitment opportunity for experienced
-                    welding professionals.
-                </p>
+<div>
+<h3>Welder</h3>
+<div class="job-location">
+Saudi Arabia / GCC
+</div>
+</div>
 
-                <div class="job-details">
+<span class="job-tag">
+SKILLED
+</span>
 
-                    <span>
-                        👷 Skilled
-                    </span>
+</div>
 
-                    <span>
-                        ⏱️ Full Time
-                    </span>
+<div class="job-info">
 
-                </div>
+<div class="info">
+<strong>Category</strong>
+<span>Welding & Fabrication</span>
+</div>
+
+<div class="info">
+<strong>Experience</strong>
+<span>As per requirement</span>
+</div>
 
-                <a href="job-welder-saudi.html">
-                    View Details →
-                </a>
+<div class="info">
+<strong>Salary</strong>
+<span>As per employer</span>
+</div>
 
-            </div>
+<div class="info">
+<strong>Positions</strong>
+<span>As required</span>
+</div>
 
+</div>
 
-            <!-- JOB 3 -->
+<ul>
+<li>Relevant welding experience</li>
+<li>Knowledge of applicable welding processes</li>
+<li>Trade test may be required</li>
+<li>Employer selection applicable</li>
+</ul>
 
-            <div
-                class="job-card vacancy-card"
-                data-country="uae"
-                data-title="plumber"
-            >
+<a href="#apply"
+class="btn btn-primary">
+Apply Now
+</a>
 
-                <div class="job-country">
-                    🇦🇪 UAE
-                </div>
+<a href="https://wa.me/919651332002?text=Hello%20Taj%20HR%20Services%2C%20I%20am%20interested%20in%20the%20Welder%20job."
+target="_blank"
+class="btn btn-outline"
+style="margin-left:7px;">
+WhatsApp
+</a>
 
-                <h3>
-                    Plumber
-                </h3>
+</article>
 
-                <p>
-                    Plumbing professionals required for
-                    current recruitment opportunities.
-                </p>
 
-                <div class="job-details">
+<!-- JOB 3 -->
 
-                    <span>
-                        👷 Skilled
-                    </span>
+<article class="job-card">
 
-                    <span>
-                        ⏱️ Full Time
-                    </span>
+<div class="job-top">
 
-                </div>
+<div>
+<h3>Plumber</h3>
+<div class="job-location">
+GCC Projects
+</div>
+</div>
 
-                <a href="job-plumber-uae.html">
-                    View Details →
-                </a>
+<span class="job-tag">
+SKILLED
+</span>
 
-            </div>
+</div>
 
+<div class="job-info">
 
-            <!-- JOB 4 -->
+<div class="info">
+<strong>Category</strong>
+<span>Plumbing</span>
+</div>
 
-            <div
-                class="job-card vacancy-card"
-                data-country="qatar"
-                data-title="mason"
-            >
+<div class="info">
+<strong>Experience</strong>
+<span>As per requirement</span>
+</div>
 
-                <div class="job-country">
-                    🇶🇦 Qatar
-                </div>
+<div class="info">
+<strong>Salary</strong>
+<span>As per employer</span>
+</div>
 
-                <h3>
-                    Mason
-                </h3>
+<div class="info">
+<strong>Positions</strong>
+<span>As required</span>
+</div>
 
-                <p>
-                    Mason recruitment opportunities for
-                    experienced construction workers.
-                </p>
+</div>
 
-                <div class="job-details">
+<ul>
+<li>Construction or industrial plumbing experience</li>
+<li>Knowledge of plumbing installation</li>
+<li>Relevant trade experience preferred</li>
+<li>Employer selection applicable</li>
+</ul>
 
-                    <span>
-                        👷 Skilled
-                    </span>
+<a href="#apply"
+class="btn btn-primary">
+Apply Now
+</a>
 
-                    <span>
-                        ⏱️ Full Time
-                    </span>
+<a href="https://wa.me/919651332002?text=Hello%20Taj%20HR%20Services%2C%20I%20am%20interested%20in%20the%20Plumber%20job."
+target="_blank"
+class="btn btn-outline"
+style="margin-left:7px;">
+WhatsApp
+</a>
 
-                </div>
+</article>
 
-                <a href="job-mason-qatar.html">
-                    View Details →
-                </a>
 
-            </div>
+<!-- JOB 4 -->
 
+<article class="job-card">
 
-            <!-- JOB 5 -->
+<div class="job-top">
 
-            <div
-                class="job-card vacancy-card"
-                data-country="kuwait"
-                data-title="mechanic"
-            >
+<div>
+<h3>Steel Fabricator</h3>
+<div class="job-location">
+GCC Projects
+</div>
+</div>
 
-                <div class="job-country">
-                    🇰🇼 Kuwait
-                </div>
+<span class="job-tag">
+SKILLED
+</span>
 
-                <h3>
-                    Mechanic
-                </h3>
+</div>
 
-                <p>
-                    Experienced mechanics required for
-                    available positions.
-                </p>
+<div class="job-info">
 
-                <div class="job-details">
+<div class="info">
+<strong>Category</strong>
+<span>Fabrication</span>
+</div>
 
-                    <span>
-                        👷 Skilled
-                    </span>
+<div class="info">
+<strong>Experience</strong>
+<span>As per requirement</span>
+</div>
 
-                    <span>
-                        ⏱️ Full Time
-                    </span>
+<div class="info">
+<strong>Salary</strong>
+<span>As per employer</span>
+</div>
 
-                </div>
+<div class="info">
+<strong>Positions</strong>
+<span>As required</span>
+</div>
 
-                <a href="job-mechanic-kuwait.html">
-                    View Details →
-                </a>
+</div>
 
-            </div>
+<ul>
+<li>Structural steel fabrication experience</li>
+<li>Reading drawings where required</li>
+<li>Relevant workshop/site experience</li>
+<li>Trade test may be required</li>
+</ul>
 
+<a href="#apply"
+class="btn btn-primary">
+Apply Now
+</a>
 
-            <!-- JOB 6 -->
+<a href="https://wa.me/919651332002?text=Hello%20Taj%20HR%20Services%2C%20I%20am%20interested%20in%20the%20Steel%20Fabricator%20job."
+target="_blank"
+class="btn btn-outline"
+style="margin-left:7px;">
+WhatsApp
+</a>
 
-            <div
-                class="job-card vacancy-card"
-                data-country="oman"
-                data-title="technician"
-            >
+</article>
 
-                <div class="job-country">
-                    🇴🇲 Oman
-                </div>
 
-                <h3>
-                    Technician
-                </h3>
+<!-- JOB 5 -->
 
-                <p>
-                    Technical manpower opportunities for
-                    qualified candidates.
-                </p>
+<article class="job-card">
 
-                <div class="job-details">
+<div class="job-top">
 
-                    <span>
-                        👷 Skilled
-                    </span>
+<div>
+<h3>Mason</h3>
+<div class="job-location">
+GCC Projects
+</div>
+</div>
 
-                    <span>
-                        ⏱️ Full Time
-                    </span>
+<span class="job-tag">
+SKILLED
+</span>
 
-                </div>
+</div>
 
-                <a href="job-technician-oman.html">
-                    View Details →
-                </a>
+<div class="job-info">
 
-            </div>
+<div class="info">
+<strong>Category</strong>
+<span>Construction</span>
+</div>
 
+<div class="info">
+<strong>Experience</strong>
+<span>As per requirement</span>
+</div>
 
-        </div>
+<div class="info">
+<strong>Salary</strong>
+<span>As per employer</span>
+</div>
 
+<div class="info">
+<strong>Positions</strong>
+<span>As required</span>
+</div>
 
-        <!-- NO RESULTS -->
+</div>
 
-        <div
-            id="noResults"
-            class="no-results"
-            style="display:none;"
-        >
+<ul>
+<li>Construction masonry experience</li>
+<li>Ability to work on project sites</li>
+<li>Relevant practical experience</li>
+<li>Employer selection applicable</li>
+</ul>
 
-            <h3>
-                No Jobs Found
-            </h3>
+<a href="#apply"
+class="btn btn-primary">
+Apply Now
+</a>
 
-            <p>
-                Try another job title or country.
-            </p>
+<a href="https://wa.me/919651332002?text=Hello%20Taj%20HR%20Services%2C%20I%20am%20interested%20in%20the%20Mason%20job."
+target="_blank"
+class="btn btn-outline"
+style="margin-left:7px;">
+WhatsApp
+</a>
 
-        </div>
+</article>
 
-    </div>
+
+<!-- JOB 6 -->
+
+<article class="job-card">
+
+<div class="job-top">
+
+<div>
+<h3>Heavy Driver</h3>
+<div class="job-location">
+GCC Countries
+</div>
+</div>
+
+<span class="job-tag">
+DRIVER
+</span>
+
+</div>
+
+<div class="job-info">
+
+<div class="info">
+<strong>Category</strong>
+<span>Logistics & Transport</span>
+</div>
+
+<div class="info">
+<strong>Experience</strong>
+<span>As per requirement</span>
+</div>
+
+<div class="info">
+<strong>Salary</strong>
+<span>As per employer</span>
+</div>
+
+<div class="info">
+<strong>Positions</strong>
+<span>As required</span>
+</div>
+
+</div>
+
+<ul>
+<li>Valid relevant driving licence required</li>
+<li>Heavy vehicle experience</li>
+<li>Good driving record preferred</li>
+<li>Employer selection applicable</li>
+</ul>
+
+<a href="#apply"
+class="btn btn-primary">
+Apply Now
+</a>
+
+<a href="https://wa.me/919651332002?text=Hello%20Taj%20HR%20Services%2C%20I%20am%20interested%20in%20the%20Heavy%20Driver%20job."
+target="_blank"
+class="btn btn-outline"
+style="margin-left:7px;">
+WhatsApp
+</a>
+
+</article>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= CANDIDATE CTA ================= -->
+<!-- CANDIDATE INFORMATION -->
 
-<section class="candidate-section section">
+<section class="section section-light">
 
-    <div class="container candidate-content">
+<div class="container two-col">
 
-        <div>
+<div class="content">
 
-            <span class="section-tag">
-                CAN'T FIND YOUR JOB?
-            </span>
+<span class="label">
+For Candidates
+</span>
 
-            <h2>
-                Submit Your CV
-            </h2>
+<h2>
+How to Apply for Overseas Jobs
+</h2>
 
-            <p>
-                Even if your preferred position is not listed,
-                you can submit your profile for future
-                recruitment opportunities.
-            </p>
+<p>
+If you are interested in an opportunity, keep your
+updated CV/resume and relevant documents ready.
+</p>
 
-        </div>
+<div class="check-list">
 
-        <a href="contact.html" class="primary-button">
-            Submit CV
-        </a>
+<div>✓ Updated CV / Resume</div>
+<div>✓ Passport details when requested</div>
+<div>✓ Education certificates where applicable</div>
+<div>✓ Experience certificates where applicable</div>
+<div>✓ Relevant trade certificates</div>
+<div>✓ Passport-size photograph when required</div>
+<div>✓ Valid contact number</div>
 
-    </div>
+</div>
+
+<p>
+Only apply for positions that match your skills,
+experience and qualifications.
+</p>
+
+</div>
+
+
+<div class="dark-box">
+
+<h3>
+Before You Apply
+</h3>
+
+<p>
+Please carefully check the complete job details
+and selection conditions.
+</p>
+
+<ul>
+<li>Job title</li>
+<li>Country / location</li>
+<li>Salary package</li>
+<li>Working hours</li>
+<li>Accommodation</li>
+<li>Food / allowance</li>
+<li>Transportation</li>
+<li>Contract duration</li>
+<li>Selection process</li>
+<li>Applicable documentation</li>
+</ul>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= EMPLOYER CTA ================= -->
+<!-- APPLICATION FORM -->
 
-<section class="employer-section section">
+<section class="section" id="apply">
 
-    <div class="container employer-content">
+<div class="container">
 
-        <div>
+<div class="section-title">
 
-            <span class="section-tag">
-                FOR EMPLOYERS
-            </span>
+<span class="label">
+Candidate Registration
+</span>
 
-            <h2>
-                Looking For Manpower?
-            </h2>
+<h2>
+Submit Your Profile
+</h2>
 
-            <p>
-                Share your manpower requirement with
-                Taj HR Services.
-            </p>
+<p>
+If you don't see a suitable vacancy today, you can
+still submit your profile for future opportunities.
+</p>
 
-        </div>
+</div>
 
-        <a href="employers.html" class="primary-button">
-            Hire Manpower
-        </a>
 
-    </div>
+<div class="application">
+
+<h3>
+Candidate Profile Form
+</h3>
+
+<p>
+Enter your basic information. Our team can contact you
+when a relevant opportunity becomes available.
+</p>
+
+
+<form action="mailto:info@tajhrservices.com"
+method="post"
+enctype="text/plain">
+
+<div class="form-grid">
+
+
+<div class="field">
+
+<label>Full Name *</label>
+
+<input
+type="text"
+name="Full Name"
+required
+placeholder="Enter your full name">
+
+</div>
+
+
+<div class="field">
+
+<label>Mobile / WhatsApp *</label>
+
+<input
+type="tel"
+name="Mobile"
+required
+placeholder="Enter mobile number">
+
+</div>
+
+
+<div class="field">
+
+<label>Email</label>
+
+<input
+type="email"
+name="Email"
+placeholder="Enter email address">
+
+</div>
+
+
+<div class="field">
+
+<label>Preferred Country</label>
+
+<select name="Preferred Country">
+
+<option value="">Select Country</option>
+<option>Saudi Arabia</option>
+<option>United Arab Emirates</option>
+<option>Qatar</option>
+<option>Kuwait</option>
+<option>Oman</option>
+<option>Bahrain</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>Profession / Trade *</label>
+
+<input
+type="text"
+name="Profession"
+required
+placeholder="Example: Electrician">
+
+</div>
+
+
+<div class="field">
+
+<label>Total Experience</label>
+
+<input
+type="text"
+name="Experience"
+placeholder="Example: 5 years">
+
+</div>
+
+
+<div class="field full">
+
+<label>Skills / Qualifications</label>
+
+<textarea
+name="Skills"
+placeholder="Write your main skills, qualifications and certificates"></textarea>
+
+</div>
+
+
+<div class="field full">
+
+<label>Additional Information</label>
+
+<textarea
+name="Additional Information"
+placeholder="Any other information you want to share"></textarea>
+
+</div>
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-primary"
+style="margin-top:20px;">
+Submit Profile
+</button>
+
+<p class="note">
+For faster communication, you can also contact Taj HR
+Services directly on WhatsApp:
++91 96513 32002
+</p>
+
+</form>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- PROCESS -->
 
-<footer class="footer">
+<section class="section section-light">
 
-    <div class="container footer-grid">
+<div class="container">
 
-        <div>
+<div class="section-title">
 
-            <div class="footer-logo">
-                TAJ HR SERVICES
-            </div>
+<span class="label">
+Candidate Process
+</span>
 
-            <p>
-                Professional manpower recruitment and
-                HR solutions for employers and candidates.
-            </p>
+<h2>
+What Happens After You Apply?
+</h2>
 
-        </div>
+<p>
+The exact process depends on the employer, job role
+and destination country.
+</p>
 
-
-        <div>
-
-            <h3>
-                Quick Links
-            </h3>
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="contact.html">Contact</a>
-
-        </div>
+</div>
 
 
-        <div>
-
-            <h3>
-                Candidates
-            </h3>
-
-            <a href="jobs.html">Latest Jobs</a>
-            <a href="contact.html">Submit CV</a>
-            <a href="contact.html">Apply Now</a>
-
-        </div>
+<div class="steps">
 
 
-        <div>
+<div class="step">
 
-            <h3>
-                Employers
-            </h3>
+<div class="step-number">1</div>
 
-            <a href="employers.html">Hire Manpower</a>
-            <a href="contact.html">Submit Requirement</a>
-            <a href="contact.html">Contact Us</a>
+<h3>
+Profile Submission
+</h3>
 
-        </div>
+<p>
+You submit your basic details, skills and experience
+for consideration.
+</p>
 
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 Taj HR Services. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
+</div>
 
 
-<!-- ================= SEARCH SCRIPT ================= -->
-
-<script>
-
-const searchInput = document.getElementById("jobSearch");
-const countryFilter = document.getElementById("countryFilter");
-const jobs = document.querySelectorAll(".vacancy-card");
-const noResults = document.getElementById("noResults");
-
-function filterJobs() {
-
-    const searchText =
-        searchInput.value.toLowerCase().trim();
-
-    const selectedCountry =
-        countryFilter.value;
-
-    let visibleJobs = 0;
-
-    jobs.forEach(function(job) {
-
-        const title =
-            job.dataset.title.toLowerCase();
-
-        const country =
-            job.dataset.country;
-
-        const matchesSearch =
-            title.includes(searchText);
-
-        const matchesCountry =
-            selectedCountry === "all" ||
-            country === selectedCountry;
-
-        if (matchesSearch && matchesCountry) {
-
-            job.style.display = "block";
-            visibleJobs++;
-
-        } else {
-
-            job.style.display = "none";
-
-        }
-
-    });
-
-
-    if (visibleJobs === 0) {
-
-        noResults.style.display = "block";
-
-    } else {
-
-        noResults.style.display = "none";
-
-    }
-
-}
-
-
-searchInput.addEventListener(
-    "input",
-    filterJobs
-);
-
-countryFilter.addEventListener(
-    "change",
-    filterJobs
-);
-
-</script>
-
-
-</body>
-</html>
+<div
