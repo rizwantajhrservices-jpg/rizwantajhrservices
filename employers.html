@@ -1,768 +1,1428 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hire Manpower | Taj HR Services</title>
+<title>Employers | Taj HR Services</title>
 
-    <meta name="description"
-        content="Taj HR Services provides manpower recruitment and workforce sourcing solutions for companies and employers.">
+<meta name="description" content="Taj HR Services helps international employers recruit skilled, semi-skilled and professional manpower from India. Submit your manpower requirement.">
 
-    <link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#172033;
+    background:#fff;
+    line-height:1.65;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+.header{
+    background:#fff;
+    border-bottom:1px solid #e5e9ee;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.header-inner{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    color:#0b3157;
+    line-height:1;
+}
+
+.logo span{
+    display:block;
+    font-size:11px;
+    letter-spacing:3px;
+    color:#d19a25;
+    margin-top:5px;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:21px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav a:hover{
+    color:#d19a25;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:6px;
+    font-weight:700;
+    border:0;
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:#d19a25;
+    color:#fff;
+}
+
+.btn-dark{
+    background:#0b3157;
+    color:#fff;
+}
+
+.btn-outline{
+    border:1px solid #d19a25;
+    color:#0b3157;
+    background:#fff;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(120deg,#071f38,#0d4169);
+    color:#fff;
+    padding:90px 0;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid rgba(255,255,255,.35);
+    padding:7px 14px;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#e4b54d;
+}
+
+.hero p{
+    color:#d9e5ef;
+    font-size:18px;
+    max-width:780px;
+}
+
+.hero-buttons{
+    margin-top:28px;
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* SECTIONS */
+
+.section{
+    padding:85px 0;
+}
+
+.section-light{
+    background:#f7f9fb;
+}
+
+.section-title{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 45px;
+}
+
+.label{
+    color:#c18b1c;
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    color:#0b3157;
+    font-size:38px;
+    line-height:1.2;
+    margin:10px 0 15px;
+}
+
+.section-title p{
+    color:#657286;
+}
+
+/* TWO COLUMN */
+
+.two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:start;
+}
+
+.content h2{
+    color:#0b3157;
+    font-size:38px;
+    line-height:1.2;
+    margin:10px 0 20px;
+}
+
+.content p{
+    color:#657286;
+    margin-bottom:16px;
+}
+
+.check-list{
+    margin:25px 0;
+}
+
+.check-list div{
+    margin:11px 0;
+    font-weight:600;
+}
+
+.dark-box{
+    background:#0b3157;
+    color:#fff;
+    padding:40px;
+    border-radius:15px;
+}
+
+.dark-box h3{
+    font-size:29px;
+    margin-bottom:15px;
+}
+
+.dark-box p{
+    color:#dce7f1;
+    margin-bottom:20px;
+}
+
+.dark-box ul{
+    padding-left:20px;
+}
+
+.dark-box li{
+    margin:9px 0;
+}
+
+/* FORM */
+
+.form-box{
+    background:#fff;
+    border:1px solid #dfe5eb;
+    border-radius:15px;
+    padding:35px;
+    box-shadow:0 10px 35px rgba(0,0,0,.05);
+}
+
+.form-box h3{
+    color:#0b3157;
+    font-size:27px;
+    margin-bottom:8px;
+}
+
+.form-intro{
+    color:#657286;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+.field label{
+    font-size:13px;
+    font-weight:700;
+    color:#334155;
+    margin-bottom:7px;
+}
+
+.field input,
+.field select,
+.field textarea{
+    width:100%;
+    border:1px solid #cfd8e1;
+    border-radius:6px;
+    padding:13px 14px;
+    font:inherit;
+    color:#172033;
+    background:#fff;
+    outline:none;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+    border-color:#0b3157;
+}
+
+.field textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.form-note{
+    color:#718094;
+    font-size:12px;
+    margin-top:13px;
+}
+
+/* STEPS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.step{
+    background:#fff;
+    border:1px solid #e1e7ed;
+    padding:27px;
+    border-radius:12px;
+}
+
+.step-number{
+    width:42px;
+    height:42px;
+    background:#0b3157;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.step h3{
+    color:#0b3157;
+    margin-bottom:8px;
+}
+
+.step p{
+    color:#657286;
+    font-size:14px;
+}
+
+/* BENEFITS */
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.benefit{
+    border:1px solid #e1e7ed;
+    border-radius:12px;
+    padding:28px;
+}
+
+.benefit-icon{
+    font-size:30px;
+    margin-bottom:13px;
+}
+
+.benefit h3{
+    color:#0b3157;
+    margin-bottom:8px;
+}
+
+.benefit p{
+    color:#657286;
+    font-size:14px;
+}
+
+/* REQUIREMENT */
+
+.requirement-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.requirement{
+    background:#fff;
+    border:1px solid #e1e7ed;
+    border-radius:10px;
+    padding:20px;
+}
+
+.requirement strong{
+    display:block;
+    color:#0b3157;
+}
+
+.requirement span{
+    color:#718094;
+    font-size:13px;
+}
+
+/* CTA */
+
+.cta{
+    background:#0b3157;
+    color:#fff;
+    border-radius:15px;
+    padding:50px;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:34px;
+    margin-bottom:14px;
+}
+
+.cta p{
+    color:#dce7f1;
+    max-width:760px;
+    margin:0 auto 25px;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#071d32;
+    color:#fff;
+    padding:60px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr 1fr;
+    gap:35px;
+}
+
+.footer-logo{
+    font-size:24px;
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.footer h3{
+    color:#e4b54d;
+    margin-bottom:15px;
+}
+
+.footer p,
+.footer a{
+    color:#bdcbd8;
+    font-size:14px;
+}
+
+.footer a{
+    display:block;
+    margin:8px 0;
+}
+
+.footer a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:40px;
+    padding-top:20px;
+    text-align:center;
+    color:#9fb0c0;
+    font-size:13px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:999;
+    background:#168c45;
+    color:#fff;
+    padding:14px 20px;
+    border-radius:40px;
+    font-weight:800;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+    .nav{
+        display:none;
+    }
+
+    .two-col{
+        grid-template-columns:1fr;
+    }
+
+    .steps{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .benefit-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .requirement-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+
+    .hero{
+        padding:65px 0;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .section{
+        padding:60px 0;
+    }
+
+    .section-title h2,
+    .content h2{
+        font-size:30px;
+    }
+
+    .form-grid,
+    .steps,
+    .benefit-grid,
+    .requirement-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-box{
+        padding:24px 18px;
+    }
+
+    .cta{
+        padding:35px 22px;
+    }
+
+    .cta h2{
+        font-size:28px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 
-<header class="main-header">
+<header class="header">
 
-    <div class="container header-content">
+<div class="container header-inner">
 
-        <a href="index.html" class="logo">
-            <span class="logo-main">TAJ</span>
-            <span class="logo-sub">HR SERVICES</span>
-        </a>
+<a href="index.html" class="logo">
+TAJ
+<span>HR SERVICES</span>
+</a>
 
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="employers.html">Employers</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="industries.html">Industries</a>
+<a href="resources.html">Resources</a>
+<a href="employers.html">Employers</a>
+<a href="jobs.html">Careers</a>
+<a href="contact.html">Contact</a>
+</nav>
 
-        <a href="contact.html" class="header-button">
-            Contact Us
-        </a>
+<a href="https://wa.me/919651332002"
+target="_blank"
+class="btn btn-primary">
+WhatsApp
+</a>
 
-    </div>
+</div>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 
 <section class="hero">
 
-    <div class="container hero-content">
+<div class="container hero-content">
 
-        <div class="hero-text">
+<span class="badge">
+For International Employers
+</span>
 
-            <span class="hero-tag">
-                FOR EMPLOYERS
-            </span>
+<h1>
+Build Your Workforce With
+<span>Taj HR Services</span>
+</h1>
 
-            <h1>
-                Need Reliable
-                <span>Manpower?</span>
-            </h1>
+<p>
+Tell us what manpower you need. We help employers
+source, screen, assess and coordinate skilled,
+semi-skilled and professional candidates from India
+for international employment opportunities.
+</p>
 
-            <p>
-                Share your workforce requirement with Taj HR Services.
-                We help employers connect with suitable candidates
-                for different industries, trades and projects.
-            </p>
+<div class="hero-buttons">
 
-            <div class="hero-buttons">
+<a href="#requirement"
+class="btn btn-primary">
+Submit Requirement
+</a>
 
-                <a href="#requirement" class="primary-button">
-                    Submit Requirement
-                </a>
+<a href="tel:+919651332002"
+class="btn btn-outline">
+Call +91 96513 32002
+</a>
 
-                <a href="contact.html" class="secondary-button">
-                    Contact Us
-                </a>
+</div>
 
-            </div>
-
-        </div>
-
-
-        <div class="hero-card">
-
-            <div class="hero-card-icon">
-                👥
-            </div>
-
-            <h3>
-                Workforce Solutions
-            </h3>
-
-            <p>
-                Tell us what manpower you need,
-                where you need it and when you need it.
-            </p>
-
-            <a href="#requirement">
-                Start Your Requirement →
-            </a>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= INTRO ================= -->
+<!-- INTRO -->
 
 <section class="section">
 
-    <div class="container two-column">
+<div class="container two-col">
 
-        <div class="section-content">
+<div class="content">
 
-            <span class="section-tag">
-                MANPOWER SOLUTIONS
-            </span>
+<span class="label">
+Employer Solutions
+</span>
 
-            <h2>
-                Recruitment Support Built Around
-                Your Requirement
-            </h2>
+<h2>
+Your manpower requirement starts here
+</h2>
 
-            <p>
-                Every organization has different workforce
-                requirements. Our approach starts by understanding
-                the position, skills, experience and manpower
-                quantity required.
-            </p>
+<p>
+Whether you need a few skilled professionals or a
+large workforce for an upcoming project, Taj HR Services
+can coordinate a recruitment process around your needs.
+</p>
 
-            <p>
-                Based on the requirement, suitable candidate
-                profiles can be sourced and coordinated through
-                the recruitment process.
-            </p>
+<p>
+Share your job roles, required quantity, experience,
+salary, destination and deployment timeline. Our team
+can review the requirement and discuss the appropriate
+recruitment approach with you.
+</p>
 
-            <div class="check-list">
+<div class="check-list">
 
-                <div>✓ Skilled manpower</div>
-                <div>✓ Semi-skilled manpower</div>
-                <div>✓ Technical workers</div>
-                <div>✓ Project manpower</div>
-                <div>✓ Support workforce</div>
+<div>✓ Skilled & semi-skilled manpower</div>
+<div>✓ Professional & technical candidates</div>
+<div>✓ Bulk and project hiring</div>
+<div>✓ Candidate screening</div>
+<div>✓ Trade testing where applicable</div>
+<div>✓ Interview coordination</div>
+<div>✓ Documentation coordination</div>
+<div>✓ Deployment support</div>
 
-            </div>
+</div>
 
-        </div>
+</div>
 
 
-        <div class="section-image">
+<div class="dark-box">
 
-            <div class="image-placeholder">
+<h3>
+What We Need From You
+</h3>
 
-                <span>HIRE</span>
+<p>
+The more information you provide, the better we can
+understand and process your manpower requirement.
+</p>
 
-                <small>
-                    Manpower Recruitment
-                </small>
+<ul>
+<li>Company / employer name</li>
+<li>Country and project location</li>
+<li>Job title and description</li>
+<li>Number of workers required</li>
+<li>Required experience</li>
+<li>Salary and benefits</li>
+<li>Working hours</li>
+<li>Accommodation / transport details</li>
+<li>Expected joining date</li>
+<li>Interview requirements</li>
+</ul>
 
-            </div>
+</div>
 
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- REQUIREMENT FORM -->
 
-<section class="section light-section">
+<section class="section section-light" id="requirement">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="section-title">
 
-            <span class="section-tag">
-                WHAT WE CAN SUPPORT
-            </span>
+<span class="label">
+Manpower Requirement
+</span>
 
-            <h2>
-                Workforce Categories
-            </h2>
+<h2>
+Submit Your Recruitment Requirement
+</h2>
 
-            <p>
-                Recruitment requirements can vary by industry,
-                project and position.
-            </p>
+<p>
+Provide your requirement below. This form prepares the
+information needed for our recruitment team to contact you.
+</p>
 
-        </div>
-
-
-        <div class="service-grid">
+</div>
 
 
-            <div class="service-card">
+<div class="form-box">
 
-                <div class="service-icon">
-                    ⚡
-                </div>
+<h3>
+Employer Requirement Form
+</h3>
 
-                <h3>
-                    Electrical
-                </h3>
+<p class="form-intro">
+Please fill in the details as accurately as possible.
+</p>
 
-                <p>
-                    Electricians, electrical technicians,
-                    supervisors and related positions.
-                </p>
+<form action="mailto:info@tajhrservices.com"
+method="post"
+enctype="text/plain">
 
-            </div>
+<div class="form-grid">
 
+<div class="field">
 
-            <div class="service-card">
+<label>Company / Employer Name *</label>
 
-                <div class="service-icon">
-                    🔧
-                </div>
+<input
+type="text"
+name="Company Name"
+required
+placeholder="Enter company name">
 
-                <h3>
-                    Mechanical
-                </h3>
-
-                <p>
-                    Mechanics, technicians, fitters and
-                    other mechanical trades.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="field">
 
-                <div class="service-icon">
-                    🏗️
-                </div>
+<label>Contact Person *</label>
 
-                <h3>
-                    Construction
-                </h3>
+<input
+type="text"
+name="Contact Person"
+required
+placeholder="Enter contact person">
 
-                <p>
-                    Masons, helpers, supervisors and
-                    construction-related manpower.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="field">
 
-                <div class="service-icon">
-                    🔥
-                </div>
+<label>Email *</label>
 
-                <h3>
-                    Welding & Fabrication
-                </h3>
+<input
+type="email"
+name="Email"
+required
+placeholder="Enter email address">
 
-                <p>
-                    Welders, fabricators and skilled
-                    fabrication workforce.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="field">
 
-                <div class="service-icon">
-                    🏭
-                </div>
+<label>Phone / WhatsApp *</label>
 
-                <h3>
-                    Industrial
-                </h3>
+<input
+type="tel"
+name="Phone"
+required
+placeholder="Enter phone number">
 
-                <p>
-                    Workforce for factories, plants
-                    and industrial operations.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="field">
 
-                <div class="service-icon">
-                    🚚
-                </div>
+<label>Destination Country *</label>
 
-                <h3>
-                    Logistics
-                </h3>
+<input
+type="text"
+name="Destination Country"
+required
+placeholder="Example: Saudi Arabia">
 
-                <p>
-                    Drivers, warehouse and logistics
-                    support positions.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="service-card">
+<div class="field">
 
-                <div class="service-icon">
-                    👷
-                </div>
+<label>Industry</label>
 
-                <h3>
-                    General Workforce
-                </h3>
+<select name="Industry">
 
-                <p>
-                    Helpers, support staff and other
-                    workforce requirements.
-                </p>
+<option value="">Select Industry</option>
+<option>Construction</option>
+<option>Manufacturing</option>
+<option>Engineering</option>
+<option>Oil & Gas</option>
+<option>Hospitality</option>
+<option>Healthcare</option>
+<option>Logistics & Transport</option>
+<option>Automotive</option>
+<option>IT & Technology</option>
+<option>Other</option>
 
-            </div>
+</select>
+
+</div>
 
 
-            <div class="service-card">
+<div class="field">
 
-                <div class="service-icon">
-                    🧑‍💼
-                </div>
+<label>Job Title / Position *</label>
 
-                <h3>
-                    Professional Staff
-                </h3>
+<input
+type="text"
+name="Job Title"
+required
+placeholder="Example: Electrician">
 
-                <p>
-                    Supervisory, administrative and
-                    professional recruitment requirements.
-                </p>
+</div>
 
-            </div>
 
-        </div>
+<div class="field">
 
-    </div>
+<label>Number of Workers *</label>
+
+<input
+type="number"
+name="Workers Required"
+required
+min="1"
+placeholder="Example: 20">
+
+</div>
+
+
+<div class="field">
+
+<label>Experience Required</label>
+
+<input
+type="text"
+name="Experience"
+placeholder="Example: 3-5 years">
+
+</div>
+
+
+<div class="field">
+
+<label>Expected Joining Date</label>
+
+<input
+type="date"
+name="Joining Date">
+
+</div>
+
+
+<div class="field full">
+
+<label>Salary / Benefits</label>
+
+<input
+type="text"
+name="Salary Benefits"
+placeholder="Salary, food, accommodation, transport, overtime etc.">
+
+</div>
+
+
+<div class="field full">
+
+<label>Job Description / Additional Requirement *</label>
+
+<textarea
+name="Requirement Details"
+required
+placeholder="Describe skills, qualifications, duties, interview requirements and other details..."></textarea>
+
+</div>
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-primary"
+style="margin-top:20px;">
+Submit Manpower Requirement
+</button>
+
+<p class="form-note">
+Submitting this form will open your email application.
+For faster assistance, you can also contact us directly
+on WhatsApp or phone.
+</p>
+
+</form>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= PROCESS ================= -->
+<!-- PROCESS -->
 
 <section class="section">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="section-title">
 
-            <span class="section-tag">
-                OUR PROCESS
-            </span>
+<span class="label">
+Our Recruitment Process
+</span>
 
-            <h2>
-                How Employer Recruitment Works
-            </h2>
+<h2>
+From Requirement to Deployment
+</h2>
 
-        </div>
+<p>
+A structured process helps us understand your requirement
+and coordinate candidate recruitment.
+</p>
 
-
-        <div class="process-grid">
-
-
-            <div class="process-step">
-
-                <span>1</span>
-
-                <h3>
-                    Requirement
-                </h3>
-
-                <p>
-                    Share your manpower requirement,
-                    positions and quantity.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="process-step">
+<div class="steps">
 
-                <span>2</span>
+<div class="step">
 
-                <h3>
-                    Sourcing
-                </h3>
+<div class="step-number">1</div>
 
-                <p>
-                    Suitable candidate profiles can
-                    be sourced according to the requirement.
-                </p>
+<h3>
+Requirement
+</h3>
 
-            </div>
+<p>
+We understand your job roles, quantity, skills,
+experience, salary and destination.
+</p>
 
-
-            <div class="process-step">
-
-                <span>3</span>
-
-                <h3>
-                    Screening
-                </h3>
-
-                <p>
-                    Candidate profiles are reviewed
-                    against the required position.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="process-step">
+<div class="step">
 
-                <span>4</span>
+<div class="step-number">2</div>
 
-                <h3>
-                    Coordination
-                </h3>
+<h3>
+Sourcing
+</h3>
 
-                <p>
-                    Recruitment stages are coordinated
-                    with the employer.
-                </p>
+<p>
+Suitable candidates are sourced through our
+recruitment network and database.
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </div>
+<div class="step">
+
+<div class="step-number">3</div>
+
+<h3>
+Screening
+</h3>
+
+<p>
+Profiles are reviewed according to your specified
+skills and experience.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">4</div>
+
+<h3>
+Assessment
+</h3>
+
+<p>
+Trade testing or technical assessment can be
+arranged where applicable.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">5</div>
+
+<h3>
+Interview
+</h3>
+
+<p>
+Shortlisted candidates are coordinated for
+employer interviews and final selection.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">6</div>
+
+<h3>
+Documentation
+</h3>
+
+<p>
+Selected candidates complete applicable
+employment and recruitment documentation.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">7</div>
+
+<h3>
+Processing
+</h3>
+
+<p>
+Applicable permit, travel and pre-departure
+processes are coordinated.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">8</div>
+
+<h3>
+Deployment
+</h3>
+
+<p>
+Candidates are prepared and coordinated for
+departure and arrival.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= REQUIREMENT FORM ================= -->
+<!-- BENEFITS -->
 
-<section id="requirement" class="section light-section">
+<section class="section section-light">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-heading">
+<div class="section-title">
 
-            <span class="section-tag">
-                EMPLOYER ENQUIRY
-            </span>
+<span class="label">
+Why Taj HR Services
+</span>
 
-            <h2>
-                Submit Your Manpower Requirement
-            </h2>
+<h2>
+A recruitment partner focused on your requirement
+</h2>
 
-            <p>
-                Provide your basic requirement below.
-                Our team can review the information and
-                contact you for further details.
-            </p>
+<p>
+Our service is built around employer communication,
+candidate quality and recruitment coordination.
+</p>
 
-        </div>
-
-
-        <div class="contact-grid">
+</div>
 
 
-            <!-- FORM -->
+<div class="benefit-grid">
 
-            <div class="contact-form">
+<div class="benefit">
 
-                <form id="employerForm">
+<div class="benefit-icon">🎯</div>
 
-                    <input
-                        type="text"
-                        name="company"
-                        placeholder="Company / Organization Name"
-                        required
-                    >
+<h3>
+Requirement Focused
+</h3>
 
-                    <input
-                        type="text"
-                        name="contact"
-                        placeholder="Contact Person"
-                        required
-                    >
+<p>
+Candidate sourcing is aligned with the job description,
+skills, experience and workforce quantity you require.
+</p>
 
-                    <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Mobile / WhatsApp Number"
-                        required
-                    >
-
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email Address"
-                    >
-
-                    <input
-                        type="text"
-                        name="country"
-                        placeholder="Required Country / Location"
-                        required
-                    >
-
-                    <input
-                        type="text"
-                        name="position"
-                        placeholder="Required Position / Trade"
-                        required
-                    >
-
-                    <input
-                        type="number"
-                        name="quantity"
-                        placeholder="Number of Workers Required"
-                        min="1"
-                    >
-
-                    <input
-                        type="text"
-                        name="salary"
-                        placeholder="Expected Salary / Package"
-                    >
-
-                    <textarea
-                        name="requirement"
-                        rows="6"
-                        placeholder="Write your manpower requirement, skills, experience, duty hours, benefits, interview details, etc."
-                    ></textarea>
-
-                    <button
-                        type="submit"
-                        class="primary-button"
-                    >
-                        Submit Requirement
-                    </button>
-
-                </form>
-
-            </div>
+</div>
 
 
-            <!-- INFORMATION -->
+<div class="benefit">
 
-            <div class="contact-info">
+<div class="benefit-icon">👥</div>
 
-                <span class="section-tag">
-                    WHY CONTACT US
-                </span>
+<h3>
+Candidate Screening
+</h3>
 
-                <h2>
-                    Tell Us What You Need
-                </h2>
+<p>
+Profiles can be screened before being presented to
+the employer for consideration.
+</p>
 
-                <p>
-                    The more information you provide,
-                    the easier it is to understand your
-                    manpower requirement.
-                </p>
+</div>
 
 
-                <div class="contact-item">
+<div class="benefit">
 
-                    <strong>
-                        Position
-                    </strong>
+<div class="benefit-icon">🧪</div>
 
-                    <span>
-                        Mention the required job title or trade.
-                    </span>
+<h3>
+Trade Assessment
+</h3>
 
-                </div>
+<p>
+Practical or technical assessment can be coordinated
+for applicable skilled positions.
+</p>
 
-
-                <div class="contact-item">
-
-                    <strong>
-                        Quantity
-                    </strong>
-
-                    <span>
-                        Tell us how many workers you require.
-                    </span>
-
-                </div>
+</div>
 
 
-                <div class="contact-item">
+<div class="benefit">
 
-                    <strong>
-                        Experience
-                    </strong>
+<div class="benefit-icon">📋</div>
 
-                    <span>
-                        Mention required experience and skills.
-                    </span>
+<h3>
+Bulk Recruitment
+</h3>
 
-                </div>
+<p>
+Recruitment can be organized for larger workforce
+requirements and project-based hiring.
+</p>
 
-
-                <div class="contact-item">
-
-                    <strong>
-                        Location
-                    </strong>
-
-                    <span>
-                        Tell us the country and project location.
-                    </span>
-
-                </div>
+</div>
 
 
-                <div class="contact-item">
+<div class="benefit">
 
-                    <strong>
-                        Requirement Details
-                    </strong>
+<div class="benefit-icon">🌍</div>
 
-                    <span>
-                        Salary, duty hours, accommodation,
-                        food, transportation and other terms.
-                    </span>
+<h3>
+International Coordination
+</h3>
 
-                </div>
+<p>
+We coordinate with employers and candidates during
+the international recruitment process.
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </div>
+<div class="benefit">
+
+<div class="benefit-icon">✈️</div>
+
+<h3>
+Deployment Support
+</h3>
+
+<p>
+Applicable travel, pre-departure and arrival
+coordination can be managed through the process.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= CTA ================= -->
+<!-- POPULAR REQUIREMENTS -->
 
-<section class="employer-section section">
+<section class="section">
 
-    <div class="container employer-content">
+<div class="container">
 
-        <div>
+<div class="section-title">
 
-            <span class="section-tag">
-                TAJ HR SERVICES
-            </span>
+<span class="label">
+Workforce Categories
+</span>
 
-            <h2>
-                Let's Discuss Your Workforce Requirement
-            </h2>
+<h2>
+Common Manpower Requirements
+</h2>
 
-            <p>
-                Contact our team to discuss your recruitment
-                and manpower requirements.
-            </p>
+<p>
+Examples of positions employers may request according
+to their project and workforce needs.
+</p>
 
-        </div>
+</div>
 
-        <a href="contact.html" class="primary-button">
-            Contact Us
-        </a>
 
-    </div>
+<div class="requirement-grid">
+
+<div class="requirement">
+<strong>Electricians</strong>
+<span>Construction & industrial</span>
+</div>
+
+<div class="requirement">
+<strong>Welders</strong>
+<span>Fabrication & industrial</span>
+</div>
+
+<div class="requirement">
+<strong>Plumbers</strong>
+<span>Construction & maintenance</span>
+</div>
+
+<div class="requirement">
+<strong>Masons</strong>
+<span>Building & infrastructure</span>
+</div>
+
+<div class="requirement">
+<strong>Steel Fabricators</strong>
+<span>Structural & industrial</span>
+</div>
+
+<div class="requirement">
+<strong>Carpenters</strong>
+<span>Construction & interiors</span>
+</div>
+
+<div class="requirement">
+<strong>Pipe Fitters</strong>
+<span>Industrial & energy</span>
+</div>
+
+<div class="requirement">
+<strong>Scaffolders</strong>
+<span>Construction projects</span>
+</div>
+
+<div class="requirement">
+<strong>Drivers</strong>
+<span>Transport & logistics</span>
+</div>
+
+<div class="requirement">
+<strong>Machine Operators</strong>
+<span>Manufacturing</span>
+</div>
+
+<div class="requirement">
+<strong>Technicians</strong>
+<span>Maintenance & industry</span>
+</div>
+
+<div class="requirement">
+<strong>Engineers</strong>
+<span>Technical & project roles</span>
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- DIRECT CONTACT -->
 
-<footer class="footer">
+<section class="section section-light">
 
-    <div class="container footer-grid">
+<div class="container two-col">
 
-        <div>
+<div class="content">
 
-            <div class="footer-logo">
-                TAJ HR SERVICES
-            </div>
+<span class="label">
+Direct Contact
+</span>
 
-            <p>
-                Professional manpower recruitment and
-                HR solutions for employers and candidates.
-            </p>
+<h2>
+Prefer to speak with our team?
+</h2>
 
-        </div>
+<p>
+You can contact Taj HR Services directly to discuss
+your manpower requirement, project size, job roles
+and recruitment timeline.
+</p>
 
+<div class="check-list">
 
-        <div>
+<div>📞 +91 96513 32002</div>
 
-            <h3>
-                Quick Links
-            </h3>
+<div>✉ info@tajhrservices.com</div>
 
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="jobs.html">Jobs</a>
-            <a href="employers.html">Employers</a>
-            <a href="contact.html">Contact</a>
+</div>
 
-        </div>
+<a href="tel:+919651332002"
+class="btn btn-dark">
+Call Now
+</a>
 
+<a href="mailto:info@tajhrservices.com"
+class="btn btn-primary"
+style="margin-left:8px;">
+Email Us
+</a>
 
-        <div>
-
-            <h3>
-                Candidates
-            </h3>
-
-            <a href="jobs.html">Latest Jobs</a>
-            <a href="contact.html">Submit CV</a>
-            <a href="jobs.html">Apply Now</a>
-
-        </div>
+</div>
 
 
-        <div>
+<div class="dark-box">
 
-            <h3>
-                Employers
-            </h3>
+<h3>
+Fastest Way to Start
+</h3>
 
-            <a href="employers.html">Hire Manpower</a>
-            <a href="#requirement">Submit Requirement</a>
-            <a href="contact.html">Contact Us</a>
+<p>
+Send us your requirement with the following information:
+</p>
 
-        </div>
+<ul>
+<li>Country / location</li>
+<li>Job title</li>
+<li>Number of workers</li>
+<li>Experience</li>
+<li>Salary package</li>
+<li>Benefits</li>
+<li>Joining timeline</li>
+<li>Interview details</li>
+</ul>
 
-    </div>
+<a href="https://wa.me/919651332002?text=Hello%20Taj%20HR%20Services%2C%20I%20have%20a%20manpower%20requirement."
+target="_blank"
+class="btn btn-primary"
+style="margin-top:20px;">
+Send Requirement on WhatsApp
+</a>
 
+</div>
 
-    <div class="footer-bottom">
+</div>
 
-        <p>
-            © 2026 Taj HR Services. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-
-<!-- ================= FORM MESSAGE ================= -->
-
-<script>
-
-document.getElementById("employerForm").addEventListener(
-    "submit",
-    function(event) {
-
-        event.preventDefault();
-
-        alert(
-            "Thank you. Your manpower requirement has been recorded on this page. The form will be connected to WhatsApp/email in the next step."
-        );
-
-    }
-);
-
-</script>
+</section>
 
 
-</body>
-</html>
+<!-- CTA -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+Need Manpower for Your Project?
+</h2>
+
+<p>
+Send your requirement today and let our recruitment
+team understand your workforce needs.
+</p>
+
+<a href="#requirement"
+class="btn btn-primary">
+Submit Requirement
+</a>
+
+<a href="https://wa.me/919651332002"
+target="_blank"
+class="b
