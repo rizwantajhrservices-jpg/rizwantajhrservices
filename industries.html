@@ -24,7 +24,7 @@
   .nav-links a:hover,.nav-links a.active{color:var(--gold);}
   .nav-cta{background:var(--gold);color:var(--navy);padding:10px 18px;border-radius:4px;font-weight:700;font-size:13.5px;white-space:nowrap;}
 
-  .page-hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);color:#fff;padding:60px 24px;text-align:center;}
+  .page-hero{background:linear-gradient(135deg,rgba(11,31,58,.93) 0%,rgba(18,49,92,.93) 100%),url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;color:#fff;padding:60px 24px;text-align:center;}
   .page-hero .eyebrow{color:var(--gold-light);font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:14px;}
   .page-hero h1{font-size:34px;font-weight:800;max-width:760px;margin:0 auto 16px;}
   .page-hero p{font-size:16px;color:#d8dde8;max-width:760px;margin:0 auto;}
@@ -33,7 +33,9 @@
   .section-inner{max-width:1200px;margin:0 auto;}
 
   .industry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
-  .industry-card{background:var(--cream);border-radius:10px;padding:30px;border-top:3px solid var(--gold);}
+  .industry-card{background:var(--cream);border-radius:10px;overflow:hidden;border-top:3px solid var(--gold);}
+  .industry-card img{width:100%;height:150px;object-fit:cover;}
+  .industry-card .card-body{padding:24px;}
   .industry-card .ic{font-size:32px;margin-bottom:14px;}
   .industry-card h3{color:var(--navy);font-size:19px;margin-bottom:10px;}
   .industry-card p{font-size:14px;color:var(--text-muted);margin-bottom:14px;}
@@ -87,46 +89,64 @@
   <div class="section-inner">
     <div class="industry-grid">
       <div class="industry-card">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=500&q=80" alt="Construction">
+        <div class="card-body">
         <div class="ic">🏗️</div>
         <h3>Construction</h3>
         <p>Skilled tradesmen, engineers, and project managers for construction and infrastructure projects across Europe.</p>
         <div class="roles"><b>Roles:</b> Masons, carpenters, electricians, plumbers, general laborers</div>
         <span class="dep">5,000+ deployed</span>
+        </div>
       </div>
       <div class="industry-card">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&q=80" alt="Manufacturing">
+        <div class="card-body">
         <div class="ic">⚙️</div>
         <h3>Manufacturing</h3>
         <p>Machine operators, automotive workers, and production staff for growing European manufacturing plants.</p>
         <div class="roles"><b>Roles:</b> Machine operators, welders, assembly line staff</div>
         <span class="dep">3,500+ deployed</span>
+        </div>
       </div>
       <div class="industry-card">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=500&q=80" alt="Hospitality">
+        <div class="card-body">
         <div class="ic">🍽️</div>
         <h3>Hospitality</h3>
         <p>Chefs, servers, and hotel management professionals for hotels, resorts, and restaurants abroad.</p>
         <div class="roles"><b>Roles:</b> Chefs, servers, housekeeping, hotel management</div>
         <span class="dep">3,200+ deployed</span>
+        </div>
       </div>
       <div class="industry-card">
+        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=500&q=80" alt="Healthcare">
+        <div class="card-body">
         <div class="ic">🏥</div>
         <h3>Healthcare</h3>
         <p>Nurses, technicians, and support staff for hospitals and care facilities across Europe.</p>
         <div class="roles"><b>Roles:</b> Nurses, lab technicians, caregivers</div>
         <span class="dep">1,200+ deployed</span>
+        </div>
       </div>
       <div class="industry-card">
+        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=500&q=80" alt="Logistics">
+        <div class="card-body">
         <div class="ic">🚛</div>
         <h3>Logistics</h3>
         <p>Long-haul and regional truck drivers, warehouse workers, and logistics coordinators for European transport companies.</p>
         <div class="roles"><b>Roles:</b> Truck drivers, warehouse staff, coordinators</div>
         <span class="dep">2,500+ deployed</span>
+        </div>
       </div>
       <div class="industry-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=500&q=80" alt="IT & Technology">
+        <div class="card-body">
         <div class="ic">💻</div>
         <h3>IT &amp; Technology</h3>
         <p>Software developers, IT administrators, data analysts, and technology specialists for growing European tech companies.</p>
         <div class="roles"><b>Roles:</b> Developers, IT admins, data analysts</div>
         <span class="dep">800+ deployed</span>
+        </div>
       </div>
     </div>
   </div>
@@ -163,7 +183,7 @@
     </div>
     <div>
       <h4>Contact</h4>
-      <li>info@tajhrservices.com</li>
+      <li>info@tajhrservices.in</li>
       <li>+91 96513 32002</li>
       <li>Mon – Sat: 9:00 AM – 6:00 PM</li>
     </div>
@@ -173,3 +193,4 @@
 
 </body>
 </html>
+
