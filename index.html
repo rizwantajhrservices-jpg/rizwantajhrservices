@@ -100,7 +100,7 @@
         {
           "@type": "Question",
           "name": "Which trades do you recruit for in the Gulf?",
-          "acceptedAnswer": {"@type": "Answer", "text": "We recruit across construction and civil trades, MEP and electrical, welding and fabrication, oil and gas support roles, drivers and transport, facility management and cleaning, hospitality, retail and security. Specific trades vary by the demand letters we hold at any time."}
+          "acceptedAnswer": {"@type": "Answer", "text": "We recruit across the full range of blue-collar trades: construction and civil, welding and fabrication, electrical, plumbing and HVAC, mechanical and workshop, heavy equipment operators, drivers and transport, oil and gas support, facility management and cleaning, hospitality and catering, retail, warehouse and logistics, security, farming and general labour. Specific trades vary by the demand letters we hold at any time."}
         },
         {
           "@type": "Question",
@@ -291,9 +291,90 @@
     .wa-float .wa-label{display:none}
   }
   @media print{.wa-float{display:none}}
+
+  /* client list */
+  .cl-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:30px}
+  @media(max-width:900px){.cl-cols{grid-template-columns:1fr 1fr;gap:22px}}
+  @media(max-width:560px){.cl-cols{grid-template-columns:1fr}}
+  .cl-col h3{font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gold);padding-bottom:8px;border-bottom:2px solid var(--navy);margin-bottom:12px}
+  .cl-col ul{list-style:none;padding:0;margin:0;font-size:.94rem}
+  .cl-col li{padding:7px 0;border-bottom:1px dotted #DCD7CA;color:#2B3547}
+  .cl-col li{color:#2B3547}
+  .cl-col li:last-child{border-bottom:none}
+
+  /* ---- icon system ---- */
+  .ic{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none;display:block}
+  .ic-lg{width:30px;height:30px}
+  .ic-sm{width:18px;height:18px}
+
+  .t-card .ic-lg,.c-card .ic-lg,.doc-box .ic-lg{
+    color:var(--gold);margin-bottom:11px;
+    transition:transform .45s cubic-bezier(.2,.7,.3,1);will-change:transform}
+  .cl-box .ic-lg{color:var(--gold-soft);margin-bottom:11px;
+    transition:transform .45s cubic-bezier(.2,.7,.3,1);will-change:transform}
+  .t-card:hover .ic-lg,.c-card:hover .ic-lg,.doc-box:hover .ic-lg,.cl-box:hover .ic-lg{
+    transform:translateY(-3px) scale(1.06)}
+
+  @keyframes ic-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3.5px)}}
+  .t-card:nth-child(3n+1) .ic-lg{animation:ic-float 3s ease-in-out infinite}
+  .t-card:nth-child(3n+2) .ic-lg{animation:ic-float 3s ease-in-out infinite .6s}
+  .t-card:nth-child(3n)   .ic-lg{animation:ic-float 3s ease-in-out infinite 1.2s}
+  .t-card:hover .ic-lg{animation-play-state:paused}
+
+  .contact-list li{display:flex;gap:13px;align-items:flex-start}
+  .contact-list .ic-sm{color:var(--gold);margin-top:4px;transition:transform .35s ease}
+  .contact-list li:hover .ic-sm{transform:scale(1.15)}
+  .contact-list .ci-body{flex:1;min-width:0}
+
+  @keyframes wa-ring{
+    0%{box-shadow:0 4px 14px rgba(0,0,0,.28),0 0 0 0 rgba(37,211,102,.42)}
+    70%{box-shadow:0 4px 14px rgba(0,0,0,.28),0 0 0 13px rgba(37,211,102,0)}
+    100%{box-shadow:0 4px 14px rgba(0,0,0,.28),0 0 0 0 rgba(37,211,102,0)}}
+  .wa-float{animation:wa-ring 3s ease-out infinite 2s;transition:transform .3s ease,background .3s ease}
+  .wa-float:hover,.wa-float:focus-visible{transform:scale(1.05);animation-play-state:paused}
+
+  .btn{transition:transform .28s cubic-bezier(.2,.7,.3,1),background .28s ease,border-color .28s ease}
+  .btn:hover,.btn:focus-visible{transform:translateY(-2px)}
+
+  @media(prefers-reduced-motion:reduce){
+    .ic,.ic-lg,.ic-sm,.wa-float,.btn,.t-card .ic-lg,.c-card .ic-lg,.cl-box .ic-lg,.doc-box .ic-lg{
+      animation:none!important;transition:none!important;transform:none!important}
+  }
 </style>
 </head>
 <body>
+
+<svg class="icon-sprite" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+<defs>
+<symbol id="i-hardhat" viewBox="0 0 24 24"><path d="M2 17h20v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2Z"/><path d="M4 17v-2a8 8 0 0 1 16 0v2"/><path d="M9.5 4.6A8 8 0 0 1 12 4a8 8 0 0 1 2.5.6"/><path d="M9.5 4.6V9M14.5 4.6V9"/></symbol>
+<symbol id="i-weld" viewBox="0 0 24 24"><path d="M3 21 12 12"/><path d="m10 10 4-4"/><path d="M13 3.5 20.5 11l-2.8 2.8a2 2 0 0 1-2.8 0l-4.7-4.7a2 2 0 0 1 0-2.8L13 3.5Z"/><path d="M17 19h4M19 17v4"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></symbol>
+<symbol id="i-pipe" viewBox="0 0 24 24"><path d="M3 8h6a3 3 0 0 1 3 3v2a3 3 0 0 0 3 3h6"/><rect x="2" y="5" width="4" height="6" rx="1"/><rect x="18" y="13" width="4" height="6" rx="1"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M22 12h-3M5 12H2M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M18.4 18.4l-2.1-2.1M7.7 7.7 5.6 5.6"/></symbol>
+<symbol id="i-crane" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M6 21V4h12"/><path d="M18 4v6"/><path d="M6 8h12"/><rect x="15" y="10" width="6" height="4" rx="1"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 16V6a1 1 0 0 1 1-1h11v11H2Z"/><path d="M14 9h4l3 3v4h-7V9Z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+<symbol id="i-oil" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="m7 21 3-14 7 14"/><path d="M8.5 12h6"/><path d="M10 7V4h4"/></symbol>
+<symbol id="i-clean" viewBox="0 0 24 24"><path d="M6 21h12l-1-8H7l-1 8Z"/><path d="M9 13V6a3 3 0 0 1 6 0v7"/><path d="M9 17h6"/></symbol>
+<symbol id="i-chef" viewBox="0 0 24 24"><path d="M7 21h10v-8H7v8Z"/><path d="M7 13a4 4 0 0 1-1-7.9A3.5 3.5 0 0 1 12 3a3.5 3.5 0 0 1 6 2.1A4 4 0 0 1 17 13"/><path d="M7 17h10"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24"><path d="M2 4h2.5l2.2 11.2a1.5 1.5 0 0 0 1.5 1.2h9.1a1.5 1.5 0 0 0 1.5-1.2L20 8H6"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M3 8.5 12 4l9 4.5v7L12 20l-9-4.5v-7Z"/><path d="M3 8.5 12 13l9-4.5M12 13v7"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.4 3.3 7.9 8 9 4.7-1.1 8-4.6 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M4 20c0-8 5-14 16-15 0 10-5 15-12 15H4Z"/><path d="M9 16c1.5-4 4-6.5 8-8"/></symbol>
+<symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21h18V10l-6 4V10l-6 4V4H3v17Z"/><path d="M7 17h2M13 17h2M18 17h1"/></symbol>
+<symbol id="i-fish" viewBox="0 0 24 24"><path d="M2 12c3-4.5 7-6.5 11-6.5S20 8 22 12c-2 4-5 6.5-9 6.5S5 16.5 2 12Z"/><circle cx="8" cy="11" r="1"/><path d="M22 12c-1.5-1-3-1.5-3-1.5"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7l-4-4Z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h4"/></symbol>
+<symbol id="i-stamp" viewBox="0 0 24 24"><path d="M5 21h14"/><path d="M6 18h12v-2a2 2 0 0 0-2-2h-1l.6-5.4A3 3 0 0 0 12.6 5h-1.2a3 3 0 0 0-3 3.6L9 14H8a2 2 0 0 0-2 2v2Z"/></symbol>
+<symbol id="i-plane" viewBox="0 0 24 24"><path d="M21 15.5 3 9.8V7l3 1 2-1.5 4 1.3L21 3v12.5Z"/><path d="M8 17l3.5 1.5L13 21"/></symbol>
+<symbol id="i-passport" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 17h6"/></symbol>
+<symbol id="i-scales" viewBox="0 0 24 24"><path d="M12 3v18M6 21h12"/><path d="M4 8h16"/><path d="M4 8 2 14h4L4 8ZM20 8l-2 6h4l-2-6Z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6 6L16.5 12l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 6.2 2 2 0 0 1 6.5 3Z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="m8.5 13.5-1 7 4.5-2.5 4.5 2.5-1-7"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 5h12l-2 4 2 4H5"/></symbol>
+</defs>
+</svg>
+
 
 <a href="#main" style="position:absolute;left:-9999px" onfocus="this.style.left='10px';this.style.top='10px';this.style.background='#fff';this.style.padding='8px';this.style.zIndex='99'">Skip to main content</a>
 
@@ -345,49 +426,52 @@
     <div class="c-grid">
 
       <article class="c-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-flag"/></svg>
         <h3>Saudi Arabia</h3>
-        <p class="lede">Construction, industrial and facility contracts across Riyadh, Jeddah, Dammam and giga-project sites.</p>
+        <p class="lede">Construction, industrial, transport and services contracts across Riyadh, Jeddah, Dammam and giga-project sites.</p>
         <ul>
-          <li>Welders and fabricators</li>
-          <li>Electricians and MEP technicians</li>
-          <li>Steel fixers, shuttering carpenters, masons</li>
-          <li>Scaffolders and riggers</li>
-          <li>Heavy and light drivers</li>
-          <li>Plumbers and pipe fitters</li>
-          <li>AC and refrigeration technicians</li>
-          <li>Cleaners and municipality workers</li>
+          <li>Construction and civil trades</li>
+          <li>Welding and fabrication</li>
+          <li>Electrical and MEP</li>
+          <li>Heavy equipment operators</li>
+          <li>Drivers and transport</li>
+          <li>Oil, gas and industrial</li>
+          <li>Facility management and cleaning</li>
+          <li>Catering, farming and general labour</li>
         </ul>
         <a class="go" href="/hire-in-saudi-arabia">Hiring for Saudi Arabia</a>
       </article>
 
       <article class="c-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-flag"/></svg>
         <h3>Oman</h3>
-        <p class="lede">Infrastructure, oil and gas support and facility management across Muscat, Sohar, Duqm and Salalah.</p>
+        <p class="lede">Infrastructure, oil and gas support and facility contracts across Muscat, Sohar, Duqm and Salalah.</p>
         <ul>
-          <li>Civil and construction workers</li>
-          <li>Welders and pipe fitters</li>
-          <li>Electricians and instrument technicians</li>
-          <li>Mechanics and heavy equipment operators</li>
-          <li>Drivers with GCC-accepted licences</li>
-          <li>Facility management and cleaning staff</li>
-          <li>Security guards</li>
-          <li>Hospitality and kitchen staff</li>
+          <li>Construction and civil trades</li>
+          <li>Welding and pipe fitting</li>
+          <li>Electrical and instrumentation</li>
+          <li>Mechanical and workshop</li>
+          <li>Heavy equipment operators</li>
+          <li>Drivers and transport</li>
+          <li>Facility management and cleaning</li>
+          <li>Hospitality, fisheries and general labour</li>
         </ul>
         <a class="go" href="/hire-in-oman">Hiring for Oman</a>
       </article>
 
       <article class="c-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-flag"/></svg>
         <h3>United Arab Emirates</h3>
         <p class="lede">Contracting, hospitality, retail and logistics across Dubai, Abu Dhabi, Sharjah and Ajman.</p>
         <ul>
-          <li>AC technicians and MEP trades</li>
-          <li>Electricians and plumbers</li>
-          <li>Carpenters and painters</li>
-          <li>Warehouse and logistics workers</li>
-          <li>Delivery riders and drivers</li>
-          <li>Security guards</li>
-          <li>Housekeeping and cleaning staff</li>
-          <li>Waiters, baristas and kitchen helpers</li>
+          <li>MEP, HVAC and electrical</li>
+          <li>Construction and finishing trades</li>
+          <li>Mechanical and workshop</li>
+          <li>Warehouse and logistics</li>
+          <li>Drivers and delivery riders</li>
+          <li>Hospitality and catering</li>
+          <li>Retail and sales</li>
+          <li>Cleaning, security and general labour</li>
         </ul>
         <a class="go" href="/hire-in-uae">Hiring for the UAE</a>
       </article>
@@ -427,18 +511,22 @@
     <p>This is the step that delays Gulf deployments most often, and it is the one candidates ask about most. Saudi Arabia, Oman and the UAE are all on the list of notified countries where it applies.</p>
     <div class="cl-grid">
       <div class="cl-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-passport"/></svg>
         <h3>ECR passports</h3>
         <p>Emigration Check Required applies to Indian passport holders who have not passed Class 10. If you hold an ECR passport and are travelling for employment to a notified country, you need Protector of Emigrants clearance through the eMigrate system before you fly. Without it you can be stopped at the airport.</p>
       </div>
       <div class="cl-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-badge"/></svg>
         <h3>ECNR passports</h3>
         <p>Emigration Check Not Required applies if you have passed Class 10 or higher, or otherwise qualify under the rules. ECNR holders do not need PoE clearance for employment travel. Check the ECR or ECNR status printed in your own passport rather than assuming.</p>
       </div>
       <div class="cl-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg>
         <h3>What employers should confirm</h3>
         <p>Before booking flights, confirm each worker's passport status. Mixing ECR workers into a batch without PoE clearance is the most common cause of last-minute offloading and schedule slip.</p>
       </div>
       <div class="cl-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
         <h3>Before you pay anyone</h3>
         <p>Check the agency's licence on emigrate.gov.in first. Any charge must be told to you in advance, stay within the legal limit, and come with a proper receipt. Never pay cash without a receipt, to anyone.</p>
       </div>
@@ -448,9 +536,61 @@
 
 <section id="clients">
   <div class="wrap">
-    <h2>Employers we work with</h2>
-    <div class="note">
-      <p><strong>Placeholder — needs your input before publishing.</strong> Add only client names you have written permission to publish. Many Gulf employers restrict this in their contracts, so check first. If names cannot be used, replace this section with sector and project-type descriptions instead, for example “municipality cleaning contract, Muscat, 120 workers” with no company name. Do not publish logos or names without permission.</p>
+    <h2>Employers we have supplied workers to</h2>
+    <p>A selection of the companies TAJ HR Services has recruited for. Names are listed as text only; we do not display client logos or branding.</p>
+
+    <div class="cl-cols">
+      <div class="cl-col">
+        <h3>Contracting and construction</h3>
+        <ul>
+          <li>Saudi Binladin Group</li>
+          <li>Alkifah Contracting</li>
+          <li>Azzam Trading &amp; Contracting Co. Ltd.</li>
+          <li>Al Jawad Trading &amp; Contracting Co.</li>
+          <li>Bin Sammar Trading &amp; Contracting Co.</li>
+          <li>Ewan for Contracting</li>
+          <li>Al Haider Co.</li>
+          <li>Al Shareich</li>
+          <li>Development Works</li>
+        </ul>
+      </div>
+
+      <div class="cl-col">
+        <h3>Energy, industrial and engineering</h3>
+        <ul>
+          <li>Saudi Aramco</li>
+          <li>TRAGS Engineering</li>
+          <li>Al Jammaz</li>
+          <li>Alrassam Company Ltd.</li>
+          <li>Abdullah H. Balharith &amp; Partners Co.</li>
+          <li>Salem Ahmed Balharith Holding Group</li>
+        </ul>
+      </div>
+
+      <div class="cl-col">
+        <h3>Holdings and diversified groups</h3>
+        <ul>
+          <li>Alesayi Holding</li>
+          <li>Almarshad Holding</li>
+          <li>Almajal Alarabi Group</li>
+          <li>Al Saleh Development Company</li>
+          <li>Seder Group</li>
+          <li>Taleb Group</li>
+          <li>Al Yamama</li>
+        </ul>
+      </div>
+
+      <div class="cl-col">
+        <h3>Facility, food and workforce services</h3>
+        <ul>
+          <li>RAE Company for Environmental Services</li>
+          <li>Tanmiah</li>
+          <li>Development Works Food Company</li>
+          <li>Jaddarah Workforce Services</li>
+          <li>ARCO Human Resources Co.</li>
+          <li>Sheraton</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -471,7 +611,7 @@
 
     <details>
       <summary>Which trades do you recruit for in the Gulf?</summary>
-      <p>Construction and civil trades, MEP and electrical, welding and fabrication, oil and gas support roles, drivers and transport, facility management and cleaning, hospitality, retail and security. The exact trades open at any time depend on the demand letters we currently hold, so contact us for the current list.</p>
+      <p>We cover the full range of blue-collar work: construction and civil trades, welding and fabrication, electrical, plumbing and HVAC, mechanical and workshop roles, heavy equipment operators, drivers and transport, oil and gas support, facility management and cleaning, hospitality and catering, retail, warehouse and logistics, security, farming and general labour. The exact trades open at any time depend on the demand letters we currently hold, so contact us for the current list.</p>
     </details>
 
     <details>
@@ -498,10 +638,10 @@
       <h2>Talk to our team</h2>
       <p>Employers can send a requirement or demand letter. Candidates can ask about current openings and the documents needed.</p>
       <ul class="contact-list">
-        <li><strong>Email</strong><a href="mailto:info@tajhrservices.in">info@tajhrservices.in</a></li>
-        <li><strong>Phone</strong><a href="tel:+919651332002">+91 96513 32002</a></li>
-        <li><strong>Office</strong>Office No. 18-B, 1st Floor, Taimoor Nagar, Nala Road, New Friends Colony, New Delhi 110025</li>
-        <li><strong>Licence</strong>MEA RA B-3252/DEL/PER/1000+/5/11251/2025</li>
+        <li><svg class="ic ic-sm" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span class="ci-body"><strong>Email</strong><a href="mailto:info@tajhrservices.in">info@tajhrservices.in</a></span></li>
+        <li><svg class="ic ic-sm" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span class="ci-body"><strong>Phone</strong><a href="tel:+919651332002">+91 96513 32002</a></span></li>
+        <li><svg class="ic ic-sm" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><span class="ci-body"><strong>Office</strong>Office No. 18-B, 1st Floor, Taimoor Nagar, Nala Road, New Friends Colony, New Delhi 110025</span></li>
+        <li><svg class="ic ic-sm" aria-hidden="true" focusable="false"><use href="#i-badge"/></svg><span class="ci-body"><strong>Licence</strong>MEA RA B-3252/DEL/PER/1000+/5/11251/2025</span></li>
       </ul>
     </div>
 
@@ -575,6 +715,11 @@
           <li><a href="tel:+919651332002">+91 96513 32002</a></li>
           <li>New Friends Colony, New Delhi 110025</li>
           <li><a href="https://tajhrservices.com" rel="noopener">Europe recruitment: tajhrservices.com</a></li>
+        </ul>
+        <h3 style="margin-top:20px">Legal</h3>
+        <ul>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
         </ul>
       </div>
     </div>
