@@ -252,9 +252,97 @@
   .warn{color:var(--gold-soft)}
   :focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  /* WhatsApp floating button */
+  .wa-float{
+    position:fixed;right:16px;bottom:16px;z-index:80;
+    display:inline-flex;align-items:center;gap:9px;
+    background:#25D366;color:#0A2E17;text-decoration:none;
+    font-family:'Inter',system-ui,sans-serif;font-weight:600;font-size:.94rem;
+    padding:12px 17px 12px 14px;border-radius:40px;
+    box-shadow:0 4px 14px rgba(0,0,0,.28);
+  }
+  .wa-float:hover,.wa-float:focus-visible{background:#1FBE5B}
+  .wa-float svg{flex:none}
+  @media(max-width:520px){
+    .wa-float{right:14px;bottom:14px;padding:13px;border-radius:50%}
+    .wa-float .wa-label{display:none}
+  }
+  @media print{.wa-float{display:none}}
+
+  /* ---- icon system ---- */
+  .ic{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none;display:block}
+  .ic-lg{width:30px;height:30px}
+  .ic-sm{width:18px;height:18px}
+
+  .t-card .ic-lg,.c-card .ic-lg,.doc-box .ic-lg{
+    color:var(--gold);margin-bottom:11px;
+    transition:transform .45s cubic-bezier(.2,.7,.3,1);will-change:transform}
+  .cl-box .ic-lg{color:var(--gold-soft);margin-bottom:11px;
+    transition:transform .45s cubic-bezier(.2,.7,.3,1);will-change:transform}
+  .t-card:hover .ic-lg,.c-card:hover .ic-lg,.doc-box:hover .ic-lg,.cl-box:hover .ic-lg{
+    transform:translateY(-3px) scale(1.06)}
+
+  @keyframes ic-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3.5px)}}
+  .t-card:nth-child(3n+1) .ic-lg{animation:ic-float 3s ease-in-out infinite}
+  .t-card:nth-child(3n+2) .ic-lg{animation:ic-float 3s ease-in-out infinite .6s}
+  .t-card:nth-child(3n)   .ic-lg{animation:ic-float 3s ease-in-out infinite 1.2s}
+  .t-card:hover .ic-lg{animation-play-state:paused}
+
+  .contact-list li{display:flex;gap:13px;align-items:flex-start}
+  .contact-list .ic-sm{color:var(--gold);margin-top:4px;transition:transform .35s ease}
+  .contact-list li:hover .ic-sm{transform:scale(1.15)}
+  .contact-list .ci-body{flex:1;min-width:0}
+
+  @keyframes wa-ring{
+    0%{box-shadow:0 4px 14px rgba(0,0,0,.28),0 0 0 0 rgba(37,211,102,.42)}
+    70%{box-shadow:0 4px 14px rgba(0,0,0,.28),0 0 0 13px rgba(37,211,102,0)}
+    100%{box-shadow:0 4px 14px rgba(0,0,0,.28),0 0 0 0 rgba(37,211,102,0)}}
+  .wa-float{animation:wa-ring 3s ease-out infinite 2s;transition:transform .3s ease,background .3s ease}
+  .wa-float:hover,.wa-float:focus-visible{transform:scale(1.05);animation-play-state:paused}
+
+  .btn{transition:transform .28s cubic-bezier(.2,.7,.3,1),background .28s ease,border-color .28s ease}
+  .btn:hover,.btn:focus-visible{transform:translateY(-2px)}
+
+  @media(prefers-reduced-motion:reduce){
+    .ic,.ic-lg,.ic-sm,.wa-float,.btn,.t-card .ic-lg,.c-card .ic-lg,.cl-box .ic-lg,.doc-box .ic-lg{
+      animation:none!important;transition:none!important;transform:none!important}
+  }
 </style>
 </head>
 <body>
+
+<svg class="icon-sprite" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden">
+<defs>
+<symbol id="i-hardhat" viewBox="0 0 24 24"><path d="M2 17h20v2a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-2Z"/><path d="M4 17v-2a8 8 0 0 1 16 0v2"/><path d="M9.5 4.6A8 8 0 0 1 12 4a8 8 0 0 1 2.5.6"/><path d="M9.5 4.6V9M14.5 4.6V9"/></symbol>
+<symbol id="i-weld" viewBox="0 0 24 24"><path d="M3 21 12 12"/><path d="m10 10 4-4"/><path d="M13 3.5 20.5 11l-2.8 2.8a2 2 0 0 1-2.8 0l-4.7-4.7a2 2 0 0 1 0-2.8L13 3.5Z"/><path d="M17 19h4M19 17v4"/></symbol>
+<symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></symbol>
+<symbol id="i-pipe" viewBox="0 0 24 24"><path d="M3 8h6a3 3 0 0 1 3 3v2a3 3 0 0 0 3 3h6"/><rect x="2" y="5" width="4" height="6" rx="1"/><rect x="18" y="13" width="4" height="6" rx="1"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M22 12h-3M5 12H2M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M18.4 18.4l-2.1-2.1M7.7 7.7 5.6 5.6"/></symbol>
+<symbol id="i-crane" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M6 21V4h12"/><path d="M18 4v6"/><path d="M6 8h12"/><rect x="15" y="10" width="6" height="4" rx="1"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 16V6a1 1 0 0 1 1-1h11v11H2Z"/><path d="M14 9h4l3 3v4h-7V9Z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+<symbol id="i-oil" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="m7 21 3-14 7 14"/><path d="M8.5 12h6"/><path d="M10 7V4h4"/></symbol>
+<symbol id="i-clean" viewBox="0 0 24 24"><path d="M6 21h12l-1-8H7l-1 8Z"/><path d="M9 13V6a3 3 0 0 1 6 0v7"/><path d="M9 17h6"/></symbol>
+<symbol id="i-chef" viewBox="0 0 24 24"><path d="M7 21h10v-8H7v8Z"/><path d="M7 13a4 4 0 0 1-1-7.9A3.5 3.5 0 0 1 12 3a3.5 3.5 0 0 1 6 2.1A4 4 0 0 1 17 13"/><path d="M7 17h10"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24"><path d="M2 4h2.5l2.2 11.2a1.5 1.5 0 0 0 1.5 1.2h9.1a1.5 1.5 0 0 0 1.5-1.2L20 8H6"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></symbol>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M3 8.5 12 4l9 4.5v7L12 20l-9-4.5v-7Z"/><path d="M3 8.5 12 13l9-4.5M12 13v7"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.4 3.3 7.9 8 9 4.7-1.1 8-4.6 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M4 20c0-8 5-14 16-15 0 10-5 15-12 15H4Z"/><path d="M9 16c1.5-4 4-6.5 8-8"/></symbol>
+<symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21h18V10l-6 4V10l-6 4V4H3v17Z"/><path d="M7 17h2M13 17h2M18 17h1"/></symbol>
+<symbol id="i-fish" viewBox="0 0 24 24"><path d="M2 12c3-4.5 7-6.5 11-6.5S20 8 22 12c-2 4-5 6.5-9 6.5S5 16.5 2 12Z"/><circle cx="8" cy="11" r="1"/><path d="M22 12c-1.5-1-3-1.5-3-1.5"/></symbol>
+<symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7l-4-4Z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h4"/></symbol>
+<symbol id="i-stamp" viewBox="0 0 24 24"><path d="M5 21h14"/><path d="M6 18h12v-2a2 2 0 0 0-2-2h-1l.6-5.4A3 3 0 0 0 12.6 5h-1.2a3 3 0 0 0-3 3.6L9 14H8a2 2 0 0 0-2 2v2Z"/></symbol>
+<symbol id="i-plane" viewBox="0 0 24 24"><path d="M21 15.5 3 9.8V7l3 1 2-1.5 4 1.3L21 3v12.5Z"/><path d="M8 17l3.5 1.5L13 21"/></symbol>
+<symbol id="i-passport" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M9 17h6"/></symbol>
+<symbol id="i-scales" viewBox="0 0 24 24"><path d="M12 3v18M6 21h12"/><path d="M4 8h16"/><path d="M4 8 2 14h4L4 8ZM20 8l-2 6h4l-2-6Z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 6 6L16.5 12l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4 6.2 2 2 0 0 1 6.5 3Z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="i-badge" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5"/><path d="m8.5 13.5-1 7 4.5-2.5 4.5 2.5-1-7"/></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 5h12l-2 4 2 4H5"/></symbol>
+</defs>
+</svg>
+
 <a href="#main" style="position:absolute;left:-9999px" onfocus="this.style.left='10px';this.style.top='10px';this.style.background='#fff';this.style.padding='8px';this.style.zIndex='99'">Skip to main content</a>
 
 <header class="site-head">
@@ -304,64 +392,467 @@
 
 <section class="trades" id="trades">
   <div class="wrap">
-    <h2>Trades we recruit for Oman</h2>
-    <p>Omani demand from India concentrates around the industrial belt at Sohar and Duqm, the construction and infrastructure programme, and service contracts in Muscat and Salalah. These are the categories we work in most often.</p>
+    <h2>Blue-collar trades we recruit for Oman</h2>
+    <p>We recruit across the full range of blue-collar work that Omani employers hire from India. Demand concentrates around the industrial belt at Sohar and Duqm, the construction and infrastructure programme, and service contracts in Muscat and Salalah. Which roles are open at any moment depends on the demand letters in hand, and on your labour clearance.</p>
 
     <div class="t-grid">
       <div class="t-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-hardhat"/></svg>
         <h3>Construction and civil</h3>
-        <p>Buildings, roads and infrastructure packages</p>
+        <p>Building, infrastructure and site work</p>
         <ul>
-          <li>Masons and plasterers</li>
-          <li>Shuttering carpenters</li>
+          <li>Masons and block layers</li>
           <li>Steel fixers</li>
+          <li>Shuttering carpenters</li>
+          <li>Plasterers</li>
+          <li>Tilers and marble fixers</li>
+          <li>Painters and decorators</li>
           <li>Scaffolders</li>
-          <li>Painters</li>
+          <li>Riggers</li>
+          <li>Concrete finishers</li>
+          <li>Road and paving workers</li>
           <li>Construction helpers</li>
         </ul>
       </div>
-
       <div class="t-card">
-        <h3>Oil, gas and industrial</h3>
-        <p>Refinery, petrochemical and plant contracts</p>
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-weld"/></svg>
+        <h3>Welding and fabrication</h3>
+        <p>Structural, pipeline and workshop work</p>
         <ul>
+          <li>Arc and MIG welders</li>
+          <li>TIG welders</li>
+          <li>6G pipeline welders</li>
+          <li>Structural fabricators</li>
           <li>Pipe fitters</li>
-          <li>TIG and 6G welders</li>
-          <li>Instrument technicians</li>
-          <li>Insulators and painters</li>
-          <li>Riggers and scaffolders</li>
-          <li>Plant helpers</li>
+          <li>Sheet metal workers</li>
+          <li>Grinders and buffers</li>
+          <li>Blacksmiths</li>
         </ul>
       </div>
-
       <div class="t-card">
-        <h3>Electrical and MEP</h3>
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-bolt"/></svg>
+        <h3>Electrical</h3>
+        <p>Site, building and industrial work</p>
+        <ul>
+          <li>Site electricians</li>
+          <li>Industrial electricians</li>
+          <li>Cable jointers</li>
+          <li>Panel wiremen</li>
+          <li>Linemen</li>
+          <li>Instrumentation technicians</li>
+          <li>Electrical helpers</li>
+        </ul>
+      </div>
+      <div class="t-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-pipe"/></svg>
+        <h3>Plumbing, HVAC and MEP</h3>
         <p>Installation and maintenance packages</p>
         <ul>
-          <li>Industrial and site electricians</li>
-          <li>AC and refrigeration technicians</li>
           <li>Plumbers</li>
+          <li>Pipe fitters</li>
+          <li>AC and refrigeration technicians</li>
+          <li>Duct fabricators</li>
           <li>Duct installers</li>
-          <li>Maintenance technicians</li>
+          <li>Fire fighting technicians</li>
+          <li>Insulation workers</li>
+          <li>MEP helpers</li>
         </ul>
       </div>
-
       <div class="t-card">
-        <h3>Mechanical and equipment</h3>
-        <p>Workshop, fleet and site machinery</p>
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-gear"/></svg>
+        <h3>Mechanical and workshop</h3>
+        <p>Fleet, plant and workshop roles</p>
         <ul>
-          <li>Diesel and auto mechanics</li>
-          <li>Heavy equipment operators</li>
-          <li>Crane and forklift operators</li>
+          <li>Diesel mechanics</li>
+          <li>Auto mechanics</li>
           <li>Auto electricians</li>
-          <li>Tyre and body technicians</li>
+          <li>Auto denters</li>
+          <li>Auto painters</li>
+          <li>Lathe and machine operators</li>
+          <li>CNC operators</li>
+          <li>Maintenance fitters</li>
+          <li>Millwrights</li>
+          <li>Tyre technicians</li>
         </ul>
       </div>
-
       <div class="t-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-crane"/></svg>
+        <h3>Heavy equipment operators</h3>
+        <p>Certified operators, licence checked</p>
+        <ul>
+          <li>Crane operators</li>
+          <li>Forklift operators</li>
+          <li>Excavator operators</li>
+          <li>Wheel loader operators</li>
+          <li>Bulldozer operators</li>
+          <li>Boom lift and scissor lift operators</li>
+          <li>Telehandler operators</li>
+          <li>Batching plant operators</li>
+        </ul>
+      </div>
+      <div class="t-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-truck"/></svg>
         <h3>Drivers and transport</h3>
         <p>Licence category confirmed before selection</p>
         <ul>
-          <li>Heavy truck and trailer drivers</li>
+          <li>Heavy truck drivers</li>
+          <li>Trailer drivers</li>
+          <li>Tanker drivers</li>
           <li>Bus drivers</li>
-          <
+          <li>Light vehicle drivers</li>
+          <li>Delivery drivers</li>
+          <li>Delivery riders</li>
+        </ul>
+      </div>
+      <div class="t-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-oil"/></svg>
+        <h3>Oil, gas and industrial</h3>
+        <p>Refinery, petrochemical and shutdown work</p>
+        <ul>
+          <li>Pipeline welders</li>
+          <li>Pipe fitters</li>
+          <li>Insulators</li>
+          <li>Sandblasters and industrial painters</li>
+          <li>Plant operators</li>
+          <li>Shutdown and turnaround crew</li>
+          <li>Scaffolders</li>
+          <li>Industrial cleaners</li>
+          <li>Plant helpers</li>
+        </ul>
+      </div>
+      <div class="t-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-clean"/></svg>
+        <h3>Facility management and cleaning</h3>
+        <p>Municipality, commercial and residential contracts</p>
+        <ul>
+          <li>Cleaners and sweepers</li>
+          <li>Housekeeping staff</li>
+          <li>Janitors</li>
+          <li>Office boys</li>
+          <li>Municipality workers</li>
+          <li>Landscapers and gardeners</li>
+          <li>Pest control workers</li>
+          <li>Pool and utility attendants</li>
+        </ul>
+      </div>
+      <div class="t-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-chef"/></svg>
+        <h3>Hospitality and catering</h3>
+        <p>Hotels, restaurants, camps and catering</p>
+        <ul>
+          <li>Cooks and chefs</li>
+          <li>Commis chefs</li>
+          <li>Kitchen helpers</li>
+          <li>Waiters and service staff</li>
+          <li>Baristas</li>
+          <li>Stewards and dishwashers</li>
+          <li>Camp catering staff</li>
+          <li>Bakers</li>
+        </ul>
+      </div>
+      <div class="t-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-fish"/></svg>
+        <h3>Fisheries and food processing</h3>
+        <p>Coastal and processing plant work</p>
+        <ul>
+          <li>Fishermen and deckhands</li>
+          <li>Fish processing workers</li>
+          <li>Cold storage workers</li>
+          <li>Packing staff</li>
+        </ul>
+      </div>
+      <div class="t-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-box"/></svg>
+        <h3>Warehouse and logistics</h3>
+        <p>Distribution, ports and last mile</p>
+        <ul>
+          <li>Warehouse workers</li>
+          <li>Pickers and packers</li>
+          <li>Loaders and unloaders</li>
+          <li>Storekeepers</li>
+          <li>Inventory clerks</li>
+          <li>Material handlers</li>
+        </ul>
+      </div>
+      <div class="t-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
+        <h3>Security</h3>
+        <p>Guarding and site protection</p>
+        <ul>
+          <li>Security guards</li>
+          <li>Watchmen</li>
+          <li>Gate keepers</li>
+          <li>CCTV operators</li>
+        </ul>
+      </div>
+      <div class="t-card">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-leaf"/></svg>
+        <h3>Agriculture and farming</h3>
+        <p>Farms, greenhouses and livestock</p>
+        <ul>
+          <li>Farm workers</li>
+          <li>Greenhouse workers</li>
+          <li>Poultry farm workers</li>
+          <li>Dairy and livestock workers</li>
+          <li>Irrigation workers</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note">
+      <p><strong>To be confirmed by TAJ HR Services:</strong> remove any trade above that you do not actually supply, and add anything missing. Salary bands are deliberately absent &mdash; publish them only when they come from a live demand letter. Remember that Omanisation limits which of these roles your client can actually fill from abroad.</p>
+    </div>
+  </div>
+</section>
+
+<section id="documents">
+  <div class="wrap">
+    <h2>What an Omani employer needs to send us</h2>
+    <p>Oman adds one step that Saudi Arabia and the UAE do not: your labour clearance has to exist before anything else is worth doing. Everything below follows from it.</p>
+
+    <div class="docs">
+      <div class="doc-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg>
+        <h3>Ministry of Labour clearance</h3>
+        <p>Confirming your establishment may employ expatriate workers in the specific job categories you want to fill, and in what numbers. This is where Omanisation limits show up in practice.</p>
+      </div>
+      <div class="doc-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-stamp"/></svg>
+        <h3>Demand letter</h3>
+        <p>On company letterhead, listing job titles, number of workers per trade, monthly salary, working hours, overtime terms, accommodation, food, medical cover, transport and contract duration.</p>
+      </div>
+      <div class="doc-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-scales"/></svg>
+        <h3>Power of attorney</h3>
+        <p>Authorising TAJ HR Services to recruit and process candidates on your behalf, naming our licence number.</p>
+      </div>
+      <div class="doc-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-passport"/></svg>
+        <h3>Specimen employment contract</h3>
+        <p>The contract each worker will sign, with terms matching the demand letter exactly. Differences between the two are a common reason for eMigrate rejection.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:26px">These documents normally require attestation by the Indian Embassy in Muscat before they can be registered on eMigrate. We will tell you which attestations your specific set needs before you spend money on them.</p>
+  </div>
+</section>
+
+<section class="clearance" id="clearance">
+  <div class="wrap">
+    <h2>Omanisation and emigration clearance</h2>
+    <p>Two separate rule sets apply to every Oman deployment, one at the Omani end and one at the Indian end. Both have to be satisfied before a worker can fly.</p>
+    <div class="cl-grid">
+      <div class="cl-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-passport"/></svg>
+        <h3>Omanisation quotas</h3>
+        <p>Oman reserves certain job categories and a share of positions for Omani nationals, with rules that differ by sector. This determines which roles you may fill from abroad. Your labour clearance reflects those limits, which is why we ask to see it before sourcing begins.</p>
+      </div>
+      <div class="cl-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-badge"/></svg>
+        <h3>ECR passports need PoE clearance</h3>
+        <p>Oman is a notified country under Indian emigration rules. Workers who have not passed Class 10 hold ECR passports and need Protector of Emigrants clearance through eMigrate before departure. Without it they can be stopped at the airport despite holding a valid visa.</p>
+      </div>
+      <div class="cl-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-doc"/></svg>
+        <h3>ECNR passports do not</h3>
+        <p>Class 10 pass and above is ECNR, and those workers do not need PoE clearance. The status is printed in the passport itself, so it should be checked for every candidate rather than assumed from the trade or the education claimed on a CV.</p>
+      </div>
+      <div class="cl-box">
+        <svg class="ic ic-lg" aria-hidden="true" focusable="false"><use href="#i-shield"/></svg>
+        <h3>Wafid medical</h3>
+        <p>Candidates must be examined at an approved GCC medical centre in India, operating under the Wafid system formerly known as GAMCA, and declared fit before visa processing. We screen early, because an unfit result after selection means restarting that position.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <h2>From clearance to departure</h2>
+    <p>The sequence is fixed; only the timing changes. We give an estimated schedule once your documents are attested, rather than a headline number that ignores your sector and clearance position.</p>
+    <ol class="steps">
+      <li>
+        <h3>Clearance and documents</h3>
+        <p>You share the labour clearance, demand letter, power of attorney and specimen contract. We check them against Indian emigration requirements and register the requirement on eMigrate.</p>
+      </li>
+      <li>
+        <h3>Sourcing and trade screening</h3>
+        <p>Candidates are shortlisted and screened on documents and practical trade ability. Video trade tests can be arranged where you cannot travel to India for interviews.</p>
+      </li>
+      <li>
+        <h3>Selection, medicals, clearance</h3>
+        <p>You select in person or by video. Selected workers complete Wafid medicals, visa processing, and PoE clearance where the passport is ECR.</p>
+      </li>
+    </ol>
+    <p style="margin-top:28px">Pre-departure briefing and ticketing follow, with arrival details shared with your site team before the worker flies.</p>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>Oman recruitment: common questions</h2>
+
+    <details>
+      <summary>What does an Omani employer need before recruiting Indian workers?</summary>
+      <p>Labour clearance from the Ministry of Labour for the roles you want to fill, plus a demand letter on company letterhead, a power of attorney authorising us to recruit for you, and a specimen employment contract. These normally require attestation by the Indian Embassy in Muscat before eMigrate processing.</p>
+    </details>
+
+    <details>
+      <summary>How does Omanisation affect hiring Indian workers?</summary>
+      <p>Oman reserves certain job categories and a proportion of positions for Omani nationals, and the rules differ by sector. This decides which roles your establishment can fill with expatriate workers and how many. Your labour clearance reflects those limits, which is why we ask to see it before sourcing rather than after.</p>
+    </details>
+
+    <details>
+      <summary>Do Indian workers going to Oman need PoE clearance?</summary>
+      <p>Oman is a notified country, so Protector of Emigrants clearance applies to ECR passport holders, meaning those who have not passed Class 10. ECNR holders do not need it. Confirm the status of every worker's passport before booking flights.</p>
+    </details>
+
+    <details>
+      <summary>Which sectors do you recruit for in Oman?</summary>
+      <p>Construction and infrastructure, oil and gas support services around Sohar and Duqm, industrial and plant maintenance, transport and driving, facility management and cleaning, hospitality, and security. The roles open at any time depend on the demand letters currently in hand.</p>
+    </details>
+
+    <details>
+      <summary>What medical examination do candidates need?</summary>
+      <p>Candidates must be examined at an approved GCC medical centre in India, operating under the Wafid system formerly known as GAMCA, and declared medically fit before visa processing. We advise screening early, because an unfit result after selection means restarting that position.</p>
+    </details>
+
+    <details>
+      <summary>Can you handle bulk requirements?</summary>
+      <p>Yes. Larger requirements are mobilised in phases rather than one batch, because medicals, visa processing and clearance move at different speeds for different candidates. We plan the phasing against your site schedule so trades arrive in the order the work needs them.</p>
+    </details>
+
+    <details>
+      <summary>Do candidates pay a fee for jobs in Oman?</summary>
+      <p>Any charge to a candidate must be disclosed in advance, stay within the limits set under Indian emigration rules, and come with an official receipt. Never make a cash payment without a receipt to anyone, and verify the agency licence on emigrate.gov.in before paying anything.</p>
+    </details>
+
+    <details>
+      <summary>Do you recruit for other Gulf countries?</summary>
+      <p>Yes, we also recruit for <a href="/hire-in-saudi-arabia">Saudi Arabia</a> and the <a href="/hire-in-uae">UAE</a>. European recruitment is handled separately on our other site, tajhrservices.com.</p>
+    </details>
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Send your Oman requirement</h2>
+      <p>Employers can share a demand letter or an outline of the trades needed. Candidates can ask about current Oman openings and the documents required.</p>
+      <ul class="contact-list">
+        <li><svg class="ic ic-sm" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span class="ci-body"><strong>Email</strong><a href="mailto:info@tajhrservices.in">info@tajhrservices.in</a></span></li>
+        <li><svg class="ic ic-sm" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span class="ci-body"><strong>Phone</strong><a href="tel:+919651332002">+91 96513 32002</a></span></li>
+        <li><svg class="ic ic-sm" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg><span class="ci-body"><strong>Office</strong>Office No. 18-B, 1st Floor, Taimoor Nagar, Nala Road, New Friends Colony, New Delhi 110025</span></li>
+        <li><svg class="ic ic-sm" aria-hidden="true" focusable="false"><use href="#i-badge"/></svg><span class="ci-body"><strong>Licence</strong>MEA RA B-3252/DEL/PER/1000+/5/11251/2025</span></li>
+      </ul>
+    </div>
+
+    <form action="https://formspree.io/f/mqpkekzr" method="POST">
+      <div class="field">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="phone">Phone or WhatsApp</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="who">I am</label>
+        <select id="who" name="enquiry_type" required>
+          <option value="">Select one</option>
+          <option>An employer with an Oman requirement</option>
+          <option>A candidate looking for work in Oman</option>
+          <option>Something else</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">Trades needed, or your trade and experience</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <input type="hidden" name="country" value="Oman">
+      <input type="hidden" name="_subject" value="Oman enquiry from tajhrservices.in">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true">
+      <button type="submit">Send enquiry</button>
+      <p class="form-note">We reply during business hours, Monday to Saturday.</p>
+    </form>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="related">
+      <a href="/hire-in-saudi-arabia">Hiring for Saudi Arabia</a>
+      <a href="/hire-in-uae">Hiring for the UAE</a>
+      <a href="/#clearance">PoE and ECR clearance explained</a>
+      <a href="/">Gulf recruitment overview</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <h3>TAJ HR Services</h3>
+        <p style="margin:0">Government of India licensed recruiting agent supplying skilled Indian workers to employers in Saudi Arabia, Oman and the United Arab Emirates.</p>
+        <p style="margin:12px 0 0">MEA RA Licence B-3252/DEL/PER/1000+/5/11251/2025</p>
+      </div>
+      <div>
+        <h3>Gulf recruitment</h3>
+        <ul>
+          <li><a href="/hire-in-saudi-arabia">Hiring for Saudi Arabia</a></li>
+          <li><a href="/hire-in-oman">Hiring for Oman</a></li>
+          <li><a href="/hire-in-uae">Hiring for the UAE</a></li>
+          <li><a href="/#clearance">PoE and ECR clearance</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:info@tajhrservices.in">info@tajhrservices.in</a></li>
+          <li><a href="tel:+919651332002">+91 96513 32002</a></li>
+          <li>New Friends Colony, New Delhi 110025</li>
+          <li><a href="https://tajhrservices.com" rel="noopener">Europe recruitment: tajhrservices.com</a></li>
+        </ul>
+        <h3 style="margin-top:20px">Legal</h3>
+        <ul>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/terms-of-service">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <p class="warn" style="margin:0 0 8px">Candidates: verify our licence on emigrate.gov.in before making any payment. Any lawful charge will be told to you in advance and given with a receipt. Never pay cash without a receipt.</p>
+      <p style="margin:0">&copy; 2026 TAJ HR Services. Approved by the Ministry of External Affairs, Government of India.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var b=document.getElementById('menuBtn'),n=document.getElementById('nav');
+  b.addEventListener('click',function(){
+    var open=n.classList.toggle('open');
+    b.setAttribute('aria-expanded',open?'true':'false');
+  });
+</script>
+
+
+<a class="wa-float" href="https://wa.me/919651332002?text=Hi%20TAJ%20HR%20Services%2C%20I%20have%20an%20enquiry%20about%20recruitment%20for%20Oman."
+   target="_blank" rel="noopener"
+   aria-label="Chat with TAJ HR Services on WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="#0A2E17" aria-hidden="true">
+    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.23 8.23 0 0 1 8.24 8.24c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.24-.02-.38.1-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.41.09-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.73 2.64 4.2 3.7.59.26 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/>
+  </svg>
+  <span class="wa-label">WhatsApp</span>
+</a>
+
+</body>
+</html>
