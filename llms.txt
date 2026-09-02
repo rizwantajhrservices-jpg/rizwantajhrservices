@@ -1,41 +1,54 @@
 # TAJ HR Services
 
-> Government-licensed (MEA Reg. No. B-3252/DEL/PER/1000+/5/11251/2025) overseas manpower recruitment agency based in New Delhi, India. ISO 9001:2015 certified. NSDC skilling partner. Places skilled, semi-skilled and unskilled Indian candidates with employers across 23 destination countries in Europe, Canada and Central Asia.
+> Overseas manpower recruitment agency in New Delhi, India, licensed by the Ministry of External Affairs, Government of India (Recruiting Agent Licence B-3252/DEL/PER/1000+/5/11251/2025). Recruits skilled and semi-skilled Indian workers for employers in Saudi Arabia, Oman and the United Arab Emirates. Operates under Krewex Technologies Private Limited.
 
 ## Company
 - Name: TAJ HR Services
-- Founded: Operating for over 10 years
-- Address: 18-B, 1st Floor, Taimoor Nagar, Nala Road, Near Honey Money Top, New Friends Colony, New Delhi, Delhi – 110025, India
+- Parent company: Krewex Technologies Private Limited
+- Address: 18-B, 1st, Money Top, near Honey, Navjivan Buddh Vihar, Taimoor Nagar, New Friends Colony, New Delhi, Delhi 110025, India
 - Phone: +91 96513 32002
-- Email: info@tajhrservices.com
+- Email: info@tajhrservices.in
 - Website: https://tajhrservices.in
-- License: MEA Reg. No. B-3252/DEL/PER/1000+/5/11251/2025
-- Certifications: ISO 9001:2015, NSDC Partner
+- Licence: MEA Recruiting Agent Licence B-3252/DEL/PER/1000+/5/11251/2025
+- Licence verification: the licence can be checked on the Government of India eMigrate portal at https://emigrate.gov.in under the registered recruiting agents list
+- Certifications: ISO 9001:2015, NSDC skilling partner
 
-## What We Do
-TAJ HR Services connects Indian job seekers with employers in Europe and Canada. Services include trade testing and candidate screening, bulk and project hiring, European work permit processing, documentation and compliance, pre-departure training, and deployment/arrival support with 90-day replacement cover.
+## Countries served
+This website covers Gulf recruitment only:
+- Saudi Arabia
+- Oman
+- United Arab Emirates
 
-## Key Facts
-- 10,000+ pre-screened candidates in database
-- 50+ partner employer companies
-- 23 destination countries served (including Germany, Poland, Romania, Ireland, UK, Netherlands, Canada, Hungary, Portugal, Czech Republic, Austria)
-- 98% client satisfaction rate
-- 4–12 week average deployment timeline
-- Industries served: Construction, Manufacturing, Hospitality, Healthcare, Logistics, IT & Technology
+European and Canadian recruitment is handled separately at https://tajhrservices.com and is not covered by this site.
+
+## What we do
+TAJ HR Services recruits Indian workers on behalf of Gulf employers. The work covers sourcing candidates, screening them on documents and practical trade ability, checking that employer demand documents meet Indian emigration requirements, registering requirements on the eMigrate system, arranging medical examinations, supporting visa processing, obtaining Protector of Emigrants clearance where the candidate holds an ECR passport, and coordinating pre-departure briefing and travel.
+
+## Trades recruited
+Construction and civil trades; welding and fabrication; electrical; plumbing, HVAC and MEP; mechanical and workshop; heavy equipment operators; drivers and transport; oil, gas and industrial; facility management and cleaning; hospitality and catering; retail and sales; warehouse and logistics; security; agriculture and farming; manufacturing and production; general labour. Which trades are open at any given time depends on the demand letters currently held.
+
+## Emigration clearance
+Saudi Arabia, Oman and the United Arab Emirates are all on India's list of notified countries for emigration clearance.
+- ECR (Emigration Check Required) applies to Indian passport holders who have not passed Class 10. These workers need Protector of Emigrants clearance through eMigrate before departing for employment.
+- ECNR (Emigration Check Not Required) applies to Class 10 pass and above. These workers do not need PoE clearance.
+- Candidates must be medically examined at an approved GCC centre under the Wafid system, formerly known as GAMCA, before visa processing.
+
+## What employers need to provide
+A demand letter on company letterhead stating job titles, worker numbers, salary, benefits and contract duration; a power of attorney authorising TAJ HR Services to recruit; and a specimen employment contract matching the demand letter. Requirements vary by country: Oman additionally requires Ministry of Labour clearance reflecting Omanisation limits; the UAE requires MOHRE quota approval for mainland companies or free zone authority approval for free zone companies, and the standard job offer must be signed by the worker before the entry permit is issued.
+
+## Candidate fee policy
+Any charge to a candidate is disclosed in advance, stays within the limits set under Indian emigration rules, and is issued with an official receipt. Cash payments without a receipt are not accepted. Candidates are advised to verify any agency's licence on emigrate.gov.in before paying anything.
+
+## What we do not claim
+TAJ HR Services does not guarantee selection, visa issuance, emigration clearance or any fixed deployment timeline. Selection is the employer's decision and visa or clearance approval is the decision of the relevant government authority. Estimated timelines are given against a specific requirement, not as a general promise.
 
 ## Pages
-- Home: https://tajhrservices.in/index.html
-- About Us: https://tajhrservices.in/about.html
-- Services: https://tajhrservices.in/services.html
-- Industries: https://tajhrservices.in/industries.html
-- Employers (hiring / demand letter): https://tajhrservices.in/employers.html
-- Careers (job seekers / registration): https://tajhrservices.in/careers.html
-- Contact: https://tajhrservices.in/contact.html
-- Resources: https://tajhrservices.in/resources.html
-- Case Studies: https://tajhrservices.in/case-studies.html
-- Privacy Policy: https://tajhrservices.in/privacy-policy.html
-- Terms of Service: https://tajhrservices.in/terms-of-service.html
+- Home (Gulf recruitment overview): https://tajhrservices.in/
+- Hiring for Saudi Arabia: https://tajhrservices.in/hire-in-saudi-arabia
+- Hiring for Oman: https://tajhrservices.in/hire-in-oman
+- Hiring for the UAE: https://tajhrservices.in/hire-in-uae
+- Privacy Policy: https://tajhrservices.in/privacy-policy
+- Terms of Service: https://tajhrservices.in/terms-of-service
 
 ## Contact
-For employer manpower requests or candidate registration, use the contact form at https://tajhrservices.in/contact.html or email info@tajhrservices.com.
-
+Employers can send a hiring requirement or demand letter, and candidates can ask about openings and required documents, through the enquiry form at https://tajhrservices.in/#contact, by email at info@tajhrservices.in, by phone on +91 96513 32002, or on WhatsApp at https://wa.me/919651332002.
