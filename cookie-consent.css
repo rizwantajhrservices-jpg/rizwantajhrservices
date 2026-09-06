@@ -1,0 +1,186 @@
+/* ==========================================================================
+   TAJ HR Services — cookie consent, banner + preferences panel
+   Shared across all pages. Uses the site's existing navy/gold palette and
+   Archivo/Inter typefaces. Does not affect any existing page styling.
+   ========================================================================== */
+
+.cc-root{
+  --cc-navy:#0B2545;
+  --cc-navy-deep:#071A33;
+  --cc-navy-line:#1C3A63;
+  --cc-gold:#C8A24A;
+  --cc-gold-soft:#E3C87F;
+  --cc-ink:#182338;
+  --cc-grey:#5A6478;
+  --cc-white:#fff;
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+
+/* ---------- banner ---------- */
+.cc-banner{
+  position:fixed;left:0;right:0;bottom:0;z-index:9000;
+  background:var(--cc-navy);color:#D6DEEC;
+  border-top:3px solid var(--cc-gold);
+  box-shadow:0 -6px 24px rgba(0,0,0,.28);
+  padding:20px 22px;
+}
+.cc-banner[hidden]{display:none}
+.cc-banner-in{
+  max-width:1120px;margin:0 auto;
+  display:flex;gap:26px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;
+}
+.cc-copy{flex:1 1 420px;min-width:280px}
+.cc-copy h2{
+  font-family:'Archivo',system-ui,sans-serif;font-size:1.05rem;font-weight:600;
+  color:var(--cc-white);margin:0 0 7px;letter-spacing:-.01em;line-height:1.3;
+}
+.cc-copy p{margin:0;font-size:.92rem;line-height:1.6;max-width:70ch;color:#C4CFE0}
+.cc-copy a{color:var(--cc-gold-soft);text-decoration:underline}
+.cc-copy a:hover{color:var(--cc-gold)}
+
+.cc-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;flex:0 0 auto}
+
+.cc-btn{
+  font-family:inherit;font-size:.92rem;font-weight:600;line-height:1.2;
+  padding:11px 18px;border-radius:5px;border:1px solid transparent;
+  cursor:pointer;white-space:nowrap;
+  transition:background .25s ease,border-color .25s ease,color .25s ease,transform .25s ease;
+}
+.cc-btn:hover,.cc-btn:focus-visible{transform:translateY(-1px)}
+.cc-btn-primary{background:var(--cc-gold);color:var(--cc-navy-deep)}
+.cc-btn-primary:hover,.cc-btn-primary:focus-visible{background:var(--cc-gold-soft)}
+.cc-btn-secondary{background:transparent;color:var(--cc-white);border-color:#35507F}
+.cc-btn-secondary:hover,.cc-btn-secondary:focus-visible{border-color:var(--cc-gold);color:var(--cc-gold-soft)}
+.cc-btn-link{
+  background:none;border:none;color:#D6DEEC;text-decoration:underline;
+  padding:11px 4px;font-weight:500;
+}
+.cc-btn-link:hover,.cc-btn-link:focus-visible{color:var(--cc-gold-soft)}
+
+@media(max-width:760px){
+  .cc-banner{padding:18px 16px}
+  .cc-banner-in{gap:16px}
+  .cc-actions{width:100%}
+  .cc-btn{flex:1 1 auto;text-align:center}
+  .cc-btn-link{flex-basis:100%}
+}
+
+/* ---------- preferences panel ---------- */
+.cc-overlay{
+  position:fixed;inset:0;z-index:9100;
+  background:rgba(7,26,51,.62);
+  display:flex;align-items:center;justify-content:center;padding:20px;
+}
+.cc-overlay[hidden]{display:none}
+
+.cc-panel{
+  background:#fff;color:var(--cc-ink);
+  width:100%;max-width:600px;max-height:88vh;overflow-y:auto;
+  border-radius:6px;border-top:4px solid var(--cc-gold);
+  box-shadow:0 18px 50px rgba(0,0,0,.32);
+}
+.cc-panel-head{
+  padding:22px 24px 16px;border-bottom:1px solid #E4E7EC;
+  display:flex;align-items:flex-start;justify-content:space-between;gap:16px;
+}
+.cc-panel-head h2{
+  font-family:'Archivo',system-ui,sans-serif;font-size:1.2rem;font-weight:600;
+  margin:0 0 6px;letter-spacing:-.015em;color:var(--cc-ink);
+}
+.cc-panel-head p{margin:0;font-size:.9rem;color:var(--cc-grey);line-height:1.55}
+.cc-close{
+  background:none;border:1px solid #D5DAE3;border-radius:5px;
+  width:32px;height:32px;flex:none;cursor:pointer;
+  font-size:1.15rem;line-height:1;color:var(--cc-grey);
+}
+.cc-close:hover,.cc-close:focus-visible{border-color:var(--cc-navy);color:var(--cc-navy)}
+
+.cc-panel-body{padding:8px 24px 4px}
+
+.cc-cat{padding:18px 0;border-bottom:1px solid #EDEFF3}
+.cc-cat:last-child{border-bottom:none}
+.cc-cat-top{display:flex;align-items:flex-start;justify-content:space-between;gap:18px}
+.cc-cat h3{
+  font-family:'Archivo',system-ui,sans-serif;font-size:1rem;font-weight:600;
+  margin:0 0 5px;color:var(--cc-ink);
+}
+.cc-cat p{margin:0;font-size:.89rem;line-height:1.6;color:#3A4459;max-width:62ch}
+.cc-always{
+  font-size:.76rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--cc-gold);background:#FBF6E9;border:1px solid #EBDCB4;
+  padding:6px 11px;border-radius:20px;white-space:nowrap;flex:none;
+}
+
+/* switch */
+.cc-switch{position:relative;flex:none;width:48px;height:27px}
+.cc-switch input{
+  position:absolute;inset:0;width:100%;height:100%;
+  margin:0;opacity:0;cursor:pointer;z-index:2;
+}
+.cc-track{
+  position:absolute;inset:0;background:#C3C9D4;border-radius:27px;
+  transition:background .25s ease;pointer-events:none;
+}
+.cc-track::after{
+  content:"";position:absolute;top:3px;left:3px;width:21px;height:21px;
+  background:#fff;border-radius:50%;box-shadow:0 1px 3px rgba(0,0,0,.3);
+  transition:transform .25s ease;
+}
+.cc-switch input:checked ~ .cc-track{background:var(--cc-gold)}
+.cc-switch input:checked ~ .cc-track::after{transform:translateX(21px)}
+.cc-switch input:focus-visible ~ .cc-track{outline:2px solid var(--cc-navy);outline-offset:2px}
+
+.cc-panel-foot{
+  padding:18px 24px 22px;border-top:1px solid #E4E7EC;background:#FBFAF7;
+  display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;
+  border-radius:0 0 6px 6px;
+}
+.cc-panel-foot .cc-btn-primary{background:var(--cc-navy);color:#fff}
+.cc-panel-foot .cc-btn-primary:hover,.cc-panel-foot .cc-btn-primary:focus-visible{background:var(--cc-navy-deep)}
+.cc-panel-foot .cc-btn-secondary{color:var(--cc-navy);border-color:#C9CFDA}
+.cc-panel-foot .cc-btn-secondary:hover,.cc-panel-foot .cc-btn-secondary:focus-visible{border-color:var(--cc-navy)}
+
+.cc-note{
+  padding:0 24px 20px;margin:0;font-size:.82rem;color:var(--cc-grey);line-height:1.6;
+}
+.cc-note a{color:var(--cc-navy);font-weight:500}
+
+@media(max-width:560px){
+  .cc-overlay{padding:0;align-items:flex-end}
+  .cc-panel{max-width:none;max-height:92vh;border-radius:6px 6px 0 0}
+  .cc-panel-foot{border-radius:0}
+  .cc-panel-foot .cc-btn{flex:1 1 100%}
+}
+
+/* ---------- floating settings button (bottom LEFT, so it never
+     collides with the existing WhatsApp button on the right) ---------- */
+.cc-fab{
+  position:fixed;left:16px;bottom:16px;z-index:80;
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--cc-navy);color:#D6DEEC;
+  border:1px solid var(--cc-navy-line);border-radius:40px;
+  padding:10px 15px 10px 12px;cursor:pointer;
+  font-family:inherit;font-size:.86rem;font-weight:600;line-height:1;
+  box-shadow:0 3px 12px rgba(0,0,0,.22);
+  transition:background .25s ease,color .25s ease,transform .25s ease;
+}
+.cc-fab[hidden]{display:none}
+.cc-fab:hover,.cc-fab:focus-visible{background:var(--cc-navy-deep);color:var(--cc-gold-soft);transform:translateY(-1px)}
+.cc-fab svg{flex:none;width:17px;height:17px;fill:none;stroke:var(--cc-gold);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+@media(max-width:520px){
+  .cc-fab{left:14px;bottom:14px;padding:11px;border-radius:50%}
+  .cc-fab .cc-fab-label{display:none}
+}
+
+/* ---------- shared ---------- */
+.cc-root :focus-visible{outline:2px solid var(--cc-gold);outline-offset:2px}
+
+@media(prefers-reduced-motion:reduce){
+  .cc-root *{transition:none!important;animation:none!important}
+  .cc-btn:hover,.cc-btn:focus-visible,.cc-fab:hover,.cc-fab:focus-visible{transform:none}
+}
+
+@media print{
+  .cc-banner,.cc-overlay,.cc-fab{display:none!important}
+}
