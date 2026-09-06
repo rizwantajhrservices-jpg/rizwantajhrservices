@@ -43,7 +43,17 @@
       ]
     },
     {
-      "@type": "Service",
+      {
+          "@type": "WebPage",
+          "@id": "https://tajhrservices.in/hire-in-uae#webpage",
+          "url": "https://tajhrservices.in/hire-in-uae",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["#licence-verify", "#faq-poe"]
+          }
+        },
+        {
+        "@type": "Service",
     "@id": "https://tajhrservices.in/hire-in-uae#service",
           "url": "https://tajhrservices.in/hire-in-uae",
           "name": "Indian manpower recruitment for the United Arab Emirates",
@@ -431,7 +441,7 @@
       <dt>Ministry of External Affairs licence</dt>
       <dd class="num">B-3252/DEL/PER/1000+/5/11251/2025</dd>
       <dt>Verify before you engage us</dt>
-      <dd>Check our licence on the Government of India portal at <a href="https://emigrate.gov.in" rel="noopener">emigrate.gov.in</a>.</dd>
+      <dd id="licence-verify">Check our licence on the Government of India portal at <a href="https://emigrate.gov.in" rel="noopener">emigrate.gov.in</a>.</dd>
       <dt>Where we recruit from</dt>
       <dd>New Delhi head office, with sourcing across North India, Bihar, Uttar Pradesh and other states.</dd>
     </dl>
@@ -751,7 +761,7 @@
       <p>Yes. Under UAE labour rules the standard job offer must be signed by the worker before the work permit and entry permit are issued, and the contract signed later must match it. This protects the worker against terms being changed on arrival. We make sure candidates read and understand the offer before signing.</p>
     </details>
 
-    <details>
+    <details id="faq-poe">
       <summary>Do Indian workers going to the UAE need PoE clearance?</summary>
       <p>The UAE is a notified country, so Protector of Emigrants clearance applies to ECR passport holders, meaning those who have not passed Class 10. ECNR holders do not need it. Confirm the status of every worker's passport before booking flights.</p>
     </details>
