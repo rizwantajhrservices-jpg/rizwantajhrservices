@@ -29,4 +29,19 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
 Sitemap: https://tajhrservices.in/sitemap.xml
