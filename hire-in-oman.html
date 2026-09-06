@@ -42,8 +42,17 @@
         {"@type": "ListItem", "position": 2, "name": "Hire in Oman", "item": "https://tajhrservices.in/hire-in-oman"}
       ]
     },
-    {
-      "@type": "Service",
+{
+          "@type": "WebPage",
+          "@id": "https://tajhrservices.in/hire-in-oman#webpage",
+          "url": "https://tajhrservices.in/hire-in-oman",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": ["#licence-verify", "#faq-poe"]
+          }
+        },
+        {
+        "@type": "Service",
     "@id": "https://tajhrservices.in/hire-in-oman#service",
           "url": "https://tajhrservices.in/hire-in-oman",
           "name": "Indian manpower recruitment for Oman",
@@ -426,7 +435,7 @@
       <dt>Ministry of External Affairs licence</dt>
       <dd class="num">B-3252/DEL/PER/1000+/5/11251/2025</dd>
       <dt>Verify before you engage us</dt>
-      <dd>Check our licence on the Government of India portal at <a href="https://emigrate.gov.in" rel="noopener">emigrate.gov.in</a>.</dd>
+      <dd id="licence-verify">Check our licence on the Government of India portal at <a href="https://emigrate.gov.in" rel="noopener">emigrate.gov.in</a>.</dd>
       <dt>Where we recruit from</dt>
       <dd>New Delhi head office, with sourcing across North India, Bihar, Uttar Pradesh and other states.</dd>
     </dl>
@@ -745,7 +754,7 @@
       <p>Oman reserves certain job categories and a proportion of positions for Omani nationals, and the rules differ by sector. This decides which roles your establishment can fill with expatriate workers and how many. Your labour clearance reflects those limits, which is why we ask to see it before sourcing rather than after.</p>
     </details>
 
-    <details>
+    <details id="faq-poe">
       <summary>Do Indian workers going to Oman need PoE clearance?</summary>
       <p>Oman is a notified country, so Protector of Emigrants clearance applies to ECR passport holders, meaning those who have not passed Class 10. ECNR holders do not need it. Confirm the status of every worker's passport before booking flights.</p>
     </details>
