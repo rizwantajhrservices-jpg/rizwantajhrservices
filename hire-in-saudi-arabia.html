@@ -197,14 +197,14 @@
   .nav a[aria-current=page]{color:var(--gold-soft)}
   .nav .btn-sm{background:var(--gold);color:var(--navy-deep);padding:8px 15px;border-radius:5px;font-weight:600}
   .nav .btn-sm:hover{background:var(--gold-soft)}
-  .menu-btn{display:none;background:none;border:1px solid var(--navy-line);color:#fff;border-radius:5px;padding:7px 11px;font-size:.9rem}
+  .menu-btn{display:none;background:none;border:1px solid var(--navy-line);color:#fff;border-radius:5px;padding:7px 11px;font-size:.9rem}.nav .dropdown{position:relative}.nav .dropdown>a{cursor:pointer}.nav .dropdown>a::after{content:" \25BE";font-size:.75em}.nav .dropdown-menu{display:none;position:absolute;top:100%;left:0;background:var(--navy);border:1px solid var(--navy-line);min-width:150px;flex-direction:column;padding:6px 0;border-radius:5px;box-shadow:0 8px 20px rgba(0,0,0,.3)}.nav .dropdown:hover .dropdown-menu,.nav .dropdown:focus-within .dropdown-menu{display:flex}.nav .dropdown-menu a{padding:9px 16px;width:100%}
   @media(max-width:860px){
     .nav{display:none;flex-direction:column;align-items:flex-start;gap:0;width:100%;padding:8px 22px 16px}
     .nav.open{display:flex}
     .nav a{padding:11px 0;width:100%;border-bottom:1px solid var(--navy-line)}
     .nav .btn-sm{margin-top:12px;border-bottom:none;text-align:center}
     .menu-btn{display:block}
-    .head-in{flex-wrap:wrap;padding-bottom:0}
+    .head-in{flex-wrap:wrap;padding-bottom:0}.nav .dropdown{width:100%}.nav .dropdown-menu{display:flex;position:static;background:none;border:none;box-shadow:none;padding:0 0 0 14px;width:100%}.nav .dropdown-menu a{border-bottom:1px solid var(--navy-line)}
   }
 
   .crumb{background:var(--sand);font-size:.85rem;padding:11px 0;border-bottom:1px solid #E5E1D6}
@@ -406,9 +406,7 @@
     </a>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav class="nav" id="nav">
-      <a href="/hire-in-saudi-arabia" aria-current="page">Saudi Arabia</a>
-      <a href="/hire-in-oman">Oman</a>
-      <a href="/hire-in-uae">UAE</a>
+      <div class="dropdown"><a href="/hire-in-saudi-arabia" aria-haspopup="true">Gulf Countries</a><div class="dropdown-menu"><a href="/hire-in-saudi-arabia" aria-current="page">Saudi Arabia</a><a href="/hire-in-uae">UAE</a><a href="/hire-in-oman">Oman</a><a href="/hire-in-qatar">Qatar</a><a href="/hire-in-kuwait">Kuwait</a><a href="/hire-in-bahrain">Bahrain</a></div></div>
       <a href="/jobs">Jobs</a>
       <a href="/employers">Employers</a>
       <a href="/careers">Candidates</a>
