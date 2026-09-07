@@ -88,7 +88,7 @@
       '    <div class="cc-copy">',
       '      <h2>Privacy &amp; cookies</h2>',
       '      <p>This website does not set advertising or analytics cookies. It loads',
-      '        typefaces from Google Fonts and processes enquiry forms through Formspree,',
+      '        typefaces from Google Fonts and processes enquiry forms through FormSubmit,',
       '        which means those providers receive technical data such as your IP address.',
       '        You can choose what you allow, and change it at any time. See our',
       '        <a href="' + POLICY_URL + '">Privacy Policy</a> for detail.</p>',
